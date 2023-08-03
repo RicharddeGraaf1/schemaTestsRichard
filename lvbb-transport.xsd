@@ -321,7 +321,7 @@
          </xs:extension>
       </xs:complexContent>
    </xs:complexType>
-   <xs:element name="raadpleegOpdracht" type="lvbbt:RaadpleegOpdrachtType">
+<!--   <xs:element name="raadpleegOpdracht" type="lvbbt:RaadpleegOpdrachtType">
       <xs:annotation>
          <xs:documentation source="https://koop.gitlab.io/lvbb/bronhouderkoppelvlak/2.0.0-rc/go/go.html?id=xsd:lvbbt:raadpleegOpdracht"/>
       </xs:annotation>
@@ -341,7 +341,7 @@
             </xs:sequence>
          </xs:extension>
       </xs:complexContent>
-   </xs:complexType>
+   </xs:complexType>-->
    <xs:element name="breekPublicatieAfOpdracht"
                type="lvbbt:BreekPublicatieAfOpdrachtType">
       <xs:annotation>
@@ -689,7 +689,7 @@
    <!--
   Antwoord voor raadpleegVerzoek 
   -->
-   <xs:element name="raadpleegVerzoekResultaat"
+  <!-- <xs:element name="raadpleegVerzoekResultaat"
                type="lvbbt:RaadpleegVerzoekResultaatType">
       <xs:annotation>
          <xs:documentation source="https://koop.gitlab.io/lvbb/bronhouderkoppelvlak/2.0.0-rc/go/go.html?id=xsd:lvbbt:raadpleegVerzoekResultaat"/>
@@ -755,7 +755,7 @@
             </xs:annotation>
          </xs:enumeration>
       </xs:restriction>
-   </xs:simpleType>
+   </xs:simpleType>-->
    <!--
   Antwoord voor breekPublicatieAfVerzoek 
   -->
