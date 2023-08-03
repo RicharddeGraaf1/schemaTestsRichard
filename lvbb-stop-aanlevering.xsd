@@ -16,17 +16,17 @@
    <!-- xs:appinfo om geincludeerde STOP-versie vast te leggen -->
    <xs:annotation>
       <xs:appinfo>
-         <imop:STOPversie>1.3.0</imop:STOPversie>
+         <imop:STOPversie>2.0.0-rc</imop:STOPversie>
       </xs:appinfo>
    </xs:annotation>
    <xs:import namespace="https://standaarden.overheid.nl/stop/imop/data/"
-              schemaLocation="https://standaarden.overheid.nl/stop/1.3.0/imop-data.xsd"/>
+      schemaLocation="https://standaarden.overheid.nl/stop/2.0.0-rc/imop-data.xsd"/>
    <xs:import namespace="https://standaarden.overheid.nl/stop/imop/tekst/"
-              schemaLocation="https://standaarden.overheid.nl/stop/1.3.0/imop-tekst.xsd"/>
+      schemaLocation="https://standaarden.overheid.nl/stop/2.0.0-rc/imop-tekst.xsd"/>
    <xs:import namespace="http://www.opengis.net/se"
-              schemaLocation="https://standaarden.overheid.nl/stop/1.3.0/se-FeatureStyle-imop.xsd"/>
+      schemaLocation="https://standaarden.overheid.nl/stop/2.0.0-rc/se-FeatureStyle-imop.xsd"/>
    <xs:import namespace="https://standaarden.overheid.nl/stop/imop/gio/"
-              schemaLocation="https://standaarden.overheid.nl/stop/1.3.0/imop-gio.xsd"/>
+              schemaLocation="https://standaarden.overheid.nl/stop/2.0.0-rc/imop-gio.xsd"/>
    <!--
     AANLEVEREN BESLUIT
   -->

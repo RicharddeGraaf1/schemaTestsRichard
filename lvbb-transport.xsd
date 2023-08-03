@@ -11,9 +11,9 @@
       <xs:documentation>versie 2.0.0-rc</xs:documentation>
    </xs:annotation>
    <xs:import namespace="http://www.logius.nl/digikoppeling/gb/2010/10"
-              schemaLocation="https://standaarden.overheid.nl/lvbb/2.0.0-rc/gb-meta.xsd"/>
+      schemaLocation="https://raw.githubusercontent.com/RicharddeGraaf1/schemaTestsRichard/main/gb-meta.xsd"/>
    <xs:import namespace="http://www.overheid.nl/2017/stop"
-              schemaLocation="https://standaarden.overheid.nl/lvbb/2.0.0-rc/stop_toevoeging.xsd"/>
+      schemaLocation="https://raw.githubusercontent.com/RicharddeGraaf1/schemaTestsRichard/main/stop_toevoeging.xsd"/>
    <!--===========================================================================
   
   Schema voor de LVBB berichten en bestanden die via het Digikoppeling
