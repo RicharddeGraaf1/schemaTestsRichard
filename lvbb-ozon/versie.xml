@@ -10,7 +10,7 @@
     <implementatie>
       <Moduleversie>
         <introductieversie>1.0.0</introductieversie>
-        <schema>https://standaarden.overheid.nl/lvbb/1.5.versieB.0/lvbb-stop-uitlevering.xsd</schema>
+        <schema>https://raw.githubusercontent.com/RicharddeGraaf1/schemaTestsRichard/main/lvbb-ozon/lvbb-stop-uitlevering.xsd</schema>
       </Moduleversie>
     </implementatie>
   </Module>
@@ -20,7 +20,7 @@
     <implementatie>
       <Moduleversie>
         <introductieversie>1.0.0</introductieversie>
-        <schema>https://standaarden.overheid.nl/lvbb/1.5.versieB.0/lvbb-stop-uitlevering.xsd</schema>
+        <schema>https://raw.githubusercontent.com/RicharddeGraaf1/schemaTestsRichard/main/lvbb-ozon/lvbb-stop-uitlevering.xsd</schema>
       </Moduleversie>
     </implementatie>
   </Module>
@@ -30,7 +30,7 @@
     <implementatie>
       <Moduleversie>
         <introductieversie>1.0.0</introductieversie>
-        <schema>https://standaarden.overheid.nl/lvbb/1.5.versieB.0/lvbb-stop-uitlevering.xsd</schema>
+        <schema>https://raw.githubusercontent.com/RicharddeGraaf1/schemaTestsRichard/main/lvbb-ozon/lvbb-stop-uitlevering.xsd</schema>
       </Moduleversie>
     </implementatie>
   </Module>
@@ -40,7 +40,7 @@
     <implementatie>
       <Moduleversie>
         <introductieversie>1.0.0</introductieversie>
-        <schema>https://standaarden.overheid.nl/lvbb/1.5.versieB.0/lvbb-stop-uitlevering.xsd</schema>
+        <schema>https://raw.githubusercontent.com/RicharddeGraaf1/schemaTestsRichard/main/lvbb-ozon/lvbb-stop-uitlevering.xsd</schema>
       </Moduleversie>
     </implementatie>
   </Module>

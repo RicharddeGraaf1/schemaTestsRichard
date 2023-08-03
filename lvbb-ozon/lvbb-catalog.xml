@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
-  <uri name="https://standaarden.overheid.nl/lvbb/1.5.versieB.0/lvbb-stop-uitlevering.xsd" uri="lvbb-stop-uitlevering.xsd"/>
-  <uri name="https://standaarden.overheid.nl/lvbb/1.5.versieB.0/lvbb-vergunningsmetadata.xsd" uri="lvbb-vergunningsmetadata.xsd"/>
+  <uri name="https://raw.githubusercontent.com/RicharddeGraaf1/schemaTestsRichard/main/lvbb-ozon/lvbb-stop-uitlevering.xsd" uri="lvbb-stop-uitlevering.xsd"/>
+  <uri name="https://raw.githubusercontent.com/RicharddeGraaf1/schemaTestsRichard/main/lvbb-ozon/lvbb-vergunningsmetadata.xsd" uri="lvbb-vergunningsmetadata.xsd"/>
 </catalog>
