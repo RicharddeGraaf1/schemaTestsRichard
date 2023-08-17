@@ -1088,8 +1088,95 @@
          </xs:enumeration>
       </xs:restriction>
    </xs:simpleType>
-   <!--Antwoord voor opdracht tot validatie van de revisie-->
    
+   <!--Antwoord voor opdracht tot validatie van de revisie-->
+   <xs:element name="validatieRevisieVerzoekResultaat"
+      type="lvbbt:ValidatieRevisieVerzoekResultaatType">
+      <xs:annotation>
+         <xs:documentation source="https://koop.gitlab.io/lvbb/bronhouderkoppelvlak/2.0.0-rc/go/go.html?id=xsd:lvbbt:validatieRevisieVerzoekResultaat"/>
+      </xs:annotation>
+   </xs:element>
+   <xs:element name="validatieRevisieStatusVerzoekResultaat"
+      type="lvbbt:ValidatieRevisieVerzoekResultaatType">
+      <xs:annotation>
+         <xs:documentation source="https://koop.gitlab.io/lvbb/bronhouderkoppelvlak/2.0.0-rc/go/go.html?id=xsd:lvbbt:validatieRevisieStatusVerzoekResultaat"/>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="ValidatieRevisieVerzoekResultaatType">
+      <xs:annotation>
+         <xs:documentation source="https://koop.gitlab.io/lvbb/bronhouderkoppelvlak/2.0.0-rc/go/go.html?id=xsd:lvbbt:ValidatieRevisieVerzoekResultaatType"/>
+      </xs:annotation>
+      <xs:complexContent>
+         <xs:extension base="lvbbt:VerzoekResultaatType">
+            <xs:sequence>
+               <xs:element minOccurs="0"
+                  name="verslag"
+                  type="lvbbt:ValidatieRevisieVerslagType">
+                  <xs:annotation>
+                     <xs:documentation source="https://koop.gitlab.io/lvbb/bronhouderkoppelvlak/2.0.0-rc/go/go.html?id=xsd:lvbbt:verslag:ValidatieRevisieVerzoekResultaatType"/>
+                  </xs:annotation>
+               </xs:element>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:complexType name="ValidatieRevisieVerslagType">
+      <xs:annotation>
+         <xs:documentation source="https://koop.gitlab.io/lvbb/bronhouderkoppelvlak/2.0.0-rc/go/go.html?id=xsd:lvbbt:ValidatieRevisieVerslagType"/>
+      </xs:annotation>
+      <xs:complexContent>
+         <xs:extension base="lvbbt:OpdrachtverslagType">
+            <xs:sequence>
+               <xs:choice>
+                  <xs:element name="uitkomst" type="lvbbt:ValidatieRevisieUitkomstCode">
+                     <xs:annotation>
+                        <xs:documentation source="https://koop.gitlab.io/lvbb/bronhouderkoppelvlak/2.0.0-rc/go/go.html?id=xsd:lvbbt:uitkomst:ValidatieRevisieVerslagType"/>
+                     </xs:annotation>
+                  </xs:element>
+                  <xs:element name="voortgang" type="lvbbt:ValidatieRevisieVoortgangCode">
+                     <xs:annotation>
+                        <xs:documentation source="https://koop.gitlab.io/lvbb/bronhouderkoppelvlak/2.0.0-rc/go/go.html?id=xsd:lvbbt:voortgang:ValidatieRevisieVerslagType"/>
+                     </xs:annotation>
+                  </xs:element>
+               </xs:choice>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:simpleType name="ValidatieRevisieUitkomstCode">
+      <xs:annotation>
+         <xs:documentation> Code die aangeeft of de behandeling van een opdracht tot validatie van een
+            revisie is geslaagd. </xs:documentation>
+      </xs:annotation>
+      <xs:restriction base="xs:string">
+         <xs:enumeration value="valide">
+            <xs:annotation>
+               <xs:documentation> De revisie voldoet aan alle eisen die de LVBB er op dit moment
+                  aan stelt. </xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="niet-valide">
+            <xs:annotation>
+               <xs:documentation> De revisie voldoet niet aan de eisen die de LVBB er aan stelt.
+               </xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType name="ValidatieRevisieVoortgangCode">
+      <xs:annotation>
+         <xs:documentation> Code die aangeeft hoe ver de behandeling van een opdracht tot validatie van
+            een revisie is gevorderd. </xs:documentation>
+      </xs:annotation>
+      <xs:restriction base="xs:string">
+         <xs:enumeration value="validatie-voltooid">
+            <xs:annotation>
+               <xs:documentation> De validatie van de revisie is voltooid. </xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+      </xs:restriction>
+   </xs:simpleType>
+  
    <!--Antwoord voor opdracht voor een revisie-->
    <xs:element name="revisieVerzoekResultaat"
       type="lvbbt:RevisieVerzoekResultaatType">
