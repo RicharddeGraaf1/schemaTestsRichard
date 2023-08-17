@@ -21,6 +21,8 @@
    </xs:annotation>
    <xs:import namespace="https://standaarden.overheid.nl/stop/imop/data/"
       schemaLocation="https://raw.githubusercontent.com/RicharddeGraaf1/schemaTestsRichard/main/stop/2.0.0-rc/imop-data.xsd"/>
+   <!--gebruik deze voor echte 2.0.0-rc --><!--https://standaarden.overheid.nl/stop/2.0.0-rc/imop-data.xsd-->
+   <!--gebruik deze voor Richards 1.4.0 testjes--><!--https://raw.githubusercontent.com/RicharddeGraaf1/schemaTestsRichard/main/stop/2.0.0-rc/imop-data.xsd-->
    <xs:import namespace="https://standaarden.overheid.nl/stop/imop/tekst/"
       schemaLocation="https://standaarden.overheid.nl/stop/2.0.0-rc/imop-tekst.xsd"/>
    <xs:import namespace="http://www.opengis.net/se"

@@ -830,11 +830,11 @@
       </xs:annotation>
       <xs:complexType>
          <xs:sequence>
-            <xs:element maxOccurs="1" minOccurs="1" ref="data:gemaaktOp"/>
+            <!--<xs:element maxOccurs="1" minOccurs="1" ref="data:gemaaktOp"/>--> <!--aangepast-->
             <xs:element maxOccurs="1" minOccurs="0" ref="data:BeoogdeRegelgeving"/>
             <xs:element maxOccurs="1" minOccurs="0" ref="data:Intrekkingen"/>
             <xs:element maxOccurs="1" minOccurs="0" ref="data:Tijdstempels"/>
-            <xs:element maxOccurs="1" minOccurs="0" ref="data:Terugtrekkingen"/>
+            <xs:element maxOccurs="1" minOccurs="0" ref="data:Terugtrekkingen"/> <!--aangepast: toevoeging in 2.0, helemaal prima voor 1.4-test.-->
          </xs:sequence>
          <xs:attributeGroup ref="data:agSchemaVersie"/>
       </xs:complexType>
@@ -932,7 +932,7 @@
             <xs:element maxOccurs="1" minOccurs="1" ref="data:doel"/>
             <xs:element maxOccurs="1" minOccurs="1" ref="data:soortTijdstempel"/>
             <xs:element maxOccurs="1" minOccurs="1" ref="data:datum"/>
-            <xs:element maxOccurs="1" minOccurs="0" ref="data:eId"/>
+            <xs:element maxOccurs="1" minOccurs="1" ref="data:eId"/> <!--aangepast: verplicht gemaakt (minOcc=1), is het vanuit validaties toch, lijkt me alleen maar zinnig-->
          </xs:sequence>
       </xs:complexType>
    </xs:element>
@@ -1068,8 +1068,9 @@
    </xs:element>
    <xs:group name="mgBranch">
       <xs:sequence>
-         <xs:element maxOccurs="1" minOccurs="1" ref="data:doel"/>
-         <xs:element maxOccurs="1" minOccurs="1" ref="data:gemaaktOp"/>
+         <xs:element maxOccurs="1" minOccurs="1" ref="data:instrumentVersie"/> <!--aangepast, toegevoegd-->
+         <xs:element maxOccurs="1" minOccurs="1" ref="data:doel"/> <!--aangepast, weggehaald.-->
+         <xs:element maxOccurs="1" minOccurs="1" ref="data:gemaaktOp"/> <!--aangepast, weggehaald.-->
       </xs:sequence>
    </xs:group>
    <xs:element name="gemaaktOp" type="data:dtDateTimeUTC">
