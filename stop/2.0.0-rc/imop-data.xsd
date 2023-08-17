@@ -830,7 +830,7 @@
       </xs:annotation>
       <xs:complexType>
          <xs:sequence>
-            <xs:element maxOccurs="1" minOccurs="1" ref="data:gemaaktOp"/>
+            <xs:element maxOccurs="1" minOccurs="1" ref="data:gemaaktOpa"/>
             <xs:element maxOccurs="1" minOccurs="0" ref="data:BeoogdeRegelgeving"/>
             <xs:element maxOccurs="1" minOccurs="0" ref="data:Intrekkingen"/>
             <xs:element maxOccurs="1" minOccurs="0" ref="data:Tijdstempels"/>
@@ -1031,9 +1031,9 @@
          <xs:documentation source="https://koop.gitlab.io/STOP/voorinzage/standaard-preview-b/go/go.html?id=xsd:data:datum"/>
       </xs:annotation>
    </xs:element>
-   <xs:element name="gemaaktOpBasisVan">
+   <xs:element name="gemaaktOpaBasisVan">
       <xs:annotation>
-         <xs:documentation source="https://koop.gitlab.io/STOP/voorinzage/standaard-preview-b/go/go.html?id=xsd:data:gemaaktOpBasisVan"/>
+         <xs:documentation source="https://koop.gitlab.io/STOP/voorinzage/standaard-preview-b/go/go.html?id=xsd:data:gemaaktOpaBasisVan"/>
       </xs:annotation>
       <xs:complexType>
          <xs:sequence>
@@ -1069,12 +1069,12 @@
    <xs:group name="mgBranch">
       <xs:sequence>
          <xs:element maxOccurs="1" minOccurs="1" ref="data:doel"/>
-         <xs:element maxOccurs="1" minOccurs="1" ref="data:gemaaktOp"/>
+         <xs:element maxOccurs="1" minOccurs="1" ref="data:gemaaktOpa"/>
       </xs:sequence>
    </xs:group>
-   <xs:element name="gemaaktOp" type="data:dtDateTimeUTC">
+   <xs:element name="gemaaktOpa" type="data:dtDateTimeUTC">
       <xs:annotation>
-         <xs:documentation source="https://koop.gitlab.io/STOP/voorinzage/standaard-preview-b/go/go.html?id=xsd:data:gemaaktOp"/>
+         <xs:documentation source="https://koop.gitlab.io/STOP/voorinzage/standaard-preview-b/go/go.html?id=xsd:data:gemaaktOpa"/>
       </xs:annotation>
    </xs:element>
    <!--
@@ -1090,7 +1090,7 @@
       <xs:complexType>
          <xs:sequence>
             <xs:element maxOccurs="1" minOccurs="1" ref="data:doel"/>
-            <xs:element maxOccurs="1" minOccurs="1" ref="data:gemaaktOp"/>
+            <xs:element maxOccurs="1" minOccurs="1" ref="data:gemaaktOpa"/>
             <xs:element maxOccurs="1" minOccurs="0" ref="data:bevatWijzigingenVoor"/>
          </xs:sequence>
          <xs:attributeGroup ref="data:agSchemaVersie"/>
@@ -1115,7 +1115,7 @@
       <xs:complexType>
          <xs:sequence>
             <xs:element maxOccurs="1" minOccurs="1" ref="data:FRBRWork"/>
-            <xs:element maxOccurs="1" minOccurs="0" ref="data:gemaaktOpBasisVan"/>
+            <xs:element maxOccurs="1" minOccurs="0" ref="data:gemaaktOpaBasisVan"/>
          </xs:sequence>
       </xs:complexType>
    </xs:element>
@@ -1273,9 +1273,9 @@
             <xs:element maxOccurs="1" minOccurs="1" ref="data:instrument"/>
          </xs:choice>
          <xs:element maxOccurs="1" minOccurs="0" ref="data:eId"/>
-         <xs:element maxOccurs="1" minOccurs="0" name="gemaaktOpBasisVan">
+         <xs:element maxOccurs="1" minOccurs="0" name="gemaaktOpaBasisVan">
             <xs:annotation>
-               <xs:documentation source="https://koop.gitlab.io/STOP/voorinzage/standaard-preview-b/go/go.html?id=xsd:data:gemaaktOpBasisVan"/>
+               <xs:documentation source="https://koop.gitlab.io/STOP/voorinzage/standaard-preview-b/go/go.html?id=xsd:data:gemaaktOpaBasisVan"/>
             </xs:annotation>
             <xs:complexType>
                <xs:choice maxOccurs="unbounded" minOccurs="1">
@@ -1293,7 +1293,7 @@
          <xs:element maxOccurs="1" minOccurs="1" ref="data:doel"/>
          <xs:element maxOccurs="1" minOccurs="1" ref="data:instrument"/>
          <xs:element maxOccurs="1" minOccurs="1" ref="data:eId"/>
-         <xs:element maxOccurs="1" minOccurs="1" ref="data:gemaaktOpBasisVan"/>
+         <xs:element maxOccurs="1" minOccurs="1" ref="data:gemaaktOpaBasisVan"/>
       </xs:sequence>
    </xs:group>
    <xs:group name="mgIntrekkenTerugtrekkenEidOptioneel">
@@ -1302,7 +1302,7 @@
          <xs:element maxOccurs="1" minOccurs="1" ref="data:doel"/>
          <xs:element maxOccurs="1" minOccurs="1" ref="data:instrument"/>
          <xs:element maxOccurs="1" minOccurs="0" ref="data:eId"/>
-         <xs:element maxOccurs="1" minOccurs="1" ref="data:gemaaktOpBasisVan"/>
+         <xs:element maxOccurs="1" minOccurs="1" ref="data:gemaaktOpaBasisVan"/>
       </xs:sequence>
    </xs:group>
    <!-- datatypes -->
