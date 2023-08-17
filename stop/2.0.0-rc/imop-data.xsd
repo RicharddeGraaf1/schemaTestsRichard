@@ -891,7 +891,7 @@
          <xs:choice maxOccurs="unbounded" minOccurs="1">
             <xs:element ref="data:TerugtrekkingRegeling"/>
             <xs:element ref="data:TerugtrekkingInformatieobject"/>
-            <xs:element ref="data:TerugtrekkingTijdstempel"/>
+            <xs:element ref="data:TerugtrekkingTijdstempel"/> <!--waar is deze eigenlijk voor?-->
             <xs:element ref="data:TerugtrekkingIntrekking"/>
             <xs:element ref="data:TerugtrekkingMaterieelUitgewerkt"/>
          </xs:choice>

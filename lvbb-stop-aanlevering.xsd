@@ -74,6 +74,20 @@
          <xs:attributeGroup ref="lvbba:agSchemaversie"/>
       </xs:complexType>
    </xs:element>
+   <!--
+   AANLEVEREN REVISIE
+ -->
+   <xs:element name="AanleveringRevisie">
+      <xs:annotation>
+         <xs:documentation source="https://koop.gitlab.io/lvbb/bronhouderkoppelvlak/2.0.0-rc/go/go.html?id=xsd:lvbba:AanleveringRevisie"/>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element maxOccurs="1" minOccurs="1" ref="lvbba:RevisieVersie"/>
+         </xs:sequence>
+         <xs:attributeGroup ref="lvbba:agSchemaversie"/>
+      </xs:complexType>
+   
    <!-- 
     AANLEVEREN REGELINGVERSIE (RENVOOISERVICE)
   -->
@@ -147,6 +161,18 @@
          </xs:sequence>
       </xs:complexType>
    </xs:element>
+      <xs:element name="RevisieVersie">
+         <xs:annotation>
+            <xs:documentation source="https://koop.gitlab.io/lvbb/bronhouderkoppelvlak/2.0.0-rc/go/go.html?id=xsd:lvbba:RevisieVersie"/>
+         </xs:annotation>
+         <xs:complexType>
+            <xs:sequence>
+               <xs:element maxOccurs="1" minOccurs="1" ref="data:ExpressionIdentificatie"/> <!--wat ben ik?-->
+               <xs:element maxOccurs="1" minOccurs="1" ref="data:ConsolidatieInformatie"/>
+               <xs:element maxOccurs="1" minOccurs="1" ref="tekst:Tekstrevisie"/>
+            </xs:sequence>
+         </xs:complexType>
+      </xs:element>
    <xs:element name="RegelingVersieInformatie">
       <xs:annotation>
          <xs:documentation source="https://koop.gitlab.io/lvbb/bronhouderkoppelvlak/2.0.0-rc/go/go.html?id=xsd:lvbba:RegelingVersieInformatie"/>
