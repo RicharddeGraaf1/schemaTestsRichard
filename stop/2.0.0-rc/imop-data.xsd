@@ -958,7 +958,7 @@
          <xs:documentation source="https://koop.gitlab.io/STOP/voorinzage/standaard-preview-b/go/go.html?id=xsd:data:TerugtrekkingRegeling"/>
       </xs:annotation>
       <xs:complexType>
-         <xs:group ref="data:mgIntrekkenTerugtrekken"/>
+         <xs:group ref="data:mgIntrekkenTerugtrekkenEidOptioneel"/> <!--aangepast: dit moet volgens mij EidOptioneel zijn, want wat moet je invullen bij een revisie incl. terugtrekking dan heb je geen eId om naar te verwijzen?-->
       </xs:complexType>
    </xs:element>
    <xs:element name="TerugtrekkingInformatieobject">
@@ -1292,8 +1292,8 @@
       <xs:sequence>
          <xs:element maxOccurs="1" minOccurs="0" ref="data:bekendOp"/>
          <xs:element maxOccurs="1" minOccurs="1" ref="data:doel"/>
-         <xs:element maxOccurs="1" minOccurs="1" ref="data:instrumentVersie"/> <!--aangepast naar instrumentversie, want dat wordt bedoeld-->
-         <xs:element maxOccurs="1" minOccurs="0" ref="data:eId"/> <!--aangepast optioneel gemaakt want er hoeft niet altijd een identificatie te zijn waar je naar kunt verwijzen voor de grondslag van deze actie-->
+         <xs:element maxOccurs="1" minOccurs="1" ref="data:instrumentVersie"/> <!--aangepast naar instrumentversie, want dat wordt bedoeld denk ik-->
+         <xs:element maxOccurs="1" minOccurs="1" ref="data:eId"/> 
          <xs:element maxOccurs="1" minOccurs="1" ref="data:gemaaktOpBasisVan"/>
       </xs:sequence>
    </xs:group>
@@ -1301,7 +1301,7 @@
       <xs:sequence>
          <xs:element maxOccurs="1" minOccurs="0" ref="data:bekendOp"/>
          <xs:element maxOccurs="1" minOccurs="1" ref="data:doel"/>
-         <xs:element maxOccurs="1" minOccurs="1" ref="data:instrument"/>
+         <xs:element maxOccurs="1" minOccurs="1" ref="data:instrumentVersie"/> <!--aangepast naar instrumentversie, want dat wordt bedoeld denk ik-->
          <xs:element maxOccurs="1" minOccurs="0" ref="data:eId"/>
          <xs:element maxOccurs="1" minOccurs="1" ref="data:gemaaktOpBasisVan"/>
       </xs:sequence>
