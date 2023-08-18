@@ -190,6 +190,7 @@
       <xs:complexType>
          <xs:sequence>
             <xs:element maxOccurs="1" minOccurs="1" ref="data:ExpressionIdentificatie"/> <!--wat ben ik?-->
+            <xs:element maxOccurs="1" minOccurs="1" ref="data:MededelingMetadata"/>
             <xs:element maxOccurs="1" minOccurs="0" ref="data:ConsolidatieInformatie"/>
             <xs:element maxOccurs="1" minOccurs="1" ref="tekst:Tekstrevisie"/>
          </xs:sequence>
@@ -202,6 +203,7 @@
       <xs:complexType>
          <xs:sequence>
             <xs:element maxOccurs="1" minOccurs="1" ref="data:ExpressionIdentificatie"/>
+            <xs:element maxOccurs="1" minOccurs="1" ref="data:RectificatieMetadata"/>
             <xs:element maxOccurs="1" minOccurs="0" ref="data:ConsolidatieInformatie"/>
             <xs:element maxOccurs="1" minOccurs="1" ref="tekst:Rectificatie"/>
          </xs:sequence>
