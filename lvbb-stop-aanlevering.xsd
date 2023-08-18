@@ -74,6 +74,28 @@
          <xs:attributeGroup ref="lvbba:agSchemaversie"/>
       </xs:complexType>
    </xs:element>
+   <xs:element name="AanleveringMededeling">
+      <xs:annotation>
+         <xs:documentation source="https://koop.gitlab.io/lvbb/bronhouderkoppelvlak/2.0.0-rc/go/go.html?id=xsd:lvbba:AanleveringKennisgeving"/>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element maxOccurs="1" minOccurs="1" ref="lvbba:MededelingVersie"/>
+         </xs:sequence>
+         <xs:attributeGroup ref="lvbba:agSchemaversie"/>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="AanleveringRectificatie">
+      <xs:annotation>
+         <xs:documentation source="https://koop.gitlab.io/lvbb/bronhouderkoppelvlak/2.0.0-rc/go/go.html?id=xsd:lvbba:AanleveringKennisgeving"/>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element maxOccurs="1" minOccurs="1" ref="lvbba:RectificatieVersie"/>
+         </xs:sequence>
+         <xs:attributeGroup ref="lvbba:agSchemaversie"/>
+      </xs:complexType>
+   </xs:element>
    <!--
    AANLEVEREN REVISIE
  -->
@@ -158,6 +180,30 @@
             <xs:element maxOccurs="1" minOccurs="0" ref="data:InformatieObjectMetadata"/>
             <xs:element maxOccurs="1" minOccurs="0" ref="se:FeatureTypeStyle"/>
             <xs:element maxOccurs="1" minOccurs="0" ref="gio:JuridischeBorgingVan"/>
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="MededelingVersie">
+      <xs:annotation>
+         <xs:documentation source="https://koop.gitlab.io/lvbb/bronhouderkoppelvlak/2.0.0-rc/go/go.html?id=xsd:lvbba:MededelingVersie"/>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element maxOccurs="1" minOccurs="1" ref="data:ExpressionIdentificatie"/> <!--wat ben ik?-->
+            <xs:element maxOccurs="1" minOccurs="0" ref="data:ConsolidatieInformatie"/>
+            <xs:element maxOccurs="1" minOccurs="1" ref="tekst:Tekstrevisie"/>
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="RectificatieVersie">
+      <xs:annotation>
+         <xs:documentation source="https://koop.gitlab.io/lvbb/bronhouderkoppelvlak/2.0.0-rc/go/go.html?id=xsd:lvbba:RectificatieVersie"/>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element maxOccurs="1" minOccurs="1" ref="data:ExpressionIdentificatie"/>
+            <xs:element maxOccurs="1" minOccurs="0" ref="data:ConsolidatieInformatie"/>
+            <xs:element maxOccurs="1" minOccurs="1" ref="tekst:Rectificatie"/>
          </xs:sequence>
       </xs:complexType>
    </xs:element>
