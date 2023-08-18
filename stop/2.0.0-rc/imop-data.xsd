@@ -1292,8 +1292,8 @@
       <xs:sequence>
          <xs:element maxOccurs="1" minOccurs="0" ref="data:bekendOp"/>
          <xs:element maxOccurs="1" minOccurs="1" ref="data:doel"/>
-         <xs:element maxOccurs="1" minOccurs="1" ref="data:instrument"/>
-         <xs:element maxOccurs="1" minOccurs="1" ref="data:eId"/>
+         <xs:element maxOccurs="1" minOccurs="1" ref="data:instrumentVersie"/> <!--aangepast naar instrumentversie, want dat wordt bedoeld-->
+         <xs:element maxOccurs="1" minOccurs="0" ref="data:eId"/> <!--aangepast optioneel gemaakt want er hoeft niet altijd een identificatie te zijn waar je naar kunt verwijzen voor de grondslag van deze actie-->
          <xs:element maxOccurs="1" minOccurs="1" ref="data:gemaaktOpBasisVan"/>
       </xs:sequence>
    </xs:group>
@@ -1371,7 +1371,7 @@
    </xs:simpleType>
    <xs:simpleType name="wlSoortTijdstempel">
       <xs:restriction base="xs:token">
-         <xs:enumeration value="geldigVanaf"/>
+         <!--<xs:enumeration value="geldigVanaf"/>--> <!--aangepast, want niet nodig, mag ook niet aangeleverd worden-->
          <xs:enumeration value="juridischWerkendVanaf"/>
       </xs:restriction>
    </xs:simpleType>
