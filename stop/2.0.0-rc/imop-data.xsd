@@ -220,7 +220,7 @@
             <xs:element maxOccurs="1" minOccurs="1" ref="data:officieleTitel"/>
             <xs:element maxOccurs="1" minOccurs="1" ref="data:onderwerpen"/>
             <xs:element maxOccurs="1" minOccurs="0" ref="data:mededelingOver"/>
-            <xs:element maxOccurs="1" minOccurs="1" ref="data:soortKennisgeving"/>
+            <xs:element maxOccurs="1" minOccurs="0" ref="data:soortKennisgeving"/> <!--aangepast vanwege backwards compatibility-->
             <xs:element maxOccurs="1" minOccurs="0" ref="data:formatenKennisgeving"/>
          </xs:all>
          <xs:attributeGroup ref="data:agSchemaVersie"/>
