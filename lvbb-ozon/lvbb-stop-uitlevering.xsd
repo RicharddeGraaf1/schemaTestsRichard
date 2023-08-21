@@ -21,7 +21,7 @@
    <xs:import namespace="https://standaarden.overheid.nl/stop/imop/data/"
               schemaLocation="https://standaarden.overheid.nl/stop/2.0.0-rc/imop-data.xsd"/>
    <xs:import namespace="https://standaarden.overheid.nl/stop/imop/consolidatie/"
-              schemaLocation="https://standaarden.overheid.nl/stop/2.0.0-rc/imop-consolidatie.xsd"/>
+      schemaLocation="https://raw.githubusercontent.com/RicharddeGraaf1/schemaTestsRichard/main/stop/2.0.0-rc/imop-consolidatie.xsd"/>
    <xs:import namespace="https://standaarden.overheid.nl/stop/imop/tekst/"
               schemaLocation="https://standaarden.overheid.nl/stop/2.0.0-rc/imop-tekst.xsd"/>
    <xs:import namespace="http://www.opengis.net/se"
@@ -47,8 +47,9 @@
       <xs:complexType>
          <xs:sequence>
             <xs:element maxOccurs="1" minOccurs="1" ref="cons:ConsolidatieIdentificatie"/>
-            <xs:element maxOccurs="1" minOccurs="0" ref="cons:ActueleToestanden"/><!--aangepast was eerst Toestanden-->
-            <xs:element maxOccurs="1" minOccurs="0" ref="cons:CompleteToestanden"/> <!--aangepast nieuw-->
+            <xs:element maxOccurs="1" minOccurs="1" ref="cons:Toestanden"/> <!--EDIT2 toegevoegd--> 
+            <!--<xs:element maxOccurs="1" minOccurs="0" ref="cons:ActueleToestanden"/>--><!--aangepast was eerst Toestanden--> <!--EDIT2: weggehaald, misschien terug als we het een beter idee vinden.-->
+            <!--<xs:element maxOccurs="1" minOccurs="0" ref="cons:CompleteToestanden"/> --><!--aangepast nieuw--> <!--EDIT2: weggehaald, misschien terug als we het een beter idee vinden.-->
             <xs:element maxOccurs="1" minOccurs="0" ref="lvbbu:IntrekkingRegeling"/>
             <xs:choice>
                <xs:element maxOccurs="unbounded" minOccurs="0" ref="lvbbu:RegelingVersie"/>
