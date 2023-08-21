@@ -183,7 +183,7 @@
       <xs:complexType>
          <xs:all>
             <xs:element ref="cons:juridischWerkendOp"/>
-            <xs:element ref="cons:geldigOp"/>
+           <!-- <xs:element ref="cons:geldigOp"/>--> <!--EDIT weggehaald, want niet nodig-->
          </xs:all>
       </xs:complexType>
    </xs:element>
@@ -197,7 +197,7 @@
          </xs:sequence>
       </xs:complexType>
    </xs:element>
-   <xs:element name="geldigOp">
+  <!-- <xs:element name="geldigOp">
       <xs:annotation>
          <xs:documentation source="https://koop.gitlab.io/STOP/standaard/1.3.0/go/go.html?id=xsd:cons:geldigOp"/>
       </xs:annotation>
@@ -206,7 +206,7 @@
             <xs:element maxOccurs="unbounded" minOccurs="0" ref="cons:Periode"/>
          </xs:sequence>
       </xs:complexType>
-   </xs:element>
+   </xs:element>-->
    <xs:element name="Periode">
       <xs:annotation>
          <xs:documentation source="https://koop.gitlab.io/STOP/standaard/1.3.0/go/go.html?id=xsd:cons:Periode"/>
