@@ -3,7 +3,7 @@
                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                  schemaversie="2.0.0-rc"
                  xsi:schemaLocation="https://standaarden.overheid.nl/stop/imop/schemata/   https://standaarden.overheid.nl/stop/2.0.0-rc/imop-schemata.xsd">
-  <versie>1.5.versieB.0</versie>
+  <versie>1.6.0</versie>
   <Module>
     <localName>Consolidaties</localName>
     <namespace>https://standaarden.overheid.nl/lvbb/stop/uitlevering/</namespace>

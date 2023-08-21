@@ -8,10 +8,10 @@
            xmlns:xs="http://www.w3.org/2001/XMLSchema"
            elementFormDefault="qualified"
            targetNamespace="https://standaarden.overheid.nl/lvbb/stop/uitlevering/"
-           version="1.5.versieB.0">
+           version="1.6.0">
    <xs:annotation>
       <xs:documentation>LVBB-Uitlevering-schema</xs:documentation>
-      <xs:documentation>versie 1.5.versieB.0</xs:documentation>
+      <xs:documentation>versie 1.6.0</xs:documentation>
    </xs:annotation>
    <xs:annotation>
       <xs:appinfo>
