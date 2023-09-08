@@ -1292,7 +1292,7 @@
       <xs:sequence>
          <xs:element maxOccurs="1" minOccurs="0" ref="data:bekendOp"/>
          <xs:element maxOccurs="1" minOccurs="1" ref="data:doel"/>
-         <xs:element maxOccurs="1" minOccurs="1" ref="data:instrumentVersie"/> <!--aangepast naar instrumentversie, want dat wordt bedoeld denk ik-->
+         <xs:element maxOccurs="1" minOccurs="1" ref="data:instrument"/> 
          <xs:element maxOccurs="1" minOccurs="1" ref="data:eId"/> 
          <!--<xs:element maxOccurs="1" minOccurs="1" ref="data:gemaaktOpBasisVan"/>--> <!--aangepast, overbodig lijkt ons, voegt niets toe.-->
       </xs:sequence>
@@ -1301,9 +1301,9 @@
       <xs:sequence>
          <xs:element maxOccurs="1" minOccurs="0" ref="data:bekendOp"/>
          <xs:element maxOccurs="1" minOccurs="1" ref="data:doel"/>
-         <xs:element maxOccurs="1" minOccurs="1" ref="data:instrumentVersie"/> <!--aangepast naar instrumentversie, want dat wordt bedoeld denk ik-->
+         <xs:element maxOccurs="1" minOccurs="1" ref="data:instrument"/> 
          <xs:element maxOccurs="1" minOccurs="0" ref="data:eId"/>
-<!--         <xs:element maxOccurs="1" minOccurs="1" ref="data:gemaaktOpBasisVan"/>-->
+<!--         <xs:element maxOccurs="1" minOccurs="1" ref="data:gemaaktOpBasisVan"/>--> <!--aangepast-->
       </xs:sequence>
    </xs:group>
    <!-- datatypes -->
