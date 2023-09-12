@@ -890,8 +890,8 @@
       <xs:complexType>
          <xs:choice maxOccurs="unbounded" minOccurs="1">
             <xs:element ref="data:TerugtrekkingRegeling"/>
-            <xs:element ref="data:TerugtrekkingInformatieobject"/>
-            <xs:element ref="data:TerugtrekkingTijdstempel"/> <!--waar is deze eigenlijk voor?-->
+            <!--<xs:element ref="data:TerugtrekkingInformatieobject"/>--> <!--aangepast, weggehaald-->
+            <!--<xs:element ref="data:TerugtrekkingTijdstempel"/>--> <!--aangepast, weggehaald-->
             <xs:element ref="data:TerugtrekkingIntrekking"/>
             <xs:element ref="data:TerugtrekkingMaterieelUitgewerkt"/>
          </xs:choice>
@@ -919,7 +919,7 @@
          <xs:documentation source="https://koop.gitlab.io/STOP/voorinzage/standaard-preview-b/go/go.html?id=xsd:data:Intrekking"/>
       </xs:annotation>
       <xs:complexType>
-         <xs:group ref="data:mgIntrekkenTerugtrekkenEidOptioneel"/>
+         <xs:group ref="data:mgIntrekkenEidOptioneel"/>
       </xs:complexType>
    </xs:element>
    <xs:element name="Tijdstempel">
@@ -932,7 +932,7 @@
             <xs:element maxOccurs="1" minOccurs="1" ref="data:doel"/>
             <xs:element maxOccurs="1" minOccurs="1" ref="data:soortTijdstempel"/>
             <xs:element maxOccurs="1" minOccurs="1" ref="data:datum"/>
-            <xs:element maxOccurs="1" minOccurs="0" ref="data:eId"/> <!--aangepast: dacht eerst dat het verplicht moest zijn, moet toch niet, want revisie dan heb je geen eId-->
+            <xs:element maxOccurs="1" minOccurs="0" ref="data:eId"/>
          </xs:sequence>
       </xs:complexType>
    </xs:element>
@@ -958,23 +958,23 @@
          <xs:documentation source="https://koop.gitlab.io/STOP/voorinzage/standaard-preview-b/go/go.html?id=xsd:data:TerugtrekkingRegeling"/>
       </xs:annotation>
       <xs:complexType>
-         <xs:group ref="data:mgIntrekkenTerugtrekkenEidOptioneel"/> <!--aangepast: dit moet volgens mij EidOptioneel zijn, want wat moet je invullen bij een revisie incl. terugtrekking dan heb je geen eId om naar te verwijzen?-->
+         <xs:group ref="data:mgTerugtrekkenEidOptioneel"/> <!--aangepast: dit moet volgens mij EidOptioneel zijn, want wat moet je invullen bij een revisie incl. terugtrekking dan heb je geen eId om naar te verwijzen?-->
       </xs:complexType>
    </xs:element>
-   <xs:element name="TerugtrekkingInformatieobject">
+   <!--<xs:element name="TerugtrekkingInformatieobject">
       <xs:annotation>
          <xs:documentation source="https://koop.gitlab.io/STOP/voorinzage/standaard-preview-b/go/go.html?id=xsd:data:TerugtrekkingInformatieobject"/>
       </xs:annotation>
       <xs:complexType>
-         <xs:group ref="data:mgIntrekkenTerugtrekkenEidOptioneel"/>
+         <xs:group ref="data:mgTerugtrekkenEidOptioneel"/>
       </xs:complexType>
-   </xs:element>
+   </xs:element>-->
    <xs:element name="TerugtrekkingIntrekking">
       <xs:annotation>
          <xs:documentation source="https://koop.gitlab.io/STOP/voorinzage/standaard-preview-b/go/go.html?id=xsd:data:TerugtrekkingIntrekking"/>
       </xs:annotation>
       <xs:complexType>
-         <xs:group ref="data:mgIntrekkenTerugtrekkenEidOptioneel"/>
+         <xs:group ref="data:mgTerugtrekkenEidOptioneel"/>
       </xs:complexType>
    </xs:element>
    <xs:element name="TerugtrekkingMaterieelUitgewerkt">
@@ -987,7 +987,7 @@
          </xs:sequence>
       </xs:complexType>
    </xs:element>
-   <xs:element name="TerugtrekkingTijdstempel">
+<!--   <xs:element name="TerugtrekkingTijdstempel">
       <xs:annotation>
          <xs:documentation source="https://koop.gitlab.io/STOP/voorinzage/standaard-preview-b/go/go.html?id=xsd:data:TerugtrekkingTijdstempel"/>
       </xs:annotation>
@@ -999,7 +999,7 @@
             <xs:element maxOccurs="1" minOccurs="1" ref="data:eId"/>
          </xs:sequence>
       </xs:complexType>
-   </xs:element>
+   </xs:element>-->
    <!-- generieke elementen binnen ConsolidatieInformatie -->
    <xs:element name="doelen">
       <xs:annotation>
@@ -1288,7 +1288,7 @@
          </xs:element>
       </xs:sequence>
    </xs:group>
-   <xs:group name="mgIntrekkenTerugtrekken">
+   <xs:group name="mgIntrekken"> <!--aangepast, terugtrekken in een aparte, want je trekt instrumenten in, maar je trekt versies terug.-->
       <xs:sequence>
          <xs:element maxOccurs="1" minOccurs="0" ref="data:bekendOp"/>
          <xs:element maxOccurs="1" minOccurs="1" ref="data:doel"/>
@@ -1297,7 +1297,7 @@
          <!--<xs:element maxOccurs="1" minOccurs="1" ref="data:gemaaktOpBasisVan"/>--> <!--aangepast, overbodig lijkt ons, voegt niets toe.-->
       </xs:sequence>
    </xs:group>
-   <xs:group name="mgIntrekkenTerugtrekkenEidOptioneel">
+   <xs:group name="mgIntrekkenEidOptioneel"> <!--aangepast, terugtrekken in een aparte, want je trekt instrumenten in, maar je trekt versies terug.-->
       <xs:sequence>
          <xs:element maxOccurs="1" minOccurs="0" ref="data:bekendOp"/>
          <xs:element maxOccurs="1" minOccurs="1" ref="data:doel"/>
@@ -1306,6 +1306,24 @@
 <!--         <xs:element maxOccurs="1" minOccurs="1" ref="data:gemaaktOpBasisVan"/>--> <!--aangepast-->
       </xs:sequence>
    </xs:group>
+   <xs:group name="mgTerugtrekken"> <!--aangepast, terugtrekken in een aparte, want je trekt instrumenten in, maar je trekt versies terug.-->
+      <xs:sequence>
+         <xs:element maxOccurs="1" minOccurs="0" ref="data:bekendOp"/>
+         <xs:element maxOccurs="1" minOccurs="1" ref="data:doel"/>
+         <xs:element maxOccurs="1" minOccurs="1" ref="data:instrumentVersie"/> 
+         <xs:element maxOccurs="1" minOccurs="1" ref="data:eId"/> 
+         <!--<xs:element maxOccurs="1" minOccurs="1" ref="data:gemaaktOpBasisVan"/>--> <!--aangepast, overbodig lijkt ons, voegt niets toe.-->
+      </xs:sequence>
+   </xs:group>
+   <xs:group name="mgTerugtrekkenEidOptioneel"> <!--aangepast, terugtrekken in een aparte, want je trekt instrumenten in, maar je trekt versies terug.-->
+      <xs:sequence>
+         <xs:element maxOccurs="1" minOccurs="0" ref="data:bekendOp"/>
+         <xs:element maxOccurs="1" minOccurs="1" ref="data:doel"/>
+         <xs:element maxOccurs="1" minOccurs="1" ref="data:instrumentVersie"/> 
+         <xs:element maxOccurs="1" minOccurs="0" ref="data:eId"/>
+         <!--         <xs:element maxOccurs="1" minOccurs="1" ref="data:gemaaktOpBasisVan"/>--> <!--aangepast-->
+      </xs:sequence>
+   </xs:group>   
    <!-- datatypes -->
    <xs:simpleType name="dtSchemaVersie">
       <xs:restriction base="xs:token"/>
