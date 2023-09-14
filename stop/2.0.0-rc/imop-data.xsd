@@ -834,7 +834,7 @@
             <xs:element maxOccurs="1" minOccurs="0" ref="data:BeoogdeRegelgeving"/>
             <xs:element maxOccurs="1" minOccurs="0" ref="data:Intrekkingen"/>
             <xs:element maxOccurs="1" minOccurs="0" ref="data:Tijdstempels"/>
-            <xs:element maxOccurs="1" minOccurs="0" ref="data:Terugtrekkingen"/> <!--aangepast: toevoeging in 2.0, helemaal prima voor 1.4-test.-->
+            <xs:element maxOccurs="1" minOccurs="0" ref="data:Terugtrekkingen"/>
          </xs:sequence>
          <xs:attributeGroup ref="data:agSchemaVersie"/>
       </xs:complexType>
