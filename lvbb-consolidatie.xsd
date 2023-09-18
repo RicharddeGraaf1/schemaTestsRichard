@@ -87,7 +87,7 @@
          <xs:sequence>
             <xs:group ref="cons:mgContext"/>
             <xs:element maxOccurs="unbounded" minOccurs="0" ref="cons:BekendeToestand"/>
-            <xs:element maxOccurs="unbounded" minOccurs="0" ref="cons:Terugtrekkingen"/>
+            <xs:element maxOccurs="unbounded" minOccurs="0" ref="cons:ToestandTerugtrekking"/>
             <!--<xs:choice maxOccurs="unbounded" minOccurs="1">
                <xs:element ref="cons:BekendeToestand"/>
                <xs:element ref="cons:ToestandMetSamenloop"/> aangepast, niets met samenloop
@@ -107,7 +107,7 @@
          </xs:sequence>
       </xs:complexType>
    </xs:element>
-   <xs:element name="Terugtrekkingen">
+   <xs:element name="ToestandTerugtrekking">
       <xs:complexType>
           <xs:group ref="cons:mgTerugtrekkingConsolidatie"/>
       </xs:complexType>
