@@ -538,7 +538,9 @@
       </xs:sequence>
    </xs:group>
    <xs:element name="aanleverType" type="cons:wlaanleverType">
-      
+      <xs:annotation>
+         <xs:documentation source="lvbbLink-aanlevertype"/>
+      </xs:annotation>
    </xs:element>
    <xs:element name="bekendOp" type="xs:date">
       <xs:annotation>
