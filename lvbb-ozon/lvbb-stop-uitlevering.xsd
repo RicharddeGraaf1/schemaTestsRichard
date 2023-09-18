@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:cons="https://standaarden.overheid.nl/stop/imop/consolidatie/"
+<xs:schema xmlns:cons="http://www.overheid.nl/2017/lvbb/consolidatie"
            xmlns:data="https://standaarden.overheid.nl/stop/imop/data/"
            xmlns:imop="https://standaarden.overheid.nl/stop/imop/"
            xmlns:lvbbu="https://standaarden.overheid.nl/lvbb/stop/uitlevering/"
@@ -20,8 +20,8 @@
    </xs:annotation>
    <xs:import namespace="https://standaarden.overheid.nl/stop/imop/data/"
               schemaLocation="https://standaarden.overheid.nl/stop/2.0.0-rc/imop-data.xsd"/>
-   <xs:import namespace="https://standaarden.overheid.nl/stop/imop/consolidatie/"
-      schemaLocation="https://raw.githubusercontent.com/RicharddeGraaf1/schemaTestsRichard/main/stop/2.0.0-rc/imop-consolidatie.xsd"/>
+   <xs:import namespace="http://www.overheid.nl/2017/lvbb/consolidatie"
+      schemaLocation="https://raw.githubusercontent.com/RicharddeGraaf1/schemaTestsRichard/main/lvbb-consolidatie.xsd"/>
    <xs:import namespace="https://standaarden.overheid.nl/stop/imop/tekst/"
               schemaLocation="https://standaarden.overheid.nl/stop/2.0.0-rc/imop-tekst.xsd"/>
    <xs:import namespace="http://www.opengis.net/se"
