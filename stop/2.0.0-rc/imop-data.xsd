@@ -889,7 +889,7 @@
       </xs:annotation>
       <xs:complexType>
          <xs:choice maxOccurs="unbounded" minOccurs="1">
-            <xs:element ref="data:TerugtrekkingRegeling"/>
+            <xs:element ref="data:TerugtrekkingConsolidatie"/> <!--aangepast, naam gewijzigd-->
             <!--<xs:element ref="data:TerugtrekkingInformatieobject"/>--> <!--aangepast, weggehaald-->
             <!--<xs:element ref="data:TerugtrekkingTijdstempel"/>--> <!--aangepast, weggehaald-->
             <xs:element ref="data:TerugtrekkingIntrekking"/>
@@ -953,9 +953,9 @@
       </xs:annotation>
    </xs:element>
    <!-- terugtrekkingen -->
-   <xs:element name="TerugtrekkingRegeling">
+   <xs:element name="TerugtrekkingConsolidatie"> <!--aangepast, naam gewijzigd-->
       <xs:annotation>
-         <xs:documentation source="https://koop.gitlab.io/STOP/voorinzage/standaard-preview-b/go/go.html?id=xsd:data:TerugtrekkingRegeling"/>
+         <xs:documentation source="https://koop.gitlab.io/STOP/voorinzage/standaard-preview-b/go/go.html?id=xsd:data:TerugtrekkingConsolidatie"/>
       </xs:annotation>
       <xs:complexType>
          <xs:group ref="data:mgTerugtrekkenEidOptioneel"/> <!--aangepast: dit moet volgens mij EidOptioneel zijn, want wat moet je invullen bij een revisie incl. terugtrekking dan heb je geen eId om naar te verwijzen?-->

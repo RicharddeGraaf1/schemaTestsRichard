@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:lvbbt="http://www.overheid.nl/2017/lvbb"
+<xs:schema xmlns:lvbbt="http://www.overheid.nl/2017/lvbb/transport"
            xmlns:stop="http://www.overheid.nl/2017/stop"
            xmlns:tns="http://www.logius.nl/digikoppeling/gb/2010/10"
            xmlns:xs="http://www.w3.org/2001/XMLSchema"
            elementFormDefault="qualified"
-           targetNamespace="http://www.overheid.nl/2017/lvbb"
+           targetNamespace="http://www.overheid.nl/2017/lvbb/transport"
            version="2.0.0-rc">
    <xs:annotation>
       <xs:documentation>LVBB-Transport-schema</xs:documentation>

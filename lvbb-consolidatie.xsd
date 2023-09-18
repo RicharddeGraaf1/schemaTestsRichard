@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:cons="https://standaarden.overheid.nl/stop/imop/consolidatie/"
+<xs:schema xmlns:cons="http://www.overheid.nl/2017/lvbb/consolidatie"
            xmlns:xs="http://www.w3.org/2001/XMLSchema"
            elementFormDefault="qualified"
-           targetNamespace="https://standaarden.overheid.nl/stop/imop/consolidatie/"
+           targetNamespace="http://www.overheid.nl/2017/lvbb/consolidatie"
            version="1.3.0">
    <xs:annotation>
-      <xs:documentation>"consolidatie-schema" van STOP. </xs:documentation>
-      <xs:documentation>Dit schema definieert de elementen voor de STOP-modules voor consolidaties</xs:documentation>
+      <xs:documentation>"consolidatie-schema" van LVBB. </xs:documentation>
+      <xs:documentation>Dit schema definieert de elementen voor de LVBB-modules voor consolidaties</xs:documentation>
       <xs:documentation>versie 1.3.0</xs:documentation>
    </xs:annotation>
    <!--
@@ -106,6 +106,11 @@
          </xs:sequence>
       </xs:complexType>
    </xs:element>
+   <xs:element name="Terugtrekkingen">
+      <xs:complexType>
+          <xs:group ref="cons:mgTerugtrekkingConsolidatie"/>
+      </xs:complexType>
+   </xs:element>
 <!--   <xs:element name="ToestandMetSamenloop"> aangepast, niets met samenloop
       <xs:annotation>
          <xs:documentation source="https://koop.gitlab.io/STOP/standaard/1.3.0/go/go.html?id=xsd:cons:ToestandMetSamenloop"/>
@@ -121,6 +126,25 @@
          <xs:element maxOccurs="1" minOccurs="1" ref="cons:FRBRExpression"/>
          <xs:element maxOccurs="unbounded" minOccurs="1" ref="cons:gerealiseerdeDoelen"/>
          <xs:element maxOccurs="1" minOccurs="1" ref="cons:geldigheid"/>
+         <xs:element maxOccurs="1" minOccurs="0" ref="cons:aanleverType"/>
+      </xs:sequence>
+   </xs:group>
+   <xs:group name="mgTerugtrekkingConsolidatie"> <!--aangepast, toegevoegd-->
+      <xs:sequence>
+         <xs:element maxOccurs="1" minOccurs="1" ref="cons:doel"/>
+         <xs:element maxOccurs="1" minOccurs="1" ref="cons:instrumentVersie"/> 
+      </xs:sequence>
+   </xs:group>
+   
+   <!--Regelingversies beïnvloed door Mededeling-->
+   <xs:element name="MededelingVerwerking">
+      <xs:complexType>
+         <xs:group ref="cons:mgRegelingversiesGeraaktDoorMededeling"/>
+      </xs:complexType>
+   </xs:element>
+   <xs:group name="mgRegelingversiesGeraaktDoorMededeling">
+      <xs:sequence>
+         <xs:element ref="cons:instrumentVersie"></xs:element>
       </xs:sequence>
    </xs:group>
    <xs:element name="Proefversies">
@@ -502,6 +526,12 @@
          <xs:documentation source="https://koop.gitlab.io/STOP/standaard/1.3.0/go/go.html?id=xsd:cons:url"/>
       </xs:annotation>
    </xs:element>
+    <xs:element name="aanleverType" type="xs:string"> <!--aangepast toegevoegd-->
+        <xs:annotation>
+            <xs:documentation source="bhkv-locatie:aanleverType"></xs:documentation>
+        </xs:annotation>
+    </xs:element>
+  
    <!-- mg -->
    <xs:group name="mgContext">
       <xs:sequence>
