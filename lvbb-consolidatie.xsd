@@ -86,7 +86,8 @@
       <xs:complexType>
          <xs:sequence>
             <xs:group ref="cons:mgContext"/>
-            <xs:element maxOccurs="unbounded" minOccurs="1" ref="cons:BekendeToestand"/>
+            <xs:element maxOccurs="unbounded" minOccurs="0" ref="cons:BekendeToestand"/>
+            <xs:element maxOccurs="unbounded" minOccurs="0" ref="cons:Terugtrekkingen"/>
             <!--<xs:choice maxOccurs="unbounded" minOccurs="1">
                <xs:element ref="cons:BekendeToestand"/>
                <xs:element ref="cons:ToestandMetSamenloop"/> aangepast, niets met samenloop
@@ -144,7 +145,8 @@
    </xs:element>
    <xs:group name="mgRegelingversiesGeraaktDoorMededeling">
       <xs:sequence>
-         <xs:element ref="cons:instrumentVersie"></xs:element>
+         <xs:element name="soortMededeling" minOccurs="1" maxOccurs="1"></xs:element>
+         <xs:element ref="cons:instrumentVersie" minOccurs="1" maxOccurs="1"></xs:element>
       </xs:sequence>
    </xs:group>
    <xs:element name="Proefversies">
