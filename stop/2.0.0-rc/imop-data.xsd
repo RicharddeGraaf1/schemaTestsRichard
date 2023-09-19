@@ -1308,8 +1308,7 @@
    </xs:group>
    <xs:group name="mgTerugtrekken"> <!--aangepast, terugtrekken in een aparte, want je trekt instrumenten in, maar je trekt versies terug.-->
       <xs:sequence>
-         <xs:element maxOccurs="1" minOccurs="0" ref="data:bekendOp"/>
-         <xs:element maxOccurs="1" minOccurs="1" ref="data:doel"/>
+         <xs:element maxOccurs="1" minOccurs="0" ref="data:bekendOp"/> <!--aangepast doel weggegooid-->
          <xs:element maxOccurs="1" minOccurs="1" ref="data:instrumentVersie"/> 
          <xs:element maxOccurs="1" minOccurs="1" ref="data:eId"/> 
          <!--<xs:element maxOccurs="1" minOccurs="1" ref="data:gemaaktOpBasisVan"/>--> <!--aangepast, overbodig lijkt ons, voegt niets toe.-->
@@ -1317,8 +1316,7 @@
    </xs:group>
    <xs:group name="mgTerugtrekkenEidOptioneel"> <!--aangepast, terugtrekken in een aparte, want je trekt instrumenten in, maar je trekt versies terug.-->
       <xs:sequence>
-         <xs:element maxOccurs="1" minOccurs="0" ref="data:bekendOp"/>
-         <xs:element maxOccurs="1" minOccurs="1" ref="data:doel"/>
+         <xs:element maxOccurs="1" minOccurs="0" ref="data:bekendOp"/> <!--aangepast doel weggegooid-->
          <xs:element maxOccurs="1" minOccurs="1" ref="data:instrumentVersie"/> 
          <xs:element maxOccurs="1" minOccurs="0" ref="data:eId"/>
          <!--         <xs:element maxOccurs="1" minOccurs="1" ref="data:gemaaktOpBasisVan"/>--> <!--aangepast-->
