@@ -302,10 +302,21 @@
          <xs:documentation source="https://koop.gitlab.io/STOP/voorinzage/standaard-preview-b/go/go.html?id=xsd:data:soortPublicatie"/>
       </xs:annotation>
    </xs:element>
-   <xs:element name="soortKennisgeving" type="data:dtWaardeRef">
+   <xs:element name="soortKennisgeving" default="KennisgevingBesluittermijnen">
       <xs:annotation>
          <xs:documentation source="https://koop.gitlab.io/STOP/voorinzage/standaard-preview-b/go/go.html?id=xsd:data:soortKennisgeving"/>
       </xs:annotation>
+      <xs:simpleType>
+         <xs:restriction base="xs:token">
+            <xs:enumeration value="KennisgevingBesluittermijnen"/>
+            <xs:enumeration value="KennisgevingVoorgenomenBesluit"/>
+            <!--<xs:enumeration value="KennisgevingUitspraakRechter"/>--> <!--weggehaald, want mag niet.-->
+            <xs:enumeration value="KennisgevingVoorontwerp"/>
+            <xs:enumeration value="KennisgevingTerinzageleggingOpDeZaakBetrekkingHebbendeStukken"/>
+            <xs:enumeration value="KennisgevingParticipatie"/>
+            <xs:enumeration value="KennisgevingTerinzageleggingOntwerpVoorkeursbeslissing"/>
+         </xs:restriction>
+      </xs:simpleType>
    </xs:element>
    <xs:element name="soortMededeling" type="data:dtWaardeRef">
       <xs:annotation>
