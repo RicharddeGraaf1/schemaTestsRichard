@@ -89,7 +89,7 @@
          <xs:pattern value="[0-9A-z][0-9A-z_-]+"/>
       </xs:restriction>
    </xs:simpleType>
-   <xs:element name="validatieGBVerzoek" type="lvbbt:LeveringGBVerzoekType">
+<!--    <xs:element name="validatieGBVerzoek" type="lvbbt:LeveringGBVerzoekType">
       <xs:annotation>
          <xs:documentation source="https://koop.gitlab.io/lvbb/bronhouderkoppelvlak/2.0.0-rc/go/go.html?id=xsd:lvbbt:validatieGBVerzoek"/>
       </xs:annotation>
@@ -125,7 +125,7 @@
             </xs:sequence>
          </xs:extension>
       </xs:complexContent>
-   </xs:complexType>
+   </xs:complexType> -->
    <xs:complexType name="SoftwareVersieType">
       <xs:annotation>
          <xs:documentation source="https://koop.gitlab.io/lvbb/bronhouderkoppelvlak/2.0.0-rc/go/go.html?id=xsd:lvbbt:SoftwareVersieType"/>
