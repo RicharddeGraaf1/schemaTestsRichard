@@ -24,11 +24,11 @@
    <!--gebruik deze voor echte 2.0.0-rc --><!--https://standaarden.overheid.nl/stop/2.0.0-rc/imop-data.xsd-->
    <!--gebruik deze voor Richards 1.4.0 testjes--><!--https://raw.githubusercontent.com/RicharddeGraaf1/schemaTestsRichard/main/stop/2.0.0-rc/imop-data.xsd-->
    <xs:import namespace="https://standaarden.overheid.nl/stop/imop/tekst/"
-      schemaLocation="https://standaarden.overheid.nl/stop/2.0.0-rc/imop-tekst.xsd"/>
+      schemaLocation="https://standaarden.overheid.nl/stop/1.4.0-ic/imop-tekst.xsd"/>
    <xs:import namespace="http://www.opengis.net/se"
-      schemaLocation="https://standaarden.overheid.nl/stop/2.0.0-rc/se-FeatureStyle-imop.xsd"/>
+      schemaLocation="https://standaarden.overheid.nl/stop/1.4.0-ic/se-FeatureStyle-imop.xsd"/>
    <xs:import namespace="https://standaarden.overheid.nl/stop/imop/gio/"
-              schemaLocation="https://standaarden.overheid.nl/stop/2.0.0-rc/imop-gio.xsd"/>
+      schemaLocation="https://standaarden.overheid.nl/stop/1.4.0-ic/imop-gio.xsd"/>
    <!--
     AANLEVEREN BESLUIT
   -->
