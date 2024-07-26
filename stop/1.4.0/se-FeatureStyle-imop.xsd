@@ -5,7 +5,7 @@
   <!-- This version of se/1.1.0 was previously versioned as '1.1.1' . -->
 
   <xsd:import namespace="http://www.opengis.net/ogc"
-    schemaLocation="https://standaarden.overheid.nl/stop/1.4.0/se-filter-imop.xsd" />
+    schemaLocation="https://raw.githubusercontent.com/RicharddeGraaf1/schemaTestsRichard/main/stop/1.4.0/se-filter-imop.xsd" />
   <!-- *********************************************************************** -->
   <xsd:annotation>
     <xsd:documentation source="@@@DOCUMENTATIE_URL@@@go/goto.html?to=stop&amp;id=xsd:se"> 
