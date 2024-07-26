@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:cons="http://www.overheid.nl/2017/lvbb/consolidatie"
-           xmlns:data="https://standaarden.overheid.nl/stop/imop/data/"
-           xmlns:imop="https://standaarden.overheid.nl/stop/imop/"
-           xmlns:lvbbu="https://standaarden.overheid.nl/lvbb/stop/uitlevering/"
-           xmlns:se="http://www.opengis.net/se"
-           xmlns:tekst="https://standaarden.overheid.nl/stop/imop/tekst/"
-           xmlns:xs="http://www.w3.org/2001/XMLSchema"
-           elementFormDefault="qualified"
-           targetNamespace="https://standaarden.overheid.nl/lvbb/stop/uitlevering/"
-           version="1.6.0">
+   xmlns:data="https://standaarden.overheid.nl/stop/imop/data/"
+   xmlns:imop="https://standaarden.overheid.nl/stop/imop/"
+   xmlns:lvbbu="https://standaarden.overheid.nl/lvbb/stop/uitlevering/"
+   xmlns:se="http://www.opengis.net/se"
+   xmlns:tekst="https://standaarden.overheid.nl/stop/imop/tekst/"
+   xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
+   targetNamespace="https://standaarden.overheid.nl/lvbb/stop/uitlevering/" version="1.6.0">
    <xs:annotation>
       <xs:documentation>LVBB-Uitlevering-schema</xs:documentation>
       <xs:documentation>versie 1.6.0</xs:documentation>
@@ -19,19 +17,20 @@
       </xs:appinfo>
    </xs:annotation>
    <xs:import namespace="https://standaarden.overheid.nl/stop/imop/data/"
-              schemaLocation="https://standaarden.overheid.nl/stop/2.0.0-rc/imop-data.xsd"/>
+      schemaLocation="https://standaarden.overheid.nl/stop/2.0.0-rc/imop-data.xsd"/>
    <xs:import namespace="http://www.overheid.nl/2017/lvbb/consolidatie"
       schemaLocation="https://raw.githubusercontent.com/RicharddeGraaf1/schemaTestsRichard/main/lvbb-consolidatie.xsd"/>
    <xs:import namespace="https://standaarden.overheid.nl/stop/imop/tekst/"
-              schemaLocation="https://standaarden.overheid.nl/stop/2.0.0-rc/imop-tekst.xsd"/>
+      schemaLocation="https://standaarden.overheid.nl/stop/2.0.0-rc/imop-tekst.xsd"/>
    <xs:import namespace="http://www.opengis.net/se"
-              schemaLocation="https://standaarden.overheid.nl/stop/2.0.0-rc/se-FeatureStyle-imop.xsd"/>
+      schemaLocation="https://standaarden.overheid.nl/stop/2.0.0-rc/se-FeatureStyle-imop.xsd"/>
    <!--
     UITLEVEREN CONSOLIDATIE MET TOESTANDEN 
   -->
    <xs:element name="Consolidaties">
       <xs:annotation>
-         <xs:documentation source="https://koop.gitlab.io/lvbb/lvbb-ozon/go/go.html?id=xsd:lvbbu:Consolidaties"/>
+         <xs:documentation
+            source="https://koop.gitlab.io/lvbb/lvbb-ozon/go/go.html?id=xsd:lvbbu:Consolidaties"/>
       </xs:annotation>
       <xs:complexType>
          <xs:sequence>
@@ -42,30 +41,34 @@
    </xs:element>
    <xs:element name="Consolidatie">
       <xs:annotation>
-         <xs:documentation source="https://koop.gitlab.io/lvbb/lvbb-ozon/go/go.html?id=xsd:lvbbu:Consolidatie"/>
+         <xs:documentation
+            source="https://koop.gitlab.io/lvbb/lvbb-ozon/go/go.html?id=xsd:lvbbu:Consolidatie"/>
       </xs:annotation>
       <xs:complexType>
          <xs:sequence>
             <xs:element maxOccurs="1" minOccurs="1" ref="cons:ConsolidatieIdentificatie"/>
-            <xs:element maxOccurs="1" minOccurs="1" ref="cons:Toestanden"/> <!--EDIT2 toegevoegd--> 
-            <!--<xs:element maxOccurs="1" minOccurs="0" ref="cons:ActueleToestanden"/>--><!--aangepast was eerst Toestanden--> <!--EDIT2: weggehaald, misschien terug als we het een beter idee vinden.-->
-            <!--<xs:element maxOccurs="1" minOccurs="0" ref="cons:CompleteToestanden"/> --><!--aangepast nieuw--> <!--EDIT2: weggehaald, misschien terug als we het een beter idee vinden.-->
+            <xs:element maxOccurs="1" minOccurs="1" ref="cons:Toestanden"/>
+            <!--EDIT2 toegevoegd-->
+            <!--<xs:element maxOccurs="1" minOccurs="0" ref="cons:ActueleToestanden"/>-->
+            <!--aangepast was eerst Toestanden-->
+            <!--EDIT2: weggehaald, misschien terug als we het een beter idee vinden.-->
+            <!--<xs:element maxOccurs="1" minOccurs="0" ref="cons:CompleteToestanden"/> -->
+            <!--aangepast nieuw-->
+            <!--EDIT2: weggehaald, misschien terug als we het een beter idee vinden.-->
             <xs:element maxOccurs="1" minOccurs="0" ref="lvbbu:IntrekkingRegeling"/>
             <xs:choice>
                <xs:element maxOccurs="unbounded" minOccurs="0" ref="lvbbu:RegelingVersie"/>
-               <xs:element maxOccurs="unbounded"
-                           minOccurs="0"
-                           ref="lvbbu:InformatieObjectVersie"/>
+               <xs:element maxOccurs="unbounded" minOccurs="0" ref="lvbbu:InformatieObjectVersie"/>
             </xs:choice>
-            <xs:element maxOccurs="unbounded"
-                        minOccurs="0"
-                        ref="lvbbu:AnnotatieBijToestand"/>
+            <xs:element maxOccurs="unbounded" minOccurs="0" ref="lvbbu:AnnotatieBijToestand"/>
          </xs:sequence>
       </xs:complexType>
    </xs:element>
    <xs:element name="WettechnischeInformatie">
       <xs:annotation>
-         <xs:documentation source="https://koop.gitlab.io/lvbb/lvbb-ozon/go/go.html?id=xsd:lvbbu:WettechnischeInformatie"/>
+         <xs:documentation
+            source="https://koop.gitlab.io/lvbb/lvbb-ozon/go/go.html?id=xsd:lvbbu:WettechnischeInformatie"
+         />
       </xs:annotation>
       <xs:complexType>
          <xs:sequence>
@@ -80,11 +83,12 @@
          <xs:attribute name="schemaversie" type="lvbbu:dtSchemaVersie" use="required"/>
       </xs:complexType>
    </xs:element>
-   
+
    <!--SYNCHRONISATIE INTREKKING REGELING - BEËINDIGING OW-OBJECTEN IN RELEASE A-->
    <xs:element name="Proefversies">
       <xs:annotation>
-         <xs:documentation source="https://koop.gitlab.io/lvbb/lvbb-ozon/go/go.html?id=xsd:lvbbu:Proefversies"/>
+         <xs:documentation
+            source="https://koop.gitlab.io/lvbb/lvbb-ozon/go/go.html?id=xsd:lvbbu:Proefversies"/>
       </xs:annotation>
       <xs:complexType>
          <xs:sequence>
@@ -96,11 +100,13 @@
    </xs:element>
    <xs:element name="Proefversie">
       <xs:annotation>
-         <xs:documentation source="https://koop.gitlab.io/lvbb/lvbb-ozon/go/go.html?id=xsd:lvbbu:Proefversie"/>
+         <xs:documentation
+            source="https://koop.gitlab.io/lvbb/lvbb-ozon/go/go.html?id=xsd:lvbbu:Proefversie"/>
       </xs:annotation>
       <xs:complexType>
          <xs:sequence>
-            <!--<xs:element ref="cons:gerealiseerdeDoelen"/>--> <!--uitgecomment want bestaat niet meer.-->
+            <!--<xs:element ref="cons:gerealiseerdeDoelen"/>-->
+            <!--uitgecomment want bestaat niet meer.-->
             <xs:element ref="cons:doel"/>
             <xs:element minOccurs="1" ref="cons:instrumentVersie"/>
             <xs:element minOccurs="0" ref="lvbbu:IntrekkingRegeling"/>
@@ -109,7 +115,9 @@
    </xs:element>
    <xs:element name="IntrekkingRegeling">
       <xs:annotation>
-         <xs:documentation source="https://koop.gitlab.io/lvbb/lvbb-ozon/go/go.html?id=xsd:lvbbu:IntrekkingRegeling"/>
+         <xs:documentation
+            source="https://koop.gitlab.io/lvbb/lvbb-ozon/go/go.html?id=xsd:lvbbu:IntrekkingRegeling"
+         />
       </xs:annotation>
       <xs:complexType>
          <xs:sequence>
@@ -118,11 +126,13 @@
          </xs:sequence>
       </xs:complexType>
    </xs:element>
-   
+
    <!--UITLEVEREN PROEFVERSIE-->
    <xs:element name="UitleveringProefversieBesluit">
       <xs:annotation>
-         <xs:documentation source="https://koop.gitlab.io/lvbb/lvbb-ozon/go/go.html?id=xsd:lvbbu:UitleveringProefversieBesluit"/>
+         <xs:documentation
+            source="https://koop.gitlab.io/lvbb/lvbb-ozon/go/go.html?id=xsd:lvbbu:UitleveringProefversieBesluit"
+         />
       </xs:annotation>
       <xs:complexType>
          <xs:sequence>
@@ -135,22 +145,19 @@
             </xs:choice>
             <xs:sequence>
                <xs:element maxOccurs="unbounded" minOccurs="0" ref="lvbbu:RegelingVersie"/>
-               <xs:element maxOccurs="unbounded"
-                           minOccurs="0"
-                           ref="lvbbu:InformatieObjectVersie"/>
+               <xs:element maxOccurs="unbounded" minOccurs="0" ref="lvbbu:InformatieObjectVersie"/>
             </xs:sequence>
-            <xs:element maxOccurs="unbounded"
-                        minOccurs="0"
-                        ref="lvbbu:AnnotatieBijProefversie"/>
+            <xs:element maxOccurs="unbounded" minOccurs="0" ref="lvbbu:AnnotatieBijProefversie"/>
          </xs:sequence>
          <xs:attribute name="schemaversie" type="lvbbu:dtSchemaVersie" use="required"/>
       </xs:complexType>
    </xs:element>
-   
+
    <!--INSTRUMENTSPECIFIEKE INCLUSIES-->
    <xs:element name="RegelingVersie">
       <xs:annotation>
-         <xs:documentation source="https://koop.gitlab.io/lvbb/lvbb-ozon/go/go.html?id=xsd:lvbbu:RegelingVersie"/>
+         <xs:documentation
+            source="https://koop.gitlab.io/lvbb/lvbb-ozon/go/go.html?id=xsd:lvbbu:RegelingVersie"/>
       </xs:annotation>
       <xs:complexType>
          <xs:sequence>
@@ -168,7 +175,9 @@
    </xs:element>
    <xs:element name="RegelingVersieInformatie">
       <xs:annotation>
-         <xs:documentation source="https://koop.gitlab.io/lvbb/lvbb-ozon/go/go.html?id=xsd:lvbbu:RegelingVersieInformatie"/>
+         <xs:documentation
+            source="https://koop.gitlab.io/lvbb/lvbb-ozon/go/go.html?id=xsd:lvbbu:RegelingVersieInformatie"
+         />
       </xs:annotation>
       <xs:complexType>
          <xs:group ref="lvbbu:mgRegelingVersieInformatie"/>
@@ -182,21 +191,23 @@
    </xs:group>
    <xs:element name="InformatieObjectVersie">
       <xs:annotation>
-         <xs:documentation source="https://koop.gitlab.io/lvbb/lvbb-ozon/go/go.html?id=xsd:lvbbu:InformatieObjectVersie"/>
+         <xs:documentation
+            source="https://koop.gitlab.io/lvbb/lvbb-ozon/go/go.html?id=xsd:lvbbu:InformatieObjectVersie"
+         />
       </xs:annotation>
       <xs:complexType>
          <xs:sequence>
             <xs:element maxOccurs="1" minOccurs="1" ref="data:ExpressionIdentificatie"/>
-            <xs:element maxOccurs="1"
-                        minOccurs="0"
-                        ref="data:InformatieObjectVersieMetadata"/>
+            <xs:element maxOccurs="1" minOccurs="0" ref="data:InformatieObjectVersieMetadata"/>
          </xs:sequence>
          <xs:attribute name="schemaversie" type="lvbbu:dtSchemaVersie" use="optional"/>
       </xs:complexType>
    </xs:element>
    <xs:element name="AnnotatieBijToestand">
       <xs:annotation>
-         <xs:documentation source="https://koop.gitlab.io/lvbb/lvbb-ozon/go/go.html?id=xsd:lvbbu:AnnotatieBijToestand"/>
+         <xs:documentation
+            source="https://koop.gitlab.io/lvbb/lvbb-ozon/go/go.html?id=xsd:lvbbu:AnnotatieBijToestand"
+         />
       </xs:annotation>
       <xs:complexType>
          <xs:sequence>
@@ -212,7 +223,9 @@
    </xs:element>
    <xs:element name="AnnotatieBijProefversie">
       <xs:annotation>
-         <xs:documentation source="https://koop.gitlab.io/lvbb/lvbb-ozon/go/go.html?id=xsd:lvbbu:AnnotatieBijProefversie"/>
+         <xs:documentation
+            source="https://koop.gitlab.io/lvbb/lvbb-ozon/go/go.html?id=xsd:lvbbu:AnnotatieBijProefversie"
+         />
       </xs:annotation>
       <xs:complexType>
          <xs:sequence>
@@ -228,19 +241,20 @@
    </xs:element>
    <xs:element name="Verwijzingen">
       <xs:annotation>
-         <xs:documentation source="https://koop.gitlab.io/lvbb/lvbb-ozon/go/go.html?id=xsd:lvbbu:Verwijzingen"/>
+         <xs:documentation
+            source="https://koop.gitlab.io/lvbb/lvbb-ozon/go/go.html?id=xsd:lvbbu:Verwijzingen"/>
       </xs:annotation>
       <xs:complexType>
          <xs:sequence>
-            <xs:element minOccurs="1"
-                        maxOccurs="unbounded"
-                        ref="lvbbu:InformatieObjectInTekst"/>
+            <xs:element minOccurs="1" maxOccurs="unbounded" ref="lvbbu:InformatieObjectInTekst"/>
          </xs:sequence>
       </xs:complexType>
    </xs:element>
    <xs:element name="InformatieObjectInTekst">
       <xs:annotation>
-         <xs:documentation source="https://koop.gitlab.io/lvbb/lvbb-ozon/go/go.html?id=xsd:lvbbu:InformatieObjectInTekst"/>
+         <xs:documentation
+            source="https://koop.gitlab.io/lvbb/lvbb-ozon/go/go.html?id=xsd:lvbbu:InformatieObjectInTekst"
+         />
       </xs:annotation>
       <xs:complexType>
          <xs:sequence>
@@ -250,82 +264,86 @@
          </xs:sequence>
       </xs:complexType>
    </xs:element>
-   
+
    <!--UITLEVEREN PROCEDUREVERLOOP-->
-   
+
    <xs:element name="UitleveringProcedureverloop">
       <xs:complexType>
          <xs:sequence>
 
-               <xs:element maxOccurs="1" minOccurs="1" ref="lvbbu:BesluitBijProcedureverloop"/>
-               <xs:element maxOccurs="1" minOccurs="0" ref="lvbbu:KennisgevingBijProcedureverloop"/>
-               <xs:element maxOccurs="1" minOccurs="1" ref="data:Procedureverloop"/>
-            
+            <xs:element maxOccurs="1" minOccurs="1" ref="lvbbu:BesluitBijProcedureverloop"/>
+            <xs:element maxOccurs="1" minOccurs="0" ref="lvbbu:KennisgevingBijProcedureverloop"/>
+            <xs:element maxOccurs="1" minOccurs="1" ref="data:Procedureverloop"/>
+
          </xs:sequence>
          <xs:attribute name="schemaversie" type="lvbbu:dtSchemaVersie" use="optional"/>
       </xs:complexType>
    </xs:element>
-   
+
    <xs:element name="BesluitBijProcedureverloop">
       <xs:complexType>
          <xs:sequence>
-               <xs:element maxOccurs="1" minOccurs="1" ref="data:ExpressionIdentificatie"/>
-               <xs:element maxOccurs="1" minOccurs="1" ref="data:BesluitMetadata"/>
+            <xs:element maxOccurs="1" minOccurs="1" ref="data:ExpressionIdentificatie"/>
+            <xs:element maxOccurs="1" minOccurs="1" ref="data:BesluitMetadata"/>
          </xs:sequence>
          <xs:attribute name="schemaversie" type="lvbbu:dtSchemaVersie" use="optional"/>
       </xs:complexType>
    </xs:element>
-   
+
    <xs:element name="KennisgevingBijProcedureverloop">
       <xs:complexType>
          <xs:sequence>
-               <xs:element maxOccurs="1" minOccurs="1" ref="data:ExpressionIdentificatie"/>
-               <xs:element maxOccurs="1" minOccurs="1" ref="data:KennisgevingMetadata"/>
+            <xs:element maxOccurs="1" minOccurs="1" ref="data:ExpressionIdentificatie"/>
+            <xs:element maxOccurs="1" minOccurs="1" ref="data:KennisgevingMetadata"/>
          </xs:sequence>
          <xs:attribute name="schemaversie" type="lvbbu:dtSchemaVersie" use="optional"/>
       </xs:complexType>
    </xs:element>
-   
+
    <!--LEVEREN OFFICIELE PUBLICATIE-->
    <xs:element name="OfficielePublicatie">
       <xs:annotation>
-         <xs:documentation source="https://koop.gitlab.io/lvbb/lvbb-ozon/go/go.html?id=xsd:lvbbu:OfficielePublicatie"/>
+         <xs:documentation
+            source="https://koop.gitlab.io/lvbb/lvbb-ozon/go/go.html?id=xsd:lvbbu:OfficielePublicatie"
+         />
       </xs:annotation>
       <xs:complexType>
          <xs:sequence>
             <xs:element maxOccurs="1" minOccurs="1" ref="data:ExpressionIdentificatie"/>
-            <xs:element maxOccurs="1"
-                        minOccurs="1"
-                        ref="data:OfficielePublicatieVersieMetadata"/>
+            <xs:element maxOccurs="1" minOccurs="1" ref="data:OfficielePublicatieVersieMetadata"/>
             <xs:element maxOccurs="1" minOccurs="1" ref="data:OfficielePublicatieMetadata"/>
             <xs:element maxOccurs="1" minOccurs="1" ref="tekst:OfficielePublicatie"/>
          </xs:sequence>
          <xs:attribute name="schemaversie" type="lvbbu:dtSchemaVersie" use="required"/>
       </xs:complexType>
    </xs:element>
-   
+
    <!-- Annotaties gemaakt door LVBB -->
    <xs:element name="VerrijkingDoorLVBB">
       <xs:annotation>
-         <xs:documentation source="https://koop.gitlab.io/lvbb/lvbb-ozon/go/go.html?id=xsd:lvbbu:VerrijkingDoorLVBB"/>
+         <xs:documentation
+            source="https://koop.gitlab.io/lvbb/lvbb-ozon/go/go.html?id=xsd:lvbbu:VerrijkingDoorLVBB"
+         />
       </xs:annotation>
       <xs:complexType>
          <xs:sequence>
-            <xs:element ref="lvbbu:eindverantwoordelijkeHoofdregeling"
-                        maxOccurs="1"
-                        minOccurs="0"/>
+            <xs:element ref="lvbbu:eindverantwoordelijkeHoofdregeling" maxOccurs="1" minOccurs="0"/>
             <xs:element ref="lvbbu:gemuteerdMetVervangRegeling" maxOccurs="1" minOccurs="0"/>
          </xs:sequence>
       </xs:complexType>
    </xs:element>
    <xs:element name="eindverantwoordelijkeHoofdregeling" type="lvbbu:dtWaardeRef">
       <xs:annotation>
-         <xs:documentation source="https://koop.gitlab.io/lvbb/lvbb-ozon/go/go.html?id=xsd:lvbbu:eindverantwoordelijkeHoofdregeling"/>
+         <xs:documentation
+            source="https://koop.gitlab.io/lvbb/lvbb-ozon/go/go.html?id=xsd:lvbbu:eindverantwoordelijkeHoofdregeling"
+         />
       </xs:annotation>
    </xs:element>
    <xs:element name="gemuteerdMetVervangRegeling" type="xs:boolean">
       <xs:annotation>
-         <xs:documentation source="https://koop.gitlab.io/lvbb/lvbb-ozon/go/go.html?id=xsd:lvbbu:gemuteerdMetVervangRegeling"/>
+         <xs:documentation
+            source="https://koop.gitlab.io/lvbb/lvbb-ozon/go/go.html?id=xsd:lvbbu:gemuteerdMetVervangRegeling"
+         />
       </xs:annotation>
    </xs:element>
    <!-- generiek -->
