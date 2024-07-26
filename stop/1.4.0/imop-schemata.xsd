@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema elementFormDefault="qualified"
-  targetNamespace="https://standaarden.overheid.nl/stop/imop/schemata/" version="@@@IMOPVERSIE@@@"
+  targetNamespace="https://standaarden.overheid.nl/stop/imop/schemata/" version="1.4.0"
   xmlns:sv="https://standaarden.overheid.nl/stop/imop/schemata/"
   xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
   <xs:annotation>
     <xs:documentation source="@@@DOCUMENTATIE_URL@@@go/goto.html?to=stop&amp;id=xsd:br">"schemata-schema" van STOP.</xs:documentation>
     <xs:documentation>Dit schema definieert de schemakoppeling- en schemaversie-elementen voor STOP. Prefix sv staat voor  "schemaversie"</xs:documentation>
-    <xs:documentation>Versie @@@IMOPVERSIE@@@</xs:documentation>
+    <xs:documentation>Versie 1.4.0</xs:documentation>
     <xs:documentation>Documentatie op @@@DOCUMENTATIE_URL@@@go/goto.html?to=stop&amp;id=xsd:sv</xs:documentation>
   </xs:annotation>
 

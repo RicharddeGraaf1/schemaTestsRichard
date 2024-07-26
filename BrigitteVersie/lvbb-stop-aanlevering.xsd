@@ -22,13 +22,13 @@
   </xs:annotation>
 
   <xs:import namespace="https://standaarden.overheid.nl/stop/imop/data/"
-    schemaLocation="https://standaarden.overheid.nl/stop/1.4.0/imop-data.xsd"/>
+    schemaLocation="https://raw.githubusercontent.com/RicharddeGraaf1/schemaTestsRichard/main/stop/1.4.0/imop-data.xsd"/>
   <xs:import namespace="https://standaarden.overheid.nl/stop/imop/tekst/"
-    schemaLocation="https://standaarden.overheid.nl/stop/1.4.0/imop-tekst.xsd"/>
+    schemaLocation="https://raw.githubusercontent.com/RicharddeGraaf1/schemaTestsRichard/main/stop/1.4.0/imop-tekst.xsd"/>
   <xs:import namespace="http://www.opengis.net/se"
-    schemaLocation="https://standaarden.overheid.nl/stop/1.4.0/se-FeatureStyle-imop.xsd"/>
+    schemaLocation="https://raw.githubusercontent.com/RicharddeGraaf1/schemaTestsRichard/main/stop/1.4.0/se-FeatureStyle-imop.xsd"/>
   <xs:import namespace="https://standaarden.overheid.nl/stop/imop/gio/"
-    schemaLocation="https://standaarden.overheid.nl/stop/1.4.0/imop-gio.xsd"/>
+    schemaLocation="https://raw.githubusercontent.com/RicharddeGraaf1/schemaTestsRichard/main/stop/1.4.0/imop-gio.xsd"/>
 
   <!--
     AANLEVEREN BESLUIT

@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema elementFormDefault="qualified" targetNamespace="http://www.opengis.net/se"
-  version="@@@IMOPVERSIE@@@" xmlns:ogc="http://www.opengis.net/ogc" xmlns:se="http://www.opengis.net/se"
+  version="1.4.0" xmlns:ogc="http://www.opengis.net/ogc" xmlns:se="http://www.opengis.net/se"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <!-- This version of se/1.1.0 was previously versioned as '1.1.1' . -->
 
   <xsd:import namespace="http://www.opengis.net/ogc"
-    schemaLocation="https://standaarden.overheid.nl/stop/@@@IMOPVERSIE@@@/se-filter-imop.xsd" />
+    schemaLocation="https://standaarden.overheid.nl/stop/1.4.0/se-filter-imop.xsd" />
   <!-- *********************************************************************** -->
   <xsd:annotation>
     <xsd:documentation source="@@@DOCUMENTATIE_URL@@@go/goto.html?to=stop&amp;id=xsd:se"> 
       Symbology Encoding FEATURE STYLE version 1.1.0 (2010-02-01)
       ***************************************************** 
       Ingeperkte versie t.b.v. STOP versie
-      @@@IMOPVERSIE@@@ SE Symbolizer en SE Common geintegreerd in dit schema
+      1.4.0 SE Symbolizer en SE Common geintegreerd in dit schema
       ***************************************************** 
       originele schema's:
       http://schemas.opengis.net/se/1.1.0/FeatureStyle.xsd

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema elementFormDefault="qualified"
-	targetNamespace="https://standaarden.overheid.nl/stop/imop/data/" version="@@@IMOPVERSIE@@@"
+	targetNamespace="https://standaarden.overheid.nl/stop/imop/data/" version="1.4.0"
 	xmlns:data="https://standaarden.overheid.nl/stop/imop/data/"
 	xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
@@ -10,7 +10,7 @@
 			Dit schema definieert de "data"-elementen voor de
 			STOP-modules
 		</xs:documentation>
-		<xs:documentation>versie @@@IMOPVERSIE@@@</xs:documentation>
+		<xs:documentation>versie 1.4.0</xs:documentation>
 	</xs:annotation>
 	<!--
   ================================================ 

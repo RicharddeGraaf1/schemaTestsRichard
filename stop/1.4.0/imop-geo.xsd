@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema elementFormDefault="qualified"
-	targetNamespace="https://standaarden.overheid.nl/stop/imop/geo/" version="@@@IMOPVERSIE@@@"
+	targetNamespace="https://standaarden.overheid.nl/stop/imop/geo/" version="1.4.0"
 	xmlns:basisgeo="http://www.geostandaarden.nl/basisgeometrie/1.0"
 	xmlns:geo="https://standaarden.overheid.nl/stop/imop/geo/"
 	xmlns:gio="https://standaarden.overheid.nl/stop/imop/gio/"
@@ -13,7 +13,7 @@
 			Dit schema definieert de "geo"-elementen voor de
 			STOP-modules
 		</xs:documentation>
-		<xs:documentation>versie @@@IMOPVERSIE@@@</xs:documentation>
+		<xs:documentation>versie 1.4.0</xs:documentation>
 	</xs:annotation>
 
 	<xs:import namespace="http://www.geostandaarden.nl/basisgeometrie/1.0"
@@ -23,7 +23,7 @@
 	<xs:import namespace="http://www.opengis.net/gmlsf/2.0"
 		schemaLocation="http://schemas.opengis.net/gmlsf/2.0/gmlsfLevels.xsd"/>
 	<xs:import namespace="https://standaarden.overheid.nl/stop/imop/gio/"
-		schemaLocation="https://standaarden.overheid.nl/stop/@@@IMOPVERSIE@@@/imop-gio.xsd"/>
+		schemaLocation="https://standaarden.overheid.nl/stop/1.4.0/imop-gio.xsd"/>
 
 	<xs:annotation>
 		<xs:appinfo source="http://schemas.opengis.net/gmlsfProfile/2.0/gmlsfLevels.xsd">

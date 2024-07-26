@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema elementFormDefault="qualified"
   targetNamespace="https://standaarden.overheid.nl/stop/imop/consolidatie/"
-  version="@@@IMOPVERSIE@@@" xmlns:cons="https://standaarden.overheid.nl/stop/imop/consolidatie/"
+  version="1.4.0" xmlns:cons="https://standaarden.overheid.nl/stop/imop/consolidatie/"
   xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
   <xs:annotation>
     <xs:documentation>"consolidatie-schema" van STOP. </xs:documentation>
     <xs:documentation>Dit schema definieert de elementen voor de STOP-modules voor consolidaties</xs:documentation>
-    <xs:documentation>versie @@@IMOPVERSIE@@@</xs:documentation>
+    <xs:documentation>versie 1.4.0</xs:documentation>
   </xs:annotation>
 
   <!--

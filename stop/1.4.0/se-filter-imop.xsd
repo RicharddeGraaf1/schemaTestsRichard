@@ -4,14 +4,14 @@
 
    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
    elementFormDefault="qualified"
-   version="@@@IMOPVERSIE@@@">
+   version="1.4.0">
 
    <xsd:annotation>
       <xsd:documentation source="@@@DOCUMENTATIE_URL@@@go/goto.html?to=stop&amp;id=xsd:ogc">
          This XML Schema defines OGC query filter capabilities documents.
          
          *************************************************
-         Ingeperkte versie t.b.v. STOP versie @@@IMOPVERSIE@@@
+         Ingeperkte versie t.b.v. STOP versie 1.4.0
          *************************************************
 
          origineel: http://schemas.opengis.net/filter/1.1.0/filter.xsd

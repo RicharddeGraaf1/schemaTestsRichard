@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema elementFormDefault="qualified"
-  targetNamespace="https://standaarden.overheid.nl/stop/imop/resources/" version="@@@IMOPVERSIE@@@"
+  targetNamespace="https://standaarden.overheid.nl/stop/imop/resources/" version="1.4.0"
   xmlns:data="https://standaarden.overheid.nl/stop/imop/data/"
   xmlns:tekst="https://standaarden.overheid.nl/stop/imop/tekst/"
   xmlns:rsc="https://standaarden.overheid.nl/stop/imop/resources/"
@@ -9,7 +9,7 @@
   <xs:annotation>
     <xs:documentation source="@@@DOCUMENTATIE_URL@@@go/goto.html?to=stop&amp;id=xsd:rsc">"resources-schema" van STOP. </xs:documentation>
     <xs:documentation>Dit schema definieert de elementen voor de STOP-modules voor resources</xs:documentation>
-    <xs:documentation>versie @@@IMOPVERSIE@@@</xs:documentation>
+    <xs:documentation>versie 1.4.0</xs:documentation>
   </xs:annotation>
   
   <xs:element name="Waardelijst">

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema elementFormDefault="qualified"
-  targetNamespace="https://standaarden.overheid.nl/stop/imop/bedrijfsregels/" version="@@@IMOPVERSIE@@@"
+  targetNamespace="https://standaarden.overheid.nl/stop/imop/bedrijfsregels/" version="1.4.0"
   xmlns:br="https://standaarden.overheid.nl/stop/imop/bedrijfsregels/"
   xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
   <xs:annotation>
     <xs:documentation source="@@@DOCUMENTATIE_URL@@@go/goto.html?to=stop&amp;id=xsd:br">Schema voor het vastleggen van Bedrijfsregels vaor STOP.</xs:documentation>
     <xs:documentation>Dit schema definieert de "Bedrijfsregel" elementen voor de STOP</xs:documentation>
-    <xs:documentation>Versie @@@IMOPVERSIE@@@</xs:documentation>
+    <xs:documentation>Versie 1.4.0</xs:documentation>
     <xs:documentation>Documentatie op @@@DOCUMENTATIE_URL@@@go/goto.html?to=stop&amp;id=xsd:br</xs:documentation>
   </xs:annotation>
 

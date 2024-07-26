@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema elementFormDefault="qualified"
-  targetNamespace="https://standaarden.overheid.nl/stop/imop/tekst/" version="@@@IMOPVERSIE@@@"
+  targetNamespace="https://standaarden.overheid.nl/stop/imop/tekst/" version="1.4.0"
   xmlns:tekst="https://standaarden.overheid.nl/stop/imop/tekst/"
   xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:annotation>
@@ -8,7 +8,7 @@
       STOP.</xs:documentation>
     <xs:documentation>Dit schema definieert de "tekst"-elementen voor de
       STOP-modules</xs:documentation>
-    <xs:documentation>versie @@@IMOPVERSIE@@@</xs:documentation>
+    <xs:documentation>versie 1.4.0</xs:documentation>
     <xs:documentation>Documentatie: @@@DOCUMENTATIE_URL@@@</xs:documentation>
   </xs:annotation>
 
