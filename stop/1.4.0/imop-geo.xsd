@@ -23,7 +23,7 @@
 	<xs:import namespace="http://www.opengis.net/gmlsf/2.0"
 		schemaLocation="http://schemas.opengis.net/gmlsfProfile/2.0/gmlsfLevels.xsd"/>
 	<xs:import namespace="https://standaarden.overheid.nl/stop/imop/gio/"
-		schemaLocation="https://standaarden.overheid.nl/stop/1.4.0/imop-gio.xsd"/>
+		schemaLocation="https://raw.githubusercontent.com/RicharddeGraaf1/schemaTestsRichard/main/stop/1.4.0/imop-gio.xsd"/>
 
 	<xs:annotation>
 		<xs:appinfo source="http://schemas.opengis.net/gmlsfProfile/2.0/gmlsfLevels.xsd">
