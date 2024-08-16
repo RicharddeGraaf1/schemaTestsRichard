@@ -6,7 +6,7 @@
   <sch:ns prefix="tekst" uri="https://standaarden.overheid.nl/stop/imop/tekst/"/>
   <sch:ns prefix="lvbba" uri="https://standaarden.overheid.nl/lvbb/stop/aanlevering/"/>
   <sch:ns prefix="xsl" uri="http://www.w3.org/1999/XSL/Transform"/>
-  <sch:p>Versie @@@BHKVVERSIE@@@</sch:p>
+  <sch:p>Versie 1.3.0</sch:p>
   <sch:p>Schematron voor aanvullende validaties voor lvbba</sch:p>
   
   <sch:pattern id="sch_lvbba_003">

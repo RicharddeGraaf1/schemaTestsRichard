@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema elementFormDefault="qualified" targetNamespace="http://www.overheid.nl/2017/lvbb"
-  version="@@@BHKVVERSIE@@@" xmlns:lvbbt="http://www.overheid.nl/2017/lvbb"
+  version="1.3.0" xmlns:lvbbt="http://www.overheid.nl/2017/lvbb"
   xmlns:stop="http://www.overheid.nl/2017/stop" xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
   <xs:annotation>
     <xs:documentation>LVBB-Transport-schema</xs:documentation>
-    <xs:documentation>versie @@@BHKVVERSIE@@@</xs:documentation>
+    <xs:documentation>versie 1.3.0</xs:documentation>
   </xs:annotation>
 
   <xs:import namespace="http://www.overheid.nl/2017/stop"
-    schemaLocation="https://standaarden.overheid.nl/lvbb/@@@BHKVVERSIE@@@/stop_toevoeging.xsd"/>
+    schemaLocation="https://standaarden.overheid.nl/lvbb/1.3.0/stop_toevoeging.xsd"/>
 
   <!--===========================================================================
   
