@@ -57,7 +57,9 @@
 				<xs:element maxOccurs="1" minOccurs="0" ref="data:afkortingen"/>
 				<xs:element maxOccurs="1" minOccurs="0" ref="data:alternatieveTitels"/>
 				<xs:element maxOccurs="1" minOccurs="0" ref="data:heeftCiteertitelInformatie"/>
+				<xs:element maxOccurs="1" minOccurs="0" ref="data:effectgebiedRef"/>
 				<xs:element maxOccurs="1" minOccurs="1" ref="data:eindverantwoordelijke"/>
+				<xs:element maxOccurs="1" minOccurs="0" ref="data:gebiedsmarkeringRef"/>
 				<xs:element maxOccurs="1" minOccurs="0" ref="data:grondslagen"/>
 				<xs:element maxOccurs="1" minOccurs="0" ref="data:informatieobjectRefs"/>
 				<xs:element maxOccurs="1" minOccurs="0" ref="data:maker"/>
@@ -106,10 +108,12 @@
 				<xs:element maxOccurs="1" minOccurs="0" ref="data:afkortingen"/>
 				<xs:element maxOccurs="1" minOccurs="0" ref="data:alternatieveTitels"/>
 				<xs:element maxOccurs="1" minOccurs="0" ref="data:beginInzagetermijnOp"/>
+				<xs:element maxOccurs="1" minOccurs="0" ref="data:effectgebiedRef"/>
 				<xs:element maxOccurs="1" minOccurs="0" ref="data:eindeBeroepstermijnOp"/>
 				<xs:element maxOccurs="1" minOccurs="0" ref="data:eindeBezwaartermijnOp"/>
 				<xs:element maxOccurs="1" minOccurs="0" ref="data:eindeInzagetermijnOp"/>
 				<xs:element maxOccurs="1" minOccurs="1" ref="data:eindverantwoordelijke"/>
+				<xs:element maxOccurs="1" minOccurs="0" ref="data:gebiedsmarkeringRef"/>
 				<xs:element maxOccurs="1" minOccurs="0" ref="data:grondslagen"/>
 				<xs:element maxOccurs="1" minOccurs="0" ref="data:heeftCiteertitelInformatie"/>
 				<xs:element maxOccurs="1" minOccurs="0" ref="data:informatieobjectRefs"/>
@@ -174,7 +178,9 @@
 	<xs:element name="KennisgevingMetadata">
 		<xs:complexType>
 			<xs:all>
+				<xs:element maxOccurs="1" minOccurs="0" ref="data:effectgebiedRef"/>
 				<xs:element maxOccurs="1" minOccurs="1" ref="data:eindverantwoordelijke"/>
+				<xs:element maxOccurs="1" minOccurs="0" ref="data:gebiedsmarkeringRef"/>
 				<xs:element maxOccurs="1" minOccurs="0" ref="data:maker"/>
 				<xs:element maxOccurs="1" minOccurs="1" ref="data:officieleTitel"/>
 				<xs:element maxOccurs="1" minOccurs="1" ref="data:onderwerpen"/>
@@ -188,7 +194,9 @@
 	<xs:element name="MededelingMetadata">
 		<xs:complexType>
 			<xs:all>
+				<xs:element maxOccurs="1" minOccurs="0" ref="data:effectgebiedRef"/>
 				<xs:element maxOccurs="1" minOccurs="1" ref="data:eindverantwoordelijke"/>
+				<xs:element maxOccurs="1" minOccurs="0" ref="data:gebiedsmarkeringRef"/>
 				<xs:element maxOccurs="1" minOccurs="0" ref="data:informatieobjectRefs"/>
 				<xs:element maxOccurs="1" minOccurs="0" ref="data:maker"/>
 				<xs:element maxOccurs="1" minOccurs="1" ref="data:officieleTitel"/>
@@ -203,7 +211,9 @@
 	<xs:element name="RectificatieMetadata">
 		<xs:complexType>
 			<xs:all>
+				<xs:element maxOccurs="1" minOccurs="0" ref="data:effectgebiedRef"/>
 				<xs:element maxOccurs="1" minOccurs="1" ref="data:eindverantwoordelijke"/>
+				<xs:element maxOccurs="1" minOccurs="0" ref="data:gebiedsmarkeringRef"/>
 				<xs:element maxOccurs="1" minOccurs="0" ref="data:informatieobjectRefs"/>
 				<xs:element maxOccurs="1" minOccurs="0" ref="data:maker"/>
 				<xs:element maxOccurs="1" minOccurs="1" ref="data:officieleTitel"/>
@@ -397,7 +407,9 @@
 	</xs:element>
 	<xs:element name="informatieobjectRef" type="data:dtSTOPidentificatie"/>
 	<xs:element name="eId" type="xs:token"/>
-
+	<xs:element name="effectgebiedRef" type="data:dtSTOPidentificatie"/>
+	<xs:element name="gebiedsmarkeringRef" type="data:dtSTOPidentificatie"/>
+		
 	<xs:element name="opvolging">
 		<xs:complexType>
 			<xs:sequence>

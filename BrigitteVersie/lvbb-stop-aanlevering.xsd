@@ -171,8 +171,6 @@
         <xs:element maxOccurs="1" minOccurs="0" ref="data:Procedureverloop"/>
         <xs:element maxOccurs="1" minOccurs="1" ref="data:ConsolidatieInformatie"/>
         <xs:element maxOccurs="1" minOccurs="0" ref="tekst:Tekstrevisie"/>
-        <xs:element maxOccurs="1" minOccurs="0" ref="geo:Gebiedsmarkering"/>
-        <xs:element maxOccurs="1" minOccurs="0" ref="geo:Effectgebied"/>
         <xs:choice>
           <xs:element maxOccurs="1" minOccurs="1" ref="tekst:BesluitKlassiek"/>
           <xs:element maxOccurs="1" minOccurs="1" ref="tekst:BesluitCompact"/>
@@ -188,8 +186,6 @@
         <xs:element maxOccurs="1" minOccurs="1" ref="data:KennisgevingMetadata"/>
         <xs:element maxOccurs="1" minOccurs="0" ref="data:Procedureverloopmutatie"/>
         <xs:element maxOccurs="1" minOccurs="1" ref="tekst:Kennisgeving"/>
-        <xs:element maxOccurs="1" minOccurs="0" ref="geo:Gebiedsmarkering"/>
-        <xs:element maxOccurs="1" minOccurs="0" ref="geo:Effectgebied"/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -202,8 +198,6 @@
         <xs:element maxOccurs="1" minOccurs="0" ref="data:Procedureverloopmutatie"/>
         <xs:element maxOccurs="1" minOccurs="0" ref="data:ConsolidatieInformatie"/>
         <xs:element maxOccurs="1" minOccurs="1" ref="tekst:Rectificatie"/>
-        <xs:element maxOccurs="1" minOccurs="0" ref="geo:Gebiedsmarkering"/>
-        <xs:element maxOccurs="1" minOccurs="0" ref="geo:Effectgebied"/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -216,8 +210,6 @@
         <xs:element maxOccurs="1" minOccurs="0" ref="data:Procedureverloopmutatie"/>
         <xs:element maxOccurs="1" minOccurs="0" ref="data:ConsolidatieInformatie"/>
         <xs:element maxOccurs="1" minOccurs="1" ref="tekst:Mededeling"/>
-        <xs:element maxOccurs="1" minOccurs="0" ref="geo:Gebiedsmarkering"/>
-        <xs:element maxOccurs="1" minOccurs="0" ref="geo:Effectgebied"/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
