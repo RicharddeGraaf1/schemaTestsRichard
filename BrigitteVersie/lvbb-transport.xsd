@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema elementFormDefault="qualified" targetNamespace="http://www.overheid.nl/2017/lvbb"
-  version="1.3.0" xmlns:lvbbt="http://www.overheid.nl/2017/lvbb"
-  xmlns:stop="http://www.overheid.nl/2017/stop"
-  xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  version="@@@BHKVVERSIE@@@" xmlns:lvbbt="http://www.overheid.nl/2017/lvbb"
+  xmlns:stop="http://www.overheid.nl/2017/stop" xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
   <xs:annotation>
     <xs:documentation>LVBB-Transport-schema</xs:documentation>
-    <xs:documentation>versie 1.3.0</xs:documentation>
+    <xs:documentation>versie @@@BHKVVERSIE@@@</xs:documentation>
   </xs:annotation>
 
   <xs:import namespace="http://www.overheid.nl/2017/stop"
-    schemaLocation="https://raw.githubusercontent.com/RicharddeGraaf1/schemaTestsRichard/main/BrigitteVersie/stop_toevoeging.xsd" />
+    schemaLocation="https://standaarden.overheid.nl/lvbb/@@@BHKVVERSIE@@@/stop_toevoeging.xsd"/>
 
   <!--===========================================================================
   
@@ -22,99 +21,39 @@
   <!--
   Basistypen voor het Digikoppeling berichtenverkeer : ebMS
   -->
-  <xs:element name="validatieVerzoek" type="lvbbt:LeveringVerzoekType">
-    <xs:annotation>
-      <xs:documentation>Root element van een via Digikoppeling ebMS verzonden verzoek waarbij het
-        opdrachtbestand voor een validatieopdracht is bijgesloten.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="publicatieVerzoek" type="lvbbt:LeveringVerzoekType">
-    <xs:annotation>
-      <xs:documentation>Root element van een via Digikoppeling ebMS verzonden verzoek waarbij het
-        opdrachtbestand voor een publicatieopdracht is bijgesloten.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="breekPublicatieAfVerzoek" type="lvbbt:LeveringVerzoekType">
-    <xs:annotation>
-      <xs:documentation>Root element van een via Digikoppeling ebMS verzonden verzoek waarbij het
-        opdrachtbestand voor een breekPublicatieAfOpdracht is bijgesloten.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="validatieDirecteMutatieVerzoek" type="lvbbt:LeveringVerzoekType">
-    <xs:annotation>
-      <xs:documentation>Root element van een via Digikoppeling ebMS verzonden verzoek waarbij het
-        opdrachtbestand voor een validatieopdracht voor directe mutatie is
-        bijgesloten.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="directeMutatieVerzoek" type="lvbbt:LeveringVerzoekType">
-    <xs:annotation>
-      <xs:documentation>Root element van een via Digikoppeling ebMS verzonden verzoek waarbij het
-        opdrachtbestand voor een directe mutatie opdracht is bijgesloten.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="validatieRevisieVerzoek" type="lvbbt:LeveringVerzoekType">
-    <xs:annotation>
-      <xs:documentation>Root element van een via Digikoppeling ebMS verzonden verzoek waarbij het
-        opdrachtbestand voor een validatie van een revisieopdracht is bijgesloten.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="revisieVerzoek" type="lvbbt:LeveringVerzoekType">
-    <xs:annotation>
-      <xs:documentation>Root element van een via Digikoppeling ebMS verzonden verzoek waarbij het
-        opdrachtbestand voor een revisieopdracht is bijgesloten.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-
+  <xs:element name="validatieVerzoek" type="lvbbt:LeveringVerzoekType"> </xs:element>
+  <xs:element name="publicatieVerzoek" type="lvbbt:LeveringVerzoekType"> </xs:element>
+  <xs:element name="breekPublicatieAfVerzoek" type="lvbbt:LeveringVerzoekType"> </xs:element>
+  <xs:element name="validatieDirecteMutatieVerzoek" type="lvbbt:LeveringVerzoekType"> </xs:element>
+  <xs:element name="directeMutatieVerzoek" type="lvbbt:LeveringVerzoekType"> </xs:element>
+  <xs:element name="validatieRevisieVerzoek" type="lvbbt:LeveringVerzoekType"> </xs:element>
+  <xs:element name="revisieVerzoek" type="lvbbt:LeveringVerzoekType"> </xs:element>
+  <xs:element name="validatieProcedureverloopmutatieVerzoek" type="lvbbt:LeveringVerzoekType"> </xs:element>
+  <xs:element name="procedureverloopmutatieVerzoek" type="lvbbt:LeveringVerzoekType"> </xs:element>
+  <xs:element name="valideerDoorleverenRegelingVersie" type="lvbbt:leveringRegelingVersieType"> </xs:element>
+  <xs:element name="doorleverenRegelingVersie" type="lvbbt:leveringRegelingVersieType"> </xs:element>
+  <xs:element name="validatieRegistratieVerzoek" type="lvbbt:LeveringVerzoekType"> </xs:element>
+  <xs:element name="registratieVerzoek" type="lvbbt:LeveringVerzoekType"> </xs:element>
 
   <xs:complexType name="LeveringVerzoekType">
-    <xs:annotation>
-      <xs:documentation>Basistype voor alle leveringen via Digikoppeling ebMS.</xs:documentation>
-    </xs:annotation>
     <xs:sequence>
-      <xs:element name="idLevering" type="lvbbt:dtIdLevering" minOccurs="1" maxOccurs="1">
-        <xs:annotation>
-          <xs:documentation>Unieke waarde waaronder de opdracht aan de LVBB bekend is in de eigen
-            organisatie. Deze is uniek per organisatie (zoals geidentificeerd door het OIN). De
-            aanleverende software is vrij in de opmaak van dit kenmerk.</xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <xs:element name="softwareVersie" type="lvbbt:SoftwareVersieType">
-        <xs:annotation>
-          <xs:documentation>Beschrijving van de software die de opdracht heeft opgesteld.</xs:documentation>
-        </xs:annotation>
-      </xs:element>
+      <xs:element maxOccurs="1" minOccurs="1" name="idLevering" type="lvbbt:dtIdLevering"> </xs:element>
+      <xs:element name="softwareVersie" type="lvbbt:SoftwareVersieType"> </xs:element>
     </xs:sequence>
   </xs:complexType>
 
   <xs:simpleType name="dtIdLevering">
     <xs:restriction base="xs:string">
-      <xs:maxLength value="80" />
-      <xs:pattern value="[0-9A-z][0-9A-z_-]+" />
+      <xs:maxLength value="80"/>
+      <xs:pattern value="[0-9A-z][0-9A-z_-]+"/>
     </xs:restriction>
   </xs:simpleType>
 
   <xs:complexType name="SoftwareVersieType">
-    <xs:annotation>
-      <xs:documentation>Beschrijving van de software die het initiatief tot het sturen van een
-        verzoek heeft genomen.</xs:documentation>
-    </xs:annotation>
     <xs:sequence>
-      <xs:element name="leverancier" type="xs:string">
-        <xs:annotation>
-          <xs:documentation>Naam van de leverancier van de software.</xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <xs:element minOccurs="0" name="product" type="xs:string">
-        <xs:annotation>
-          <xs:documentation> Naam van het product. </xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <xs:element minOccurs="0" name="versie" type="xs:string">
-        <xs:annotation>
-          <xs:documentation>Versie van het product. Er zijn geen voorschriften voor de indeling van de versie.</xs:documentation>
-        </xs:annotation>
-      </xs:element>
+      <xs:element name="leverancier" type="xs:string"> </xs:element>
+      <xs:element minOccurs="0" name="product" type="xs:string"> </xs:element>
+      <xs:element minOccurs="0" name="versie" type="xs:string"> </xs:element>
     </xs:sequence>
   </xs:complexType>
 
@@ -122,45 +61,25 @@
   Opdrachtbestand: manifest.xml
   -->
   <xs:element name="manifest">
-    <xs:annotation>
-      <xs:documentation>Root element van het manifest.xml bestand. Dit is een lijst met alle
-        bestanden die in de levering zijn meegeleverd, inclusief manifest.xml en
-        opdracht.xml.</xs:documentation>
-    </xs:annotation>
     <xs:complexType>
       <xs:sequence>
         <xs:element maxOccurs="unbounded" minOccurs="2" name="bestand" type="lvbbt:BestandType">
-          <xs:annotation>
-            <xs:documentation>Detailinformatie over een van de bestanden.</xs:documentation>
-          </xs:annotation>
         </xs:element>
       </xs:sequence>
+      <xs:attribute name="schemaversie" type="xs:token" use="optional"/>
     </xs:complexType>
   </xs:element>
 
   <xs:complexType name="BestandType">
-    <xs:annotation>
-      <xs:documentation>Beschrijving van een bestand in het opdrachtbestand.</xs:documentation>
-    </xs:annotation>
     <xs:sequence>
-      <xs:element name="bestandsnaam" type="lvbbt:dtBestandsnaam">
-        <xs:annotation>
-          <xs:documentation>Naam van het bestand (evt inclusief het pad) zoals het bestand in het
-            gecomprimeerde opdrachtbestand is opgenomen.</xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <xs:element name="contentType" type="xs:string">
-        <xs:annotation>
-          <xs:documentation>Het MIME type van het bestand, bijvoorbeeld "application/xml" voor XML
-            bestanden of "application/pdf" voor PDF documenten.</xs:documentation>
-        </xs:annotation>
-      </xs:element>
+      <xs:element name="bestandsnaam" type="lvbbt:dtBestandsnaam"> </xs:element>
+      <xs:element name="contentType" type="xs:string"> </xs:element>
     </xs:sequence>
   </xs:complexType>
 
   <xs:simpleType name="dtBestandsnaam">
     <xs:restriction base="xs:token">
-      <xs:pattern value="[0-9A-Za-z\._-]+" />
+      <xs:pattern value="[0-9A-Za-z\._-]+"/>
     </xs:restriction>
   </xs:simpleType>
 
@@ -168,231 +87,181 @@
   Opdrachtbestand: opdracht.xml
   -->
   <xs:complexType abstract="true" name="OpdrachtType">
-    <xs:annotation>
-      <xs:documentation>Basistype voor een beschrijving van een opdracht voor de LVBB.</xs:documentation>
-    </xs:annotation>
     <xs:sequence>
-      <xs:element name="idLevering" type="lvbbt:dtIdLevering" minOccurs="1" maxOccurs="1">
-        <xs:annotation>
-          <xs:documentation>Unieke waarde waaronder de opdracht aan de LVBB bekend is in de eigen
-            organisatie. Deze is uniek per organisatie (zoals geïdentificeerd door het OIN). De
-            aanleverende software is vrij in de opmaak van dit kenmerk.</xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <xs:element name="idBevoegdGezag" type="lvbbt:dtOIN">
-        <xs:annotation>
-          <xs:documentation>Het OIN van het Bevoegd Gezag waarvoor een gemandateerde/intermediair de
-            afhandeling doet</xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <xs:element name="idAanleveraar" type="lvbbt:dtOIN">
-        <xs:annotation>
-          <xs:documentation>OIN van BG zelf, indien geen intermedair van toepassing is; of anders (=
-            indien een intermedair wel van toepassing is): - OIN in het geval van
-            samenwerkingsverband (overheidsorganisatie); of - HRN in het geval van
-            softwareleverancier, die de berichten namens BG verstuurt (zie
-            https://www.logius.nl/diensten/oin)</xs:documentation>
-        </xs:annotation>
-      </xs:element>
+      <xs:element maxOccurs="1" minOccurs="1" name="idLevering" type="lvbbt:dtIdLevering"> </xs:element>
+      <xs:element name="idBevoegdGezag" type="lvbbt:dtOIN"> </xs:element>
+      <xs:element name="idAanleveraar" type="lvbbt:dtOIN"> </xs:element>
     </xs:sequence>
+    <xs:attribute name="schemaversie" type="xs:token" use="optional"/>
   </xs:complexType>
 
   <xs:simpleType name="dtOIN">
     <xs:restriction base="xs:token">
-      <xs:maxLength value="20" />
-      <xs:minLength value="20" />
-      <xs:pattern value="[0-9]+" />
+      <xs:maxLength value="20"/>
+      <xs:minLength value="20"/>
+      <xs:pattern value="[0-9]+"/>
     </xs:restriction>
   </xs:simpleType>
-
-  <xs:element name="validatieOpdracht" type="lvbbt:ValidatieOpdrachtType">
-    <xs:annotation>
-      <xs:documentation>Root element van het opdracht.xml bestand waarmee een validatieopdracht aan
-        LVBB wordt doorgegeven.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:complexType name="ValidatieOpdrachtType">
-    <xs:annotation>
-      <xs:documentation>Beschrijving van een validatieopdracht voor de LVBB.</xs:documentation>
-    </xs:annotation>
-    <xs:complexContent>
-      <xs:extension base="lvbbt:OpdrachtType">
-        <xs:sequence>
-          <xs:element name="publicatie" type="xs:NCName">
-            <xs:annotation>
-              <xs:documentation>Naam van het bestand (evt inclusief het pad) in het gecomprimeerde
-                opdrachtbestand dat het besluit, de rectificatie of de mededeling bevat. Er wordt onderscheid gemaakt
-                tussen hoofd- en kleine letters.</xs:documentation>
-            </xs:annotation>
-          </xs:element>
-          <xs:element name="datumBekendmaking" type="lvbbt:dtDatumISO">
-            <xs:annotation>
-              <xs:documentation>De voorgenomen datum van bekendmaking van het besluit, de rectificatie of de mededeling.</xs:documentation>
-            </xs:annotation>
-          </xs:element>
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
 
   <xs:simpleType name="dtDatumISO">
     <xs:restriction base="xs:date">
-      <xs:pattern value="[0-9]{4}-[01][0-9]-[0-9]{2}" />
+      <xs:pattern value="[0-9]{4}-[01][0-9]-[0-9]{2}"/>
     </xs:restriction>
   </xs:simpleType>
 
-  <xs:element name="publicatieOpdracht" type="lvbbt:PublicatieOpdrachtType">
+  <xs:simpleType name="VerwerkingsrestrictieCode">
     <xs:annotation>
-      <xs:documentation>Root element van het opdracht.xml bestand waarmee een publicatieopdracht
-        aan LVBB wordt doorgegeven.</xs:documentation>
+      <xs:documentation>Type verwerkingsrestrictie</xs:documentation>
     </xs:annotation>
-  </xs:element>
-  <xs:complexType name="PublicatieOpdrachtType">
-    <xs:annotation>
-      <xs:documentation>Beschrijving van een publicatieopdracht voor de LVBB.</xs:documentation>
-    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Bekendmaken">
+        <xs:annotation>
+          <xs:documentation>De opdracht moet alleen bekendgemaakt worden.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:element name="validatieOpdracht" type="lvbbt:ValidatieOpdrachtType"> </xs:element>
+  <xs:complexType name="ValidatieOpdrachtType">
     <xs:complexContent>
       <xs:extension base="lvbbt:OpdrachtType">
         <xs:sequence>
-          <xs:element name="publicatie" type="xs:NCName">
-            <xs:annotation>
-              <xs:documentation>Naam van het bestand (evt inclusief het pad) in het gecomprimeerde
-                opdrachtbestand dat het besluit, de rectificatie of de mededeling bevat. Er wordt onderscheid gemaakt
-                tussen hoofd- en kleine letters.</xs:documentation>
-            </xs:annotation>
-          </xs:element>
-          <xs:element name="datumBekendmaking" type="xs:date">
-            <xs:annotation>
-              <xs:documentation>De datum waarop het besluit, de rectificatie of de mededeling bekendgemaakt of
-                gepubliceerd moet worden.</xs:documentation>
-            </xs:annotation>
-          </xs:element>
+          <xs:element name="publicatie" type="lvbbt:dtBestandsnaam"> </xs:element>
+          <xs:element name="datumBekendmaking" type="lvbbt:dtDatumISO"> </xs:element>
+          <xs:element maxOccurs="1" minOccurs="0" name="verwerkingsrestrictie"
+            type="lvbbt:VerwerkingsrestrictieCode"> </xs:element>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
 
-  <xs:element name="breekPublicatieAfOpdracht" type="lvbbt:BreekPublicatieAfOpdrachtType">
-    <xs:annotation>
-      <xs:documentation>Root element van het opdracht.xml bestand waarmee een
-        breekPublicatieAfOpdracht aan LVBB wordt doorgegeven.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
+  <xs:element name="publicatieOpdracht" type="lvbbt:PublicatieOpdrachtType"> </xs:element>
+  <xs:complexType name="PublicatieOpdrachtType">
+    <xs:complexContent>
+      <xs:extension base="lvbbt:OpdrachtType">
+        <xs:sequence>
+          <xs:element name="publicatie" type="lvbbt:dtBestandsnaam"> </xs:element>
+          <xs:element name="datumBekendmaking" type="xs:date"> </xs:element>
+          <xs:element maxOccurs="1" minOccurs="0" name="verwerkingsrestrictie"
+            type="lvbbt:VerwerkingsrestrictieCode"> </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:element name="breekPublicatieAfOpdracht" type="lvbbt:BreekPublicatieAfOpdrachtType"> </xs:element>
   <xs:complexType name="BreekPublicatieAfOpdrachtType">
     <xs:complexContent>
       <xs:extension base="lvbbt:OpdrachtType">
         <xs:sequence>
-          <xs:element name="identificatie" type="xs:string">
-            <xs:annotation>
-              <xs:documentation>De AKN werk of expressie identificatie van de publicatie die
-                afgebroken moet worden wordt.</xs:documentation>
-            </xs:annotation>
-          </xs:element>
+          <xs:element name="identificatie" type="xs:string"> </xs:element>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  
+
   <xs:element name="validatieDirecteMutatieOpdracht"
-    type="lvbbt:ValidatieDirecteMutatieOpdrachtType">
-    <xs:annotation>
-      <xs:documentation> Root element van het opdracht.xml bestand waarmee een opdracht aan LVBB
-        wordt gegeven om een directe mutatie te valideren. </xs:documentation>
-    </xs:annotation>
-  </xs:element>
+    type="lvbbt:ValidatieDirecteMutatieOpdrachtType"> </xs:element>
   <xs:complexType name="ValidatieDirecteMutatieOpdrachtType">
-    <xs:annotation>
-      <xs:documentation> Beschrijving van een opdracht voor de LVBB om een directe mutatie te
-        valideren. </xs:documentation>
-    </xs:annotation>
     <xs:complexContent>
       <xs:extension base="lvbbt:OpdrachtType">
         <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="0" name="directeMutatie" type="xs:NCName">
-            <xs:annotation>
-              <xs:documentation> Naam van het bestand (evt inclusief het pad) in het gecomprimeerde
-                opdrachtbestand dat de directe mutatie bevat. Dit bestand kan weggelaten worden als
-                alleen OW-objecten gemuteerd worden. Er wordt onderscheid gemaakt tussen hoofd- en
-                kleine letters. </xs:documentation>
-            </xs:annotation>
-          </xs:element>
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  
-  <xs:element name="directeMutatieOpdracht" type="lvbbt:DirecteMutatieOpdrachtType">
-    <xs:annotation>
-      <xs:documentation> Root element van het opdracht.xml bestand waarmee een opdracht aan LVBB
-        wordt doorgegeven om een directe mutatie door te geven. </xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:complexType name="DirecteMutatieOpdrachtType">
-    <xs:annotation>
-      <xs:documentation> Beschrijving van een opdracht voor de LVBB om een directe mutatie door te
-        voeren. </xs:documentation>
-    </xs:annotation>
-    <xs:complexContent>
-      <xs:extension base="lvbbt:OpdrachtType">
-        <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="0" name="directeMutatie" type="xs:NCName">
-            <xs:annotation>
-              <xs:documentation> Naam van het bestand (evt inclusief het pad) in het gecomprimeerde
-                opdrachtbestand dat de directe mutatie bevat. Dit bestand kan weggelaten worden als
-                alleen OW-objecten gemuteerd worden. Er wordt onderscheid gemaakt tussen hoofd- en
-                kleine letters. </xs:documentation>
-            </xs:annotation>
+          <xs:element maxOccurs="1" minOccurs="0" name="directeMutatie" type="lvbbt:dtBestandsnaam">
           </xs:element>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
 
-  <xs:element name="validatieRevisieOpdracht" type="lvbbt:ValidatieRevisieOpdrachtType">
-    <xs:annotation>
-      <xs:documentation>Root element van het opdracht.xml bestand waarmee een validatie van een revisieopdracht
-        aan LVBB wordt doorgegeven.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:complexType name="ValidatieRevisieOpdrachtType">
-    <xs:annotation>
-      <xs:documentation>Beschrijving van een revisieopdracht voor de LVBB.</xs:documentation>
-    </xs:annotation>
+  <xs:element name="directeMutatieOpdracht" type="lvbbt:DirecteMutatieOpdrachtType"> </xs:element>
+  <xs:complexType name="DirecteMutatieOpdrachtType">
     <xs:complexContent>
       <xs:extension base="lvbbt:OpdrachtType">
         <xs:sequence>
-          <xs:element name="revisie" type="xs:NCName">
-            <xs:annotation>
-              <xs:documentation>Naam van het bestand (evt inclusief het pad) in het gecomprimeerde
-                opdrachtbestand dat de revisie bevat. Er wordt onderscheid gemaakt
-                tussen hoofd- en kleine letters.</xs:documentation>
-            </xs:annotation>
+          <xs:element maxOccurs="1" minOccurs="0" name="directeMutatie" type="lvbbt:dtBestandsnaam">
           </xs:element>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  
-  <xs:element name="revisieOpdracht" type="lvbbt:RevisieOpdrachtType">
-    <xs:annotation>
-      <xs:documentation>Root element van het opdracht.xml bestand waarmee een revisieopdracht
-        aan LVBB wordt doorgegeven.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:complexType name="RevisieOpdrachtType">
-    <xs:annotation>
-      <xs:documentation>Beschrijving van een revisieopdracht voor de LVBB.</xs:documentation>
-    </xs:annotation>
+
+  <xs:element name="validatieRevisieOpdracht" type="lvbbt:ValidatieRevisieOpdrachtType"> </xs:element>
+  <xs:complexType name="ValidatieRevisieOpdrachtType">
     <xs:complexContent>
       <xs:extension base="lvbbt:OpdrachtType">
         <xs:sequence>
-          <xs:element name="revisie" type="xs:NCName">
-            <xs:annotation>
-              <xs:documentation>Naam van het bestand (evt inclusief het pad) in het gecomprimeerde
-                opdrachtbestand dat de revisie bevat. Er wordt onderscheid gemaakt
-                tussen hoofd- en kleine letters.</xs:documentation>
-            </xs:annotation>
+          <xs:element name="revisie" type="lvbbt:dtBestandsnaam"> </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:element name="revisieOpdracht" type="lvbbt:RevisieOpdrachtType"> </xs:element>
+  <xs:complexType name="RevisieOpdrachtType">
+    <xs:complexContent>
+      <xs:extension base="lvbbt:OpdrachtType">
+        <xs:sequence>
+          <xs:element name="revisie" type="lvbbt:dtBestandsnaam"> </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:element name="validatieProcedureverloopmutatieOpdracht"
+    type="lvbbt:ValidatieProcedureverloopmutatieOpdrachtType"> </xs:element>
+  <xs:complexType name="ValidatieProcedureverloopmutatieOpdrachtType">
+    <xs:complexContent>
+      <xs:extension base="lvbbt:OpdrachtType">
+        <xs:sequence>
+          <xs:element name="procedureverloopmutatie" type="lvbbt:dtBestandsnaam"> </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:element name="procedureverloopmutatieOpdracht"
+    type="lvbbt:ProcedureverloopmutatieOpdrachtType"> </xs:element>
+  <xs:complexType name="ProcedureverloopmutatieOpdrachtType">
+    <xs:complexContent>
+      <xs:extension base="lvbbt:OpdrachtType">
+        <xs:sequence>
+          <xs:element name="procedureverloopmutatie" type="lvbbt:dtBestandsnaam"> </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="leveringRegelingVersieType">
+    <xs:complexContent>
+      <xs:extension base="lvbbt:OpdrachtType">
+        <xs:sequence>
+          <xs:element maxOccurs="1" minOccurs="1" name="consolidatie" type="lvbbt:dtBestandsnaam">
           </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:element name="validatieRegistratieOpdracht" type="lvbbt:ValidatieRegistratieOpdrachtType"> </xs:element>
+  <xs:complexType name="ValidatieRegistratieOpdrachtType">
+    <xs:complexContent>
+      <xs:extension base="lvbbt:OpdrachtType">
+        <xs:sequence>
+          <xs:element name="registratie" type="lvbbt:dtBestandsnaam"> </xs:element>
+          <xs:element name="verantwoording" type="lvbbt:dtBestandsnaam"> </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:element name="registratieOpdracht" type="lvbbt:RegistratieOpdrachtType"> </xs:element>
+  <xs:complexType name="RegistratieOpdrachtType">
+    <xs:complexContent>
+      <xs:extension base="lvbbt:OpdrachtType">
+        <xs:sequence>
+          <xs:element name="registratie" type="lvbbt:dtBestandsnaam"> </xs:element>
+          <xs:element name="verantwoording" type="lvbbt:dtBestandsnaam"> </xs:element>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -402,25 +271,12 @@
   Antwoordberichten
   -->
   <xs:complexType abstract="true" name="VerzoekResultaatType">
-    <xs:annotation>
-      <xs:documentation>Basistype van het antwoord dat de LVBB geeft naar aanleiding van een
-        ontvangen verzoek.</xs:documentation>
-    </xs:annotation>
     <xs:sequence>
-      <xs:element name="uitkomst" type="lvbbt:VerzoekUitkomstCode">
-        <xs:annotation>
-          <xs:documentation>Code die aangeeft of de uitvoering van het verzoek is geslaagd.
-          </xs:documentation>
-        </xs:annotation>
-      </xs:element>
+      <xs:element name="uitkomst" type="lvbbt:VerzoekUitkomstCode"> </xs:element>
     </xs:sequence>
   </xs:complexType>
 
   <xs:simpleType name="VerzoekUitkomstCode">
-    <xs:annotation>
-      <xs:documentation>Code die aangeeft of de uitvoering van een verzoek is geslaagd.
-      </xs:documentation>
-    </xs:annotation>
     <xs:restriction base="xs:string">
       <xs:enumeration value="succes">
         <xs:annotation>
@@ -429,39 +285,20 @@
       </xs:enumeration>
       <xs:enumeration value="mislukt">
         <xs:annotation>
-          <xs:documentation>De LVBB heeft het verzoek niet kunnen uitvoeren.</xs:documentation>
+          <xs:documentation>De LVBB heeft het verzoek niet kunnen uitvoeren of de opdracht is niet valide.</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
     </xs:restriction>
   </xs:simpleType>
 
   <xs:complexType name="OpdrachtverslagType">
-    <xs:annotation>
-      <xs:documentation>Basistype voor een verslag van de behandeling van een opdracht.
-      </xs:documentation>
-    </xs:annotation>
     <xs:sequence>
-      <xs:element name="idLevering" type="lvbbt:dtIdLevering" minOccurs="1" maxOccurs="1">
-        <xs:annotation>
-          <xs:documentation>Unieke waarde waaronder de opdracht aan de LVBB bekend is in de eigen
-            organisatie. Deze is uniek per organisatie (zoals geidentificeerd door het OIN).
-          </xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <xs:element name="tijdstipVerslag" type="xs:dateTime">
-        <xs:annotation>
-          <xs:documentation>Datum/tijd dat het verslag voor het laatst is gewijzigd.
-          </xs:documentation>
-        </xs:annotation>
-      </xs:element>
+      <xs:element maxOccurs="1" minOccurs="1" name="idLevering" type="lvbbt:dtIdLevering"> </xs:element>
+      <xs:element name="tijdstipVerslag" type="xs:dateTime"> </xs:element>
       <xs:element minOccurs="1" name="meldingen">
-        <xs:annotation>
-          <xs:documentation>Meldingen die informatie geven over de behandeling van de opdracht.
-          </xs:documentation>
-        </xs:annotation>
         <xs:complexType>
           <xs:sequence>
-            <xs:element maxOccurs="unbounded" name="melding" type="stop:melding" />
+            <xs:element maxOccurs="unbounded" name="melding" type="stop:melding"/>
           </xs:sequence>
         </xs:complexType>
       </xs:element>
@@ -469,81 +306,41 @@
   </xs:complexType>
 
   <!--
-  Antwoord voor validatie opdracht
+  Antwoord voor validatieopdracht
   -->
-  <xs:element name="validatieVerzoekResultaat" type="lvbbt:ValidatieVerzoekResultaatType">
-    <xs:annotation>
-      <xs:documentation>Root element van het antwoord op een verzoek voor een validatieopdracht.
-      </xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="validatieStatusVerzoekResultaat" type="lvbbt:ValidatieVerzoekResultaatType">
-    <xs:annotation>
-      <xs:documentation>Root element van het antwoord op een verzoek voor de status van een
-        validatieopdracht.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
+  <xs:element name="validatieVerzoekResultaat" type="lvbbt:ValidatieVerzoekResultaatType"> </xs:element>
   <xs:complexType name="ValidatieVerzoekResultaatType">
-    <xs:annotation>
-      <xs:documentation>Beschrijving van het antwoord op een verzoek voor een validatieopdracht.
-      </xs:documentation>
-    </xs:annotation>
     <xs:complexContent>
       <xs:extension base="lvbbt:VerzoekResultaatType">
         <xs:sequence>
-          <xs:element minOccurs="1" name="verslag" type="lvbbt:ValidatieVerslagType">
-            <xs:annotation>
-              <xs:documentation>Verslag van de voortgang en uitkomst van de behandeling van de
-                validatieopdracht.</xs:documentation>
-            </xs:annotation>
-          </xs:element>
+          <xs:element minOccurs="1" name="verslag" type="lvbbt:ValidatieVerslagType"> </xs:element>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
 
   <xs:complexType name="ValidatieVerslagType">
-    <xs:annotation>
-      <xs:documentation>Beschrijving van het verslag van de behandeling van een validatieopdracht.
-      </xs:documentation>
-    </xs:annotation>
     <xs:complexContent>
       <xs:extension base="lvbbt:OpdrachtverslagType">
-        <xs:sequence>
-          <xs:choice>
-            <xs:element name="uitkomst" type="lvbbt:ValidatieUitkomstCode">
-              <xs:annotation>
-                <xs:documentation>Code het resultaat van de validatie aangeeft. Alleen aanwezig als
-                  de behandeling van de validatieopdracht volledig is afgerond.</xs:documentation>
-              </xs:annotation>
-            </xs:element>
-            <xs:element name="voortgang" type="lvbbt:ValidatieVoortgangCode">
-              <xs:annotation>
-                <xs:documentation>Voortgang van de behandeling van de validatieopdracht. Alleen
-                  aanwezig als de validatieopdracht nog in behandeling is.</xs:documentation>
-              </xs:annotation>
-            </xs:element>
-          </xs:choice>
-        </xs:sequence>
+        <xs:choice>
+          <xs:element name="uitkomst" type="lvbbt:ValidatieUitkomstCode"> </xs:element>
+          <xs:element name="voortgang" type="lvbbt:ValidatieVoortgangCode"> </xs:element>
+        </xs:choice>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
 
   <xs:simpleType name="ValidatieUitkomstCode">
-    <xs:annotation>
-      <xs:documentation>Code die aangeeft of de behandeling van een validatieopdracht is geslaagd.
-      </xs:documentation>
-    </xs:annotation>
     <xs:restriction base="xs:string">
       <xs:enumeration value="valide">
         <xs:annotation>
-          <xs:documentation>Het besluit, de rectificatie of de mededeling voldoet aan alle eisen die de LVBB er op
+          <xs:documentation>Het besluit, de kennisgeving, de rectificatie of de mededeling voldoet aan alle eisen die de LVBB er op
             dit moment aan stelt.</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="niet-valide">
         <xs:annotation>
-          <xs:documentation>Het besluit, de rectificatie of de mededeling voldoet niet aan de eisen die de LVBB er
+          <xs:documentation>Het besluit, de kennisgeving, de rectificatie of de mededeling voldoet niet aan de eisen die de LVBB er
             aan stelt.</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
@@ -556,14 +353,10 @@
   </xs:simpleType>
 
   <xs:simpleType name="ValidatieVoortgangCode">
-    <xs:annotation>
-      <xs:documentation>Code die aangeeft hoe ver de behandeling van een validatieopdracht is
-        gevorderd.</xs:documentation>
-    </xs:annotation>
     <xs:restriction base="xs:string">
       <xs:enumeration value="validatie-voltooid">
         <xs:annotation>
-          <xs:documentation>De validatie van het besluit, de rectificatie of de mededeling is voltooid.
+          <xs:documentation>De validatie van het besluit, de kennisgeving, de rectificatie of de mededeling is voltooid.
           </xs:documentation>
         </xs:annotation>
       </xs:enumeration>
@@ -571,87 +364,43 @@
   </xs:simpleType>
 
   <!--
-  Antwoord voor publicatie opdracht
+  Antwoord voor publicatieopdracht
   -->
-  <xs:element name="publicatieVerzoekResultaat" type="lvbbt:PublicatieVerzoekResultaatType">
-    <xs:annotation>
-      <xs:documentation>Root element van het antwoord op een verzoek voor een publicatieopdracht.
-      </xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="publicatieStatusVerzoekResultaat" type="lvbbt:PublicatieVerzoekResultaatType">
-    <xs:annotation>
-      <xs:documentation>Root element van het antwoord op een verzoek voor de status van een
-        publicatieopdracht.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
+  <xs:element name="publicatieVerzoekResultaat" type="lvbbt:PublicatieVerzoekResultaatType"> </xs:element>
   <xs:complexType name="PublicatieVerzoekResultaatType">
-    <xs:annotation>
-      <xs:documentation>Beschrijving van het antwoord op een verzoek voor een publicatieopdracht.
-      </xs:documentation>
-    </xs:annotation>
     <xs:complexContent>
       <xs:extension base="lvbbt:VerzoekResultaatType">
         <xs:sequence>
-          <xs:element minOccurs="1" name="verslag" type="lvbbt:PublicatieVerslagType">
-            <xs:annotation>
-              <xs:documentation>Verslag van de voortgang en uitkomst van de behandeling van de
-                publicatieopdracht.</xs:documentation>
-            </xs:annotation>
-          </xs:element>
+          <xs:element minOccurs="1" name="verslag" type="lvbbt:PublicatieVerslagType"> </xs:element>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
 
   <xs:complexType name="PublicatieVerslagType">
-    <xs:annotation>
-      <xs:documentation>Beschrijving van het verslag van de behandeling van een publicatieopdracht.
-      </xs:documentation>
-    </xs:annotation>
     <xs:complexContent>
       <xs:extension base="lvbbt:OpdrachtverslagType">
         <xs:sequence>
           <xs:choice>
-            <xs:element name="uitkomst" type="lvbbt:PublicatieUitkomstCode">
-              <xs:annotation>
-                <xs:documentation>Code die het resultaat van de publicatieopdracht aangeeft. Alleen aanwezig
-                  als de behandeling van de publicatieopdracht volledig is afgerond.
-                </xs:documentation>
-              </xs:annotation>
-            </xs:element>
-            <xs:element name="voortgang" type="lvbbt:PublicatieVoortgangCode">
-              <xs:annotation>
-                <xs:documentation>Voortgang van de behandeling van de publicatieopdracht. Alleen
-                  aanwezig als de publicatieopdracht nog in behandeling is.</xs:documentation>
-              </xs:annotation>
-            </xs:element>
+            <xs:element name="uitkomst" type="lvbbt:PublicatieUitkomstCode"> </xs:element>
+            <xs:element name="voortgang" type="lvbbt:PublicatieVoortgangCode"> </xs:element>
           </xs:choice>
-          <xs:element minOccurs="0" name="tijdstipPublicatie" type="xs:dateTime">
-            <xs:annotation>
-              <xs:documentation>Datum/tijd dat het besluit, de rectificatie of de mededeling gepubliceerd of
-                bekendgemaakt is.</xs:documentation>
-            </xs:annotation>
-          </xs:element>
+          <xs:element minOccurs="0" name="tijdstipPublicatie" type="xs:dateTime"> </xs:element>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
 
   <xs:simpleType name="PublicatieUitkomstCode">
-    <xs:annotation>
-      <xs:documentation>Code die aangeeft of de behandeling van een publicatieopdracht is geslaagd.
-      </xs:documentation>
-    </xs:annotation>
     <xs:restriction base="xs:string">
       <xs:enumeration value="gepubliceerd">
         <xs:annotation>
-          <xs:documentation>Het besluit, de rectificatie of de mededeling mededeling is gepubliceerd.</xs:documentation>
+          <xs:documentation>Het besluit, de kennisgeving, de rectificatie of de mededeling mededeling is gepubliceerd.</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="niet-valide">
         <xs:annotation>
-          <xs:documentation>Het besluit, de rectificatie of de mededeling voldoet niet aan de eisen die de LVBB er
+          <xs:documentation>Het besluit, de kennisgeving, de rectificatie of de mededeling voldoet niet aan de eisen die de LVBB er
             aan stelt.</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
@@ -664,20 +413,16 @@
   </xs:simpleType>
 
   <xs:simpleType name="PublicatieVoortgangCode">
-    <xs:annotation>
-      <xs:documentation>Code die aangeeft hoe ver de behandeling van een publicatieopdracht is
-        gevorderd. </xs:documentation>
-    </xs:annotation>
     <xs:restriction base="xs:string">
       <xs:enumeration value="validatie-voltooid">
         <xs:annotation>
-          <xs:documentation>De validatie van het besluit, de rectificatie of de mededeling is voltooid.
+          <xs:documentation>De validatie van het besluit, de kennisgeving, de rectificatie of de mededeling is voltooid.
           </xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="registratie-voltooid">
         <xs:annotation>
-          <xs:documentation>Het aangeleverde besluit, de rectificatie of de mededeling en afgeleide producten zijn
+          <xs:documentation>Het aangeleverde besluit, de kennisgeving, de rectificatie of de mededeling en afgeleide producten zijn
             geregistreerd in de LVBB en staan klaar om gepubliceerd te worden.</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
@@ -689,25 +434,12 @@
   Antwoord voor breekPublicatieAfVerzoek 
   -->
   <xs:element name="breekPublicatieAfVerzoekResultaat"
-    type="lvbbt:BreekPublicatieAfVerzoekResultaatType">
-    <xs:annotation>
-      <xs:documentation>Root element van het antwoord op een verzoek voor een
-        breekPublicatieAfOpdracht.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
+    type="lvbbt:BreekPublicatieAfVerzoekResultaatType"> </xs:element>
   <xs:complexType name="BreekPublicatieAfVerzoekResultaatType">
-    <xs:annotation>
-      <xs:documentation>Beschrijving van het antwoord op een verzoek voor een
-        breekPublicatieAfOpdracht.</xs:documentation>
-    </xs:annotation>
     <xs:complexContent>
       <xs:extension base="lvbbt:VerzoekResultaatType">
         <xs:sequence>
           <xs:element minOccurs="0" name="verslag" type="lvbbt:BreekPublicatieAfVerslagType">
-            <xs:annotation>
-              <xs:documentation>Verslag van de voortgang en uitkomst van de behandeling van de
-                breekPublicatieAfOpdrachtpdracht.</xs:documentation>
-            </xs:annotation>
           </xs:element>
         </xs:sequence>
       </xs:extension>
@@ -715,10 +447,6 @@
   </xs:complexType>
 
   <xs:complexType name="BreekPublicatieAfVerslagType">
-    <xs:annotation>
-      <xs:documentation>Beschrijving van het verslag van de behandeling van een
-        breekPublicatieAfOpdracht.</xs:documentation>
-    </xs:annotation>
     <xs:complexContent>
       <xs:extension base="lvbbt:OpdrachtverslagType">
         <xs:sequence>
@@ -734,10 +462,6 @@
   </xs:complexType>
 
   <xs:simpleType name="BreekPublicatieAfUitkomstCode">
-    <xs:annotation>
-      <xs:documentation>Code die aangeeft of de behandeling van een breekPublicatieAfOpdracht is
-        geslaagd.</xs:documentation>
-    </xs:annotation>
     <xs:restriction base="xs:string">
       <xs:enumeration value="ok">
         <xs:annotation>
@@ -751,80 +475,7 @@
       </xs:enumeration>
     </xs:restriction>
   </xs:simpleType>
-  
-  <!--
-  Antwoord voor opdracht tot validatie van de revisie
-  -->
-  <xs:element name="validatieRevisieVerzoekResultaat"
-    type="lvbbt:ValidatieRevisieVerzoekResultaatType">
-    <xs:annotation>
-      <xs:documentation>Root element van het antwoord op een verzoek voor een validatie van een revisieopdracht.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="validatieRevisieStatusVerzoekResultaat" type="lvbbt:ValidatieRevisieVerzoekResultaatType">
-    <xs:annotation>
-      <xs:documentation>Root element van het antwoord op een verzoek voor de status van een
-        validatie van een revisieopdracht.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:complexType name="ValidatieRevisieVerzoekResultaatType">
-    <xs:annotation>
-      <xs:documentation>Beschrijving van het antwoord op een verzoek voor een validatie van een revisieopdracht.</xs:documentation> 
-    </xs:annotation>
-    <xs:complexContent>
-      <xs:extension base="lvbbt:VerzoekResultaatType">
-        <xs:sequence>
-          <xs:element minOccurs="1" name="verslag" type="lvbbt:ValidatieRevisieVerslagType">
-            <xs:annotation>
-              <xs:documentation>Verslag van de voortgang en uitkomst van de behandeling van de
-                validatie van een revisieopdracht.</xs:documentation> 
-            </xs:annotation>
-          </xs:element>
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  
-  <xs:complexType name="ValidatieRevisieVerslagType">
-    <xs:annotation>
-      <xs:documentation>Beschrijving van het verslag van de behandeling van een validatie van een revisieopdracht.</xs:documentation>
-    </xs:annotation>
-    <xs:complexContent>
-      <xs:extension base="lvbbt:OpdrachtverslagType">
-        <xs:sequence>
-          <xs:element name="uitkomst" type="lvbbt:ValidatieRevisieUitkomstCode">
-            <xs:annotation>
-              <xs:documentation>Code die aangeeft of de behandeling van een validatie van een revisieopdracht is geslaagd.</xs:documentation>
-            </xs:annotation>
-          </xs:element>
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  
-  <xs:simpleType name="ValidatieRevisieUitkomstCode">
-    <xs:annotation>
-      <xs:documentation>Code die aangeeft of de behandeling van een opdracht tot validatie van een revisie is geslaagd.</xs:documentation>
-    </xs:annotation>
-    <xs:restriction base="xs:string">
-      <xs:enumeration value="valide">
-        <xs:annotation>
-          <xs:documentation>De revisie voldoet aan alle eisen die de LVBB er op dit moment aan stelt.</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="niet-valide">
-        <xs:annotation>
-          <xs:documentation>De revisie voldoet niet aan de eisen die de LVBB er aan stelt.</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="behandeling-afgebroken">
-        <xs:annotation>
-          <xs:documentation>De behandeling van de opdracht is afgebroken.</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>  
-    </xs:restriction>
-  </xs:simpleType>
-  
+
   <!--
   Antwoord voor opdracht tot validatie van de directe mutatie
   -->
@@ -833,13 +484,6 @@
     <xs:annotation>
       <xs:documentation> Root element van het antwoord op een verzoek voor een opdracht tot
         validatie van een directe mutatie. </xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="validatieDirecteMutatieStatusVerzoekResultaat"
-    type="lvbbt:ValidatieDirecteMutatieVerzoekResultaatType">
-    <xs:annotation>
-      <xs:documentation> Root element van het antwoord op een verzoek voor de status van een
-        opdracht voor de validatie van een directe mutatie. </xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:complexType name="ValidatieDirecteMutatieVerzoekResultaatType">
@@ -860,7 +504,7 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  
+
   <xs:complexType name="ValidatieDirecteMutatieVerslagType">
     <xs:annotation>
       <xs:documentation> Beschrijving van het verslag van de behandeling van een opdracht tot
@@ -868,26 +512,24 @@
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="lvbbt:OpdrachtverslagType">
-        <xs:sequence>
-          <xs:choice>
-            <xs:element name="uitkomst" type="lvbbt:ValidatieDirecteMutatieUitkomstCode">
-              <xs:annotation>
-                <xs:documentation> Code het resultaat van de validatie aangeeft. Alleen aanwezig als
+        <xs:choice>
+          <xs:element name="uitkomst" type="lvbbt:ValidatieDirecteMutatieUitkomstCode">
+            <xs:annotation>
+              <xs:documentation> Code het resultaat van de validatie aangeeft. Alleen aanwezig als
                   de behandeling van de validatieopdracht volledig is afgerond. </xs:documentation>
-              </xs:annotation>
-            </xs:element>
-            <xs:element name="voortgang" type="lvbbt:ValidatieDirecteMutatieVoortgangCode">
-              <xs:annotation>
-                <xs:documentation> Voortgang van de behandeling van de validatieopdracht. Alleen
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="voortgang" type="lvbbt:ValidatieDirecteMutatieVoortgangCode">
+            <xs:annotation>
+              <xs:documentation> Voortgang van de behandeling van de validatieopdracht. Alleen
                   aanwezig als de validatieopdracht nog in behandeling is. </xs:documentation>
-              </xs:annotation>
-            </xs:element>
-          </xs:choice>
-        </xs:sequence>
+            </xs:annotation>
+          </xs:element>
+        </xs:choice>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  
+
   <xs:simpleType name="ValidatieDirecteMutatieUitkomstCode">
     <xs:annotation>
       <xs:documentation> Code die aangeeft of de behandeling van een opdracht tot validatie van een
@@ -906,26 +548,15 @@
           </xs:documentation>
         </xs:annotation>
       </xs:enumeration>
-      <xs:enumeration value="opdracht-niet-valide">
-        <xs:annotation>
-          <xs:documentation> De opdracht voldoet niet aan de eisen die de LVBB er aan stelt.
-          </xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
     </xs:restriction>
   </xs:simpleType>
-  
+
   <xs:simpleType name="ValidatieDirecteMutatieVoortgangCode">
     <xs:annotation>
       <xs:documentation> Code die aangeeft hoe ver de behandeling van een opdracht tot validatie van
         een directe mutatie is gevorderd. </xs:documentation>
     </xs:annotation>
     <xs:restriction base="xs:string">
-      <xs:enumeration value="opdracht-ontvangen">
-        <xs:annotation>
-          <xs:documentation>De opdracht is ontvangen en in behandeling genomen.</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
       <xs:enumeration value="validatie-voltooid">
         <xs:annotation>
           <xs:documentation> De validatie van de directe mutatie is voltooid. </xs:documentation>
@@ -933,7 +564,7 @@
       </xs:enumeration>
     </xs:restriction>
   </xs:simpleType>
-  
+
   <!--
   Antwoord voor opdracht voor een directe mutatie
   -->
@@ -941,13 +572,6 @@
     <xs:annotation>
       <xs:documentation> Root element van het antwoord op een verzoek voor een opdracht voor een
         directe mutatie. </xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="directeMutatieStatusVerzoekResultaat"
-    type="lvbbt:DirecteMutatieVerzoekResultaatType">
-    <xs:annotation>
-      <xs:documentation> Root element van het antwoord op een verzoek voor de status van een
-        opdracht voor een directe mutatie. </xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:complexType name="DirecteMutatieVerzoekResultaatType">
@@ -968,7 +592,7 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  
+
   <xs:complexType name="DirecteMutatieVerslagType">
     <xs:annotation>
       <xs:documentation> Beschrijving van het verslag van de behandeling van een opdracht voor een
@@ -976,27 +600,25 @@
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="lvbbt:OpdrachtverslagType">
-        <xs:sequence>
-          <xs:choice>
-            <xs:element name="uitkomst" type="lvbbt:DirecteMutatieUitkomstCode">
-              <xs:annotation>
-                <xs:documentation> Code het resultaat van de directe mutatie aangeeft. Alleen
+        <xs:choice>
+          <xs:element name="uitkomst" type="lvbbt:DirecteMutatieUitkomstCode">
+            <xs:annotation>
+              <xs:documentation> Code het resultaat van de directe mutatie aangeeft. Alleen
                   aanwezig als de behandeling van de mutatieopdracht volledig is afgerond.
                 </xs:documentation>
-              </xs:annotation>
-            </xs:element>
-            <xs:element name="voortgang" type="lvbbt:DirecteMutatieVoortgangCode">
-              <xs:annotation>
-                <xs:documentation> Voortgang van de behandeling van de directe mutatie. Alleen
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="voortgang" type="lvbbt:DirecteMutatieVoortgangCode">
+            <xs:annotation>
+              <xs:documentation> Voortgang van de behandeling van de directe mutatie. Alleen
                   aanwezig als de mutatieopdracht nog in behandeling is. </xs:documentation>
-              </xs:annotation>
-            </xs:element>
-          </xs:choice>
-        </xs:sequence>
+            </xs:annotation>
+          </xs:element>
+        </xs:choice>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  
+
   <xs:simpleType name="DirecteMutatieUitkomstCode">
     <xs:annotation>
       <xs:documentation> Code die aangeeft of de behandeling van een opdracht voor een directe
@@ -1014,26 +636,21 @@
           </xs:documentation>
         </xs:annotation>
       </xs:enumeration>
-      <xs:enumeration value="opdracht-niet-valide">
+      <xs:enumeration value="behandeling-afgebroken">
         <xs:annotation>
-          <xs:documentation> De opdracht voldoet niet aan de eisen die de LVBB er aan stelt.
+          <xs:documentation> De behandeling van de opdracht is afgebroken. 
           </xs:documentation>
         </xs:annotation>
       </xs:enumeration>
     </xs:restriction>
   </xs:simpleType>
-  
+
   <xs:simpleType name="DirecteMutatieVoortgangCode">
     <xs:annotation>
       <xs:documentation> Code die aangeeft hoe ver de behandeling van een opdracht voor een directe
         mutatie is gevorderd. </xs:documentation>
     </xs:annotation>
     <xs:restriction base="xs:string">
-      <xs:enumeration value="opdracht-ontvangen">
-        <xs:annotation>
-          <xs:documentation> De opdracht is ontvangen en in behandeling genomen. </xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
       <xs:enumeration value="validatie-voltooid">
         <xs:annotation>
           <xs:documentation> De directe mutatie is voltooid. </xs:documentation>
@@ -1044,73 +661,98 @@
           <xs:documentation> De aangeleverde mutatie is uitgevoerd. </xs:documentation>
         </xs:annotation>
       </xs:enumeration>
-      <xs:enumeration value="behandeling-afgebroken">
-        <xs:annotation>
-          <xs:documentation> De behandeling van de opdracht is afgebroken. </xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
     </xs:restriction>
   </xs:simpleType>
-  
-  
+
   <!--
-  Antwoord voor opdracht voor een revisie
+  Antwoord voor opdracht tot validatie van de revisie
   -->
-  <xs:element name="revisieVerzoekResultaat"
-    type="lvbbt:RevisieVerzoekResultaatType">
-    <xs:annotation>
-      <xs:documentation>Root element van het antwoord op een verzoek voor een revisieopdracht.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="revisieStatusVerzoekResultaat"
-    type="lvbbt:RevisieVerzoekResultaatType">
-    <xs:annotation>
-      <xs:documentation>Root element van het antwoord op een verzoek voor de status van een revisieopdracht.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:complexType name="RevisieVerzoekResultaatType">
-    <xs:annotation>
-      <xs:documentation>Beschrijving van het antwoord op een verzoek voor een revisieopdracht.</xs:documentation>
-    </xs:annotation>
+  <xs:element name="validatieRevisieVerzoekResultaat"
+    type="lvbbt:ValidatieRevisieVerzoekResultaatType"> </xs:element>
+  <xs:complexType name="ValidatieRevisieVerzoekResultaatType">
     <xs:complexContent>
       <xs:extension base="lvbbt:VerzoekResultaatType">
         <xs:sequence>
-          <xs:element minOccurs="1" name="verslag" type="lvbbt:RevisieVerslagType">
-            <xs:annotation>
-              <xs:documentation>Verslag van de voortgang en uitkomst van de behandeling van de revisieopdracht.</xs:documentation>
-            </xs:annotation>
+          <xs:element minOccurs="1" name="verslag" type="lvbbt:ValidatieRevisieVerslagType">
           </xs:element>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  
-  <xs:complexType name="RevisieVerslagType">
-    <xs:annotation>
-      <xs:documentation></xs:documentation>
-    </xs:annotation>
+
+  <xs:complexType name="ValidatieRevisieVerslagType">
     <xs:complexContent>
       <xs:extension base="lvbbt:OpdrachtverslagType">
-          <xs:choice>
-            <xs:element name="uitkomst" type="lvbbt:RevisieUitkomstCode">
-              <xs:annotation>
-                <xs:documentation>Code die aangeeft of de behandeling van een revisieopdracht is geslaagd.</xs:documentation>
-              </xs:annotation>
-            </xs:element>
-            <xs:element name="voortgang" type="lvbbt:RevisieVoortgangCode">
-              <xs:annotation>
-                <xs:documentation>Voortgang van de behandeling van de revisieopdracht.</xs:documentation>
-              </xs:annotation>
-            </xs:element>
-          </xs:choice>     
+        <xs:choice>
+          <xs:element name="uitkomst" type="lvbbt:ValidatieRevisieUitkomstCode"> </xs:element>
+          <xs:element name="voortgang" type="lvbbt:ValidatieRevisieVoortgangCode"> </xs:element>
+        </xs:choice>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  
-  <xs:simpleType name="RevisieUitkomstCode">
+
+  <xs:simpleType name="ValidatieRevisieUitkomstCode">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="valide">
+        <xs:annotation>
+          <xs:documentation>De revisie voldoet aan alle eisen die de LVBB er op dit moment aan stelt.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="niet-valide">
+        <xs:annotation>
+          <xs:documentation>De revisie voldoet niet aan de eisen die de LVBB er aan stelt.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="behandeling-afgebroken">
+        <xs:annotation>
+          <xs:documentation>De behandeling van de opdracht is afgebroken.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="ValidatieRevisieVoortgangCode">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="validatie-voltooid">
+        <xs:annotation>
+          <xs:documentation>De validatie van de revisie is voltooid.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+
+
+
+  <!--
+  Antwoord voor opdracht voor een revisie
+  -->
+  <xs:element name="revisieVerzoekResultaat" type="lvbbt:RevisieVerzoekResultaatType"> </xs:element>
+  <xs:complexType name="RevisieVerzoekResultaatType">
+    <xs:complexContent>
+      <xs:extension base="lvbbt:VerzoekResultaatType">
+        <xs:sequence>
+          <xs:element minOccurs="1" name="verslag" type="lvbbt:RevisieVerslagType"> </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="RevisieVerslagType">
     <xs:annotation>
-      <xs:documentation>Code die aangeeft of de behandeling van een opdracht voor een revisie is geslaagd.</xs:documentation>
+      <xs:documentation/>
     </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="lvbbt:OpdrachtverslagType">
+        <xs:choice>
+          <xs:element name="uitkomst" type="lvbbt:RevisieUitkomstCode"> </xs:element>
+          <xs:element name="voortgang" type="lvbbt:RevisieVoortgangCode"> </xs:element>
+        </xs:choice>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:simpleType name="RevisieUitkomstCode">
     <xs:restriction base="xs:string">
       <xs:enumeration value="mutatie-voltooid">
         <xs:annotation>
@@ -1126,18 +768,260 @@
         <xs:annotation>
           <xs:documentation>De behandeling van de opdracht is afgebroken.</xs:documentation>
         </xs:annotation>
-      </xs:enumeration>     
+      </xs:enumeration>
     </xs:restriction>
   </xs:simpleType>
-  
+
   <xs:simpleType name="RevisieVoortgangCode">
-    <xs:annotation>
-      <xs:documentation>Code die aangeeft hoe ver de behandeling van een opdracht voor een revisie is gevorderd.</xs:documentation>
-    </xs:annotation>
     <xs:restriction base="xs:string">
       <xs:enumeration value="validatie-voltooid">
         <xs:annotation>
           <xs:documentation>De validatie van de revisie is voltooid.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+
+
+  <!--
+  Antwoord voor opdracht tot validatie van de procedureverloopmutatie
+  -->
+  <xs:element name="validatieProcedureverloopmutatieVerzoekResultaat"
+    type="lvbbt:ValidatieProcedureverloopmutatieVerzoekResultaatType"> </xs:element>
+  <xs:complexType name="ValidatieProcedureverloopmutatieVerzoekResultaatType">
+    <xs:complexContent>
+      <xs:extension base="lvbbt:VerzoekResultaatType">
+        <xs:sequence>
+          <xs:element minOccurs="1" name="verslag"
+            type="lvbbt:ValidatieProcedureverloopmutatieVerslagType"> </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="ValidatieProcedureverloopmutatieVerslagType">
+    <xs:complexContent>
+      <xs:extension base="lvbbt:OpdrachtverslagType">
+        <xs:choice>
+          <xs:element name="uitkomst" type="lvbbt:ValidatieProcedureverloopmutatieUitkomstCode"> </xs:element>
+          <xs:element name="voortgang" type="lvbbt:ValidatieProcedureverloopmutatieVoortgangCode">
+          </xs:element>
+        </xs:choice>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:simpleType name="ValidatieProcedureverloopmutatieUitkomstCode">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="valide">
+        <xs:annotation>
+          <xs:documentation>De procedureverloopmutatie voldoet aan alle eisen die de LVBB er op dit moment aan stelt.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="niet-valide">
+        <xs:annotation>
+          <xs:documentation>De procedureverloopmutatie voldoet niet aan de eisen die de LVBB er aan stelt.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="behandeling-afgebroken">
+        <xs:annotation>
+          <xs:documentation>De behandeling van de opdracht is afgebroken.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="ValidatieProcedureverloopmutatieVoortgangCode">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="validatie-voltooid">
+        <xs:annotation>
+          <xs:documentation>De validatie van de procedureverloopmutatie is voltooid.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+
+
+
+  <!--
+  Antwoord voor opdracht voor een procedureverloopmutatie
+  -->
+  <xs:element name="procedureverloopmutatieVerzoekResultaat"
+    type="lvbbt:ProcedureverloopmutatieVerzoekResultaatType"> </xs:element>
+  <xs:complexType name="ProcedureverloopmutatieVerzoekResultaatType">
+    <xs:complexContent>
+      <xs:extension base="lvbbt:VerzoekResultaatType">
+        <xs:sequence>
+          <xs:element minOccurs="1" name="verslag" type="lvbbt:ProcedureverloopmutatieVerslagType">
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="ProcedureverloopmutatieVerslagType">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="lvbbt:OpdrachtverslagType">
+        <xs:choice>
+          <xs:element name="uitkomst" type="lvbbt:ProcedureverloopmutatieUitkomstCode"> </xs:element>
+          <xs:element name="voortgang" type="lvbbt:ProcedureverloopmutatieVoortgangCode">
+          </xs:element>
+        </xs:choice>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:simpleType name="ProcedureverloopmutatieUitkomstCode">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="mutatie-voltooid">
+        <xs:annotation>
+          <xs:documentation>De aangeleverde procedureverloopmutatie is uitgevoerd.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="niet-valide">
+        <xs:annotation>
+          <xs:documentation>De procedureverloopmutatie voldoet niet aan de eisen die de LVBB er aan stelt.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="behandeling-afgebroken">
+        <xs:annotation>
+          <xs:documentation>De behandeling van de opdracht is afgebroken.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="ProcedureverloopmutatieVoortgangCode">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="validatie-voltooid">
+        <xs:annotation>
+          <xs:documentation>De validatie van de procedureverloopmutatie is voltooid.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+
+
+
+
+
+  <!--
+  Antwoord voor opdracht tot validatie van de registratie
+  -->
+  <xs:element name="validatieRegistratieVerzoekResultaat"
+    type="lvbbt:ValidatieRegistratieVerzoekResultaatType"> </xs:element>
+  <xs:complexType name="ValidatieRegistratieVerzoekResultaatType">
+    <xs:complexContent>
+      <xs:extension base="lvbbt:VerzoekResultaatType">
+        <xs:sequence>
+          <xs:element minOccurs="1" name="verslag" type="lvbbt:ValidatieRegistratieVerslagType">
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="ValidatieRegistratieVerslagType">
+    <xs:complexContent>
+      <xs:extension base="lvbbt:OpdrachtverslagType">
+        <xs:choice>
+          <xs:element name="uitkomst" type="lvbbt:ValidatieRegistratieUitkomstCode"> </xs:element>
+          <xs:element name="voortgang" type="lvbbt:ValidatieRegistratieVoortgangCode"> </xs:element>
+        </xs:choice>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:simpleType name="ValidatieRegistratieUitkomstCode">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="valide">
+        <xs:annotation>
+          <xs:documentation>De registratie voldoet aan alle eisen die de LVBB er op dit moment aan stelt.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="niet-valide">
+        <xs:annotation>
+          <xs:documentation>De registratie voldoet niet aan de eisen die de LVBB er aan stelt.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="behandeling-afgebroken">
+        <xs:annotation>
+          <xs:documentation>De behandeling van de opdracht is afgebroken.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="ValidatieRegistratieVoortgangCode">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="validatie-voltooid">
+        <xs:annotation>
+          <xs:documentation>De validatie van de registratie is voltooid.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+
+
+  <!--
+  Antwoord voor registratieopdracht
+  -->
+  <xs:element name="registratieVerzoekResultaat" type="lvbbt:RegistratieVerzoekResultaatType"> </xs:element>
+  <xs:complexType name="RegistratieVerzoekResultaatType">
+    <xs:complexContent>
+      <xs:extension base="lvbbt:VerzoekResultaatType">
+        <xs:sequence>
+          <xs:element minOccurs="1" name="verslag" type="lvbbt:RegistratieVerslagType">
+            <xs:annotation>
+              <xs:documentation>Verslag van de voortgang en uitkomst van de behandeling van de registratieopdracht.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="RegistratieVerslagType">
+    <xs:complexContent>
+      <xs:extension base="lvbbt:OpdrachtverslagType">
+        <xs:choice>
+          <xs:element name="uitkomst" type="lvbbt:RegistratieUitkomstCode"> </xs:element>
+          <xs:element name="voortgang" type="lvbbt:RegistratieVoortgangCode"> </xs:element>
+        </xs:choice>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:simpleType name="RegistratieUitkomstCode">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="registratie-voltooid">
+        <xs:annotation>
+          <xs:documentation>De aangeleverde registratieopdracht is uitgevoerd.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="niet-valide">
+        <xs:annotation>
+          <xs:documentation>De registratie voldoet niet aan de eisen die de LVBB er aan stelt.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="behandeling-afgebroken">
+        <xs:annotation>
+          <xs:documentation>De behandeling van de opdracht is afgebroken.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="RegistratieVoortgangCode">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="validatie-voltooid">
+        <xs:annotation>
+          <xs:documentation>De validatie van de registratieopdracht is voltooid.</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
     </xs:restriction>
