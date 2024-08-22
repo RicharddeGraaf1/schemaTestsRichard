@@ -35,7 +35,7 @@
     schemaLocation="https://raw.githubusercontent.com/RicharddeGraaf1/schemaTestsRichard/main/stop/1.4.0/imop-geo.xsd"/>
   <xs:import namespace="https://standaarden.overheid.nl/stop/imop/consolidatie/"
     schemaLocation="https://raw.githubusercontent.com/RicharddeGraaf1/schemaTestsRichard/main/stop/1.4.0/imop-consolidatie.xsd"/>
-
+  
   <!--
     AANLEVEREN BESLUIT
   -->
@@ -43,13 +43,13 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element maxOccurs="1" minOccurs="1" ref="lvbba:BesluitVersie"/>
-
+        
         <xs:element maxOccurs="unbounded" minOccurs="0" ref="lvbba:RegelingVersieInformatie"/>
       </xs:sequence>
       <xs:attributeGroup ref="lvbba:agSchemaversie"/>
     </xs:complexType>
   </xs:element>
-
+  
   <!-- 
     AANLEVEREN GENERIEK INFORMATIEOBJECT
   -->
@@ -61,7 +61,7 @@
       <xs:attributeGroup ref="lvbba:agSchemaversie"/>
     </xs:complexType>
   </xs:element>
-
+  
   <!--
     AANLEVEREN KENNISGEVING
   -->
@@ -73,7 +73,7 @@
       <xs:attributeGroup ref="lvbba:agSchemaversie"/>
     </xs:complexType>
   </xs:element>
-
+  
   <!--
     AANLEVEREN RECTIFICATIE 
   -->
@@ -87,7 +87,7 @@
       <xs:attributeGroup ref="lvbba:agSchemaversie"/>
     </xs:complexType>
   </xs:element>
-
+  
   <!--
     AANLEVEREN MEDEDELING 
   -->
@@ -99,7 +99,7 @@
       <xs:attributeGroup ref="lvbba:agSchemaversie"/>
     </xs:complexType>
   </xs:element>
-
+  
   <!--
     AANLEVEREN REVISIE 
   -->
@@ -112,7 +112,7 @@
       <xs:attributeGroup ref="lvbba:agSchemaversie"/>
     </xs:complexType>
   </xs:element>
-
+  
   <!--
     AANLEVEREN PROCEDUREVERLOOPMUTATIE
   -->
@@ -124,11 +124,40 @@
       <xs:attributeGroup ref="lvbba:agSchemaversie"/>
     </xs:complexType>
   </xs:element>
-
+  
+  <!--
+    AANLEVEREN GEBIEDSMARKERING
+  -->
+  
+  <xs:element name="AanleveringGebiedsmarkering">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="1" minOccurs="1" ref="geo:Gebiedsmarkering"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="lvbba:agSchemaversie"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="gebiedsmarkeringRef" type="data:bestandsnaam"/>
+  
+  
+  <!--
+    AANLEVEREN EFFECTGEBIED
+  -->
+  
+  <xs:element name="AanleveringEffectgebied">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="1" minOccurs="1" ref="geo:Effectgebied"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="lvbba:agSchemaversie"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="effectgebiedRef" type="data:bestandsnaam"/>
+  
   <!--
     AANLEVEREN JURIDISCHE VERANTWOORDING VOOR REGISTRATIEOPDRACHT (PSEUDOBESLUIT)
   -->
-
+  
   <xs:element name="AanleveringJuridischeVerantwoording">
     <xs:complexType>
       <xs:sequence>
@@ -137,7 +166,7 @@
       <xs:attributeGroup ref="lvbba:agSchemaversie"/>
     </xs:complexType>
   </xs:element>
-
+  
   <!-- 
     AANLEVEREN REGELINGVERSIE (RENVOOISERVICE)
   -->
@@ -159,7 +188,7 @@
       <xs:attributeGroup ref="lvbba:agSchemaversie"/>
     </xs:complexType>
   </xs:element>
-
+  
   <!--
     INSTRUMENT-SPECIFIEKE INCLUSIES
   -->
@@ -171,6 +200,8 @@
         <xs:element maxOccurs="1" minOccurs="0" ref="data:Procedureverloop"/>
         <xs:element maxOccurs="1" minOccurs="1" ref="data:ConsolidatieInformatie"/>
         <xs:element maxOccurs="1" minOccurs="0" ref="tekst:Tekstrevisie"/>
+        <xs:element maxOccurs="1" minOccurs="0" ref="lvbba:gebiedsmarkeringRef"/>
+        <xs:element maxOccurs="1" minOccurs="0" ref="lvbba:effectgebiedRef"/>
         <xs:choice>
           <xs:element maxOccurs="1" minOccurs="1" ref="tekst:BesluitKlassiek"/>
           <xs:element maxOccurs="1" minOccurs="1" ref="tekst:BesluitCompact"/>
@@ -178,7 +209,7 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-
+  
   <xs:element name="KennisgevingVersie">
     <xs:complexType>
       <xs:sequence>
@@ -186,10 +217,12 @@
         <xs:element maxOccurs="1" minOccurs="1" ref="data:KennisgevingMetadata"/>
         <xs:element maxOccurs="1" minOccurs="0" ref="data:Procedureverloopmutatie"/>
         <xs:element maxOccurs="1" minOccurs="1" ref="tekst:Kennisgeving"/>
+        <xs:element maxOccurs="1" minOccurs="0" ref="lvbba:gebiedsmarkeringRef"/>
+        <xs:element maxOccurs="1" minOccurs="0" ref="lvbba:effectgebiedRef"/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-
+  
   <xs:element name="RectificatieVersie">
     <xs:complexType>
       <xs:sequence>
@@ -198,10 +231,12 @@
         <xs:element maxOccurs="1" minOccurs="0" ref="data:Procedureverloopmutatie"/>
         <xs:element maxOccurs="1" minOccurs="0" ref="data:ConsolidatieInformatie"/>
         <xs:element maxOccurs="1" minOccurs="1" ref="tekst:Rectificatie"/>
+        <xs:element maxOccurs="1" minOccurs="0" ref="lvbba:gebiedsmarkeringRef"/>
+        <xs:element maxOccurs="1" minOccurs="0" ref="lvbba:effectgebiedRef"/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-
+  
   <xs:element name="MededelingVersie">
     <xs:complexType>
       <xs:sequence>
@@ -210,10 +245,12 @@
         <xs:element maxOccurs="1" minOccurs="0" ref="data:Procedureverloopmutatie"/>
         <xs:element maxOccurs="1" minOccurs="0" ref="data:ConsolidatieInformatie"/>
         <xs:element maxOccurs="1" minOccurs="1" ref="tekst:Mededeling"/>
+        <xs:element maxOccurs="1" minOccurs="0" ref="lvbba:gebiedsmarkeringRef"/>
+        <xs:element maxOccurs="1" minOccurs="0" ref="lvbba:effectgebiedRef"/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-
+  
   <xs:element name="RevisieVersie">
     <xs:complexType>
       <xs:sequence>
@@ -222,7 +259,7 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-
+  
   <xs:element name="BesluitVersieInformatie">
     <xs:complexType>
       <xs:sequence>
@@ -233,7 +270,7 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-
+  
   <xs:element name="InformatieObjectVersie">
     <xs:complexType>
       <xs:sequence>
@@ -245,7 +282,7 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-
+  
   <xs:element name="ProcedureverloopmutatieVersie">
     <xs:complexType>
       <xs:sequence>
@@ -254,7 +291,7 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-
+  
   <xs:element name="RegelingVersieInformatie">
     <xs:complexType>
       <xs:sequence>
@@ -265,7 +302,7 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-
+  
   <!-- groepen -->
   <xs:group name="mgAnnotaties">
     <xs:sequence>
@@ -274,10 +311,10 @@
       <!-- plaats voor uitbreiding met andere annotaties -->
     </xs:sequence>
   </xs:group>
-
+  
   <!-- generiek -->
   <xs:attributeGroup name="agSchemaversie">
     <xs:attribute name="schemaversie" type="xs:token" use="required"/>
   </xs:attributeGroup>
-
+  
 </xs:schema>
