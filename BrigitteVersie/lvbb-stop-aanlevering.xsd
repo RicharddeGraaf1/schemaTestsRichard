@@ -35,7 +35,7 @@
     schemaLocation="https://raw.githubusercontent.com/RicharddeGraaf1/schemaTestsRichard/main/stop/1.4.0/imop-geo.xsd"/>
   <xs:import namespace="https://standaarden.overheid.nl/stop/imop/consolidatie/"
     schemaLocation="https://raw.githubusercontent.com/RicharddeGraaf1/schemaTestsRichard/main/stop/1.4.0/imop-consolidatie.xsd"/>
-  
+
   <!--
     AANLEVEREN BESLUIT
   -->
@@ -137,7 +137,7 @@
       <xs:attributeGroup ref="lvbba:agSchemaversie"/>
     </xs:complexType>
   </xs:element>
-  <xs:element name="gebiedsmarkeringRef" type="data:bestandsnaam"/>
+  <xs:element name="gebiedsmarkeringRef" type="lvbba:dtBestandsnaam"/>
   
   
   <!--
@@ -152,7 +152,7 @@
       <xs:attributeGroup ref="lvbba:agSchemaversie"/>
     </xs:complexType>
   </xs:element>
-  <xs:element name="effectgebiedRef" type="data:bestandsnaam"/>
+  <xs:element name="effectgebiedRef" type="lvbba:dtBestandsnaam"/>
   
   <!--
     AANLEVEREN JURIDISCHE VERANTWOORDING VOOR REGISTRATIEOPDRACHT (PSEUDOBESLUIT)
@@ -316,5 +316,11 @@
   <xs:attributeGroup name="agSchemaversie">
     <xs:attribute name="schemaversie" type="xs:token" use="required"/>
   </xs:attributeGroup>
+  
+  <xs:simpleType name="dtBestandsnaam">
+    <xs:restriction base="xs:token">
+      <xs:pattern value="[0-9A-Za-z\._-]+"/>
+    </xs:restriction>
+  </xs:simpleType>
   
 </xs:schema>
