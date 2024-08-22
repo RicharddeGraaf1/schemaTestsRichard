@@ -35,7 +35,7 @@
     schemaLocation="https://raw.githubusercontent.com/RicharddeGraaf1/schemaTestsRichard/main/stop/1.4.0/imop-geo.xsd"/>
   <xs:import namespace="https://standaarden.overheid.nl/stop/imop/consolidatie/"
     schemaLocation="https://raw.githubusercontent.com/RicharddeGraaf1/schemaTestsRichard/main/stop/1.4.0/imop-consolidatie.xsd"/>
-
+  
   <!--
     AANLEVEREN BESLUIT
   -->
@@ -322,5 +322,6 @@
       <xs:pattern value="[0-9A-Za-z\._-]+"/>
     </xs:restriction>
   </xs:simpleType>
+  
   
 </xs:schema>
