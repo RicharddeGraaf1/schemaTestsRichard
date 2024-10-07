@@ -279,25 +279,6 @@
       </xs:complexType>
    </xs:element>
 
-   <xs:element name="BesluitBijProcedureverloop">
-      <xs:complexType>
-         <xs:sequence>
-            <xs:element maxOccurs="1" minOccurs="1" ref="data:ExpressionIdentificatie"/>
-         </xs:sequence>
-         <xs:attribute name="schemaversie" type="lvbbu:dtSchemaVersie" use="optional"/>
-      </xs:complexType>
-   </xs:element>
-
-   <xs:element name="KennisgevingBijProcedureverloop">
-      <xs:complexType>
-         <xs:sequence>
-            <xs:element maxOccurs="1" minOccurs="1" ref="data:ExpressionIdentificatie"/>
-            <xs:element maxOccurs="1" minOccurs="1" ref="data:KennisgevingMetadata"/>
-         </xs:sequence>
-         <xs:attribute name="schemaversie" type="lvbbu:dtSchemaVersie" use="optional"/>
-      </xs:complexType>
-   </xs:element>
-
    <!--LEVEREN OFFICIELE PUBLICATIE-->
    <xs:element name="OfficielePublicatie">
       <xs:annotation>
