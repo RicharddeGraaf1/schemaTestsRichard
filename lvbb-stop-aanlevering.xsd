@@ -20,7 +20,7 @@
       </xs:appinfo>
    </xs:annotation>
    <xs:import namespace="https://standaarden.overheid.nl/stop/imop/data/"
-      schemaLocation="https://raw.githubusercontent.com/RicharddeGraaf1/schemaTestsRichard/main/stop/2.0.0-rc/imop-data.xsd"/>
+      schemaLocation="https://raw.githubusercontent.com/RicharddeGraaf1/schemaTestsRichard/refs/heads/main/stop/1.3.0/imop-data.xsd"/>
    <!--gebruik deze voor echte 2.0.0-rc --><!--https://standaarden.overheid.nl/stop/2.0.0-rc/imop-data.xsd-->
    <!--gebruik deze voor Richards 1.4.0 testjes--><!--https://raw.githubusercontent.com/RicharddeGraaf1/schemaTestsRichard/main/stop/2.0.0-rc/imop-data.xsd-->
    <xs:import namespace="https://standaarden.overheid.nl/stop/imop/tekst/"
