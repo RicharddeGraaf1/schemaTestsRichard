@@ -10,8 +10,8 @@
     <implementatie>
       <Moduleversie>
         <introductieversie>1.0.0</introductieversie>
-        <schema>https://standaarden.overheid.nl/lvbb/2.0.0-rc/lvbb-stop-aanlevering.xsd</schema>
-        <schematron>https://standaarden.overheid.nl/lvbb/2.0.0-rc/lvbb-aanlevering.sch</schematron>
+        <schema>https://raw.githubusercontent.com/RicharddeGraaf1/schemaTestsRichard/refs/heads/main/1.3/lvbb-stop-aanlevering.xsd</schema>
+        <schematron>https://raw.githubusercontent.com/RicharddeGraaf1/schemaTestsRichard/refs/heads/main/1.3/lvbb-aanlevering.sch</schematron>
       </Moduleversie>
     </implementatie>
   </Module>
@@ -21,8 +21,8 @@
     <implementatie>
       <Moduleversie>
         <introductieversie>1.0.0</introductieversie>
-        <schema>https://standaarden.overheid.nl/lvbb/2.0.0-rc/lvbb-stop-aanlevering.xsd</schema>
-        <schematron>https://standaarden.overheid.nl/lvbb/2.0.0-rc/lvbb-aanlevering.sch</schematron>
+        <schema>https://raw.githubusercontent.com/RicharddeGraaf1/schemaTestsRichard/refs/heads/main/1.3/lvbb-stop-aanlevering.xsd</schema>
+        <schematron>https://raw.githubusercontent.com/RicharddeGraaf1/schemaTestsRichard/refs/heads/main/1.3/lvbb-aanlevering.sch</schematron>
       </Moduleversie>
     </implementatie>
   </Module>
@@ -32,8 +32,8 @@
     <implementatie>
       <Moduleversie>
         <introductieversie>1.0.0</introductieversie>
-        <schema>https://standaarden.overheid.nl/lvbb/2.0.0-rc/lvbb-stop-aanlevering.xsd</schema>
-        <schematron>https://standaarden.overheid.nl/lvbb/2.0.0-rc/lvbb-aanlevering-io.sch</schematron>
+        <schema>https://raw.githubusercontent.com/RicharddeGraaf1/schemaTestsRichard/refs/heads/main/1.3/lvbb-stop-aanlevering.xsd</schema>
+        <schematron>https://raw.githubusercontent.com/RicharddeGraaf1/schemaTestsRichard/refs/heads/main/1.3/lvbb-aanlevering-io.sch</schematron>
       </Moduleversie>
     </implementatie>
   </Module>
@@ -43,7 +43,7 @@
     <implementatie>
       <Moduleversie>
         <introductieversie>1.0.0</introductieversie>
-        <schema>https://standaarden.overheid.nl/lvbb/2.0.0-rc/lvbb-transport.xsd</schema>
+        <schema>https://raw.githubusercontent.com/RicharddeGraaf1/schemaTestsRichard/refs/heads/main/1.3/lvbb-transport.xsd</schema>
       </Moduleversie>
     </implementatie>
   </Module>
@@ -53,7 +53,7 @@
     <implementatie>
       <Moduleversie>
         <introductieversie>1.0.0</introductieversie>
-        <schema>https://standaarden.overheid.nl/lvbb/2.0.0-rc/lvbb-transport.xsd</schema>
+        <schema>https://raw.githubusercontent.com/RicharddeGraaf1/schemaTestsRichard/refs/heads/main/1.3/lvbb-transport.xsd</schema>
       </Moduleversie>
     </implementatie>
   </Module>
@@ -63,7 +63,7 @@
     <implementatie>
       <Moduleversie>
         <introductieversie>1.0.0</introductieversie>
-        <schema>https://standaarden.overheid.nl/lvbb/2.0.0-rc/lvbb-transport.xsd</schema>
+        <schema>https://raw.githubusercontent.com/RicharddeGraaf1/schemaTestsRichard/refs/heads/main/1.3/lvbb-transport.xsd</schema>
       </Moduleversie>
     </implementatie>
   </Module>
@@ -73,7 +73,7 @@
     <implementatie>
       <Moduleversie>
         <introductieversie>1.0.0</introductieversie>
-        <schema>https://standaarden.overheid.nl/lvbb/2.0.0-rc/lvbb-transport.xsd</schema>
+        <schema>https://raw.githubusercontent.com/RicharddeGraaf1/schemaTestsRichard/refs/heads/main/1.3/lvbb-transport.xsd</schema>
       </Moduleversie>
     </implementatie>
   </Module>
@@ -83,7 +83,7 @@
     <implementatie>
       <Moduleversie>
         <introductieversie>1.0.0</introductieversie>
-        <schema>https://standaarden.overheid.nl/lvbb/2.0.0-rc/lvbb-transport.xsd</schema>
+        <schema>https://raw.githubusercontent.com/RicharddeGraaf1/schemaTestsRichard/refs/heads/main/1.3/lvbb-transport.xsd</schema>
       </Moduleversie>
     </implementatie>
   </Module>
@@ -93,7 +93,7 @@
     <implementatie>
       <Moduleversie>
         <introductieversie>1.0.0</introductieversie>
-        <schema>https://standaarden.overheid.nl/lvbb/2.0.0-rc/lvbb-transport.xsd</schema>
+        <schema>https://raw.githubusercontent.com/RicharddeGraaf1/schemaTestsRichard/refs/heads/main/1.3/lvbb-transport.xsd</schema>
       </Moduleversie>
     </implementatie>
   </Module>
@@ -103,7 +103,7 @@
     <implementatie>
       <Moduleversie>
         <introductieversie>1.0.0</introductieversie>
-        <schema>https://standaarden.overheid.nl/lvbb/2.0.0-rc/lvbb-transport.xsd</schema>
+        <schema>https://raw.githubusercontent.com/RicharddeGraaf1/schemaTestsRichard/refs/heads/main/1.3/lvbb-transport.xsd</schema>
       </Moduleversie>
     </implementatie>
   </Module>
