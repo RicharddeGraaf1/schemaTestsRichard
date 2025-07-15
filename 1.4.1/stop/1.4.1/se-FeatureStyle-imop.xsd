@@ -6,7 +6,7 @@
             targetNamespace="http://www.opengis.net/se"
             version="1.4.1"><!-- This version of se/1.1.0 was previously versioned as '1.1.1' . -->
    <xsd:import namespace="http://www.opengis.net/ogc"
-      schemaLocation="https://github.com/RicharddeGraaf1/schemaTestsRichard/blob/main/1.4.1/stop/1.4.1/se-filter-imop.xsd"/>
+      schemaLocation="https://raw.githubusercontent.com/RicharddeGraaf1/schemaTestsRichard/refs/heads/main/1.4.1/stop/1.4.1/se-filter-imop.xsd"/>
    <!-- *********************************************************************** -->
    <xsd:annotation>
       <xsd:documentation source="https://koop.gitlab.io/STOP/standaard/1.4.1/go/goto.html?to=stop&amp;id=xsd:se"> 
