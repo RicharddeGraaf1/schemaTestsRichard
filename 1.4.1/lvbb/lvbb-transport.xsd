@@ -35,16 +35,6 @@
          <xs:documentation source="https://koop.gitlab.io/lvbb/bronhouderkoppelvlak/1.3.0-ic/go/go.html?id=xsd:lvbbt:breekPublicatieAfVerzoek"/>
       </xs:annotation>
    </xs:element>
-   <xs:element name="validatieDirecteMutatieVerzoek" type="lvbbt:LeveringVerzoekType">
-      <xs:annotation>
-         <xs:documentation source="https://koop.gitlab.io/lvbb/bronhouderkoppelvlak/1.3.0-ic/go/go.html?id=xsd:lvbbt:validatieDirecteMutatieVerzoek"/>
-      </xs:annotation>
-   </xs:element>
-   <xs:element name="directeMutatieVerzoek" type="lvbbt:LeveringVerzoekType">
-      <xs:annotation>
-         <xs:documentation source="https://koop.gitlab.io/lvbb/bronhouderkoppelvlak/1.3.0-ic/go/go.html?id=xsd:lvbbt:directeMutatieVerzoek"/>
-      </xs:annotation>
-   </xs:element>
    <xs:element name="validatieRevisieVerzoek" type="lvbbt:LeveringVerzoekType">
       <xs:annotation>
          <xs:documentation source="https://koop.gitlab.io/lvbb/bronhouderkoppelvlak/1.3.0-ic/go/go.html?id=xsd:lvbbt:validatieRevisieVerzoek"/>
@@ -64,6 +54,17 @@
    <xs:element name="procedureverloopmutatieVerzoek" type="lvbbt:LeveringVerzoekType">
       <xs:annotation>
          <xs:documentation source="https://koop.gitlab.io/lvbb/bronhouderkoppelvlak/1.3.0-ic/go/go.html?id=xsd:lvbbt:procedureverloopmutatieVerzoek"/>
+      </xs:annotation>
+   </xs:element>
+   <xs:element name="validatieDoorleverenRegelingVersieVerzoek"
+      type="lvbbt:LeveringVerzoekType">
+      <xs:annotation>
+         <xs:documentation source="https://koop.gitlab.io/lvbb/bronhouderkoppelvlak/1.3.0-ic/go/go.html?id=xsd:lvbbt:validatieDoorleverenRegelingVersieVerzoek"/>
+      </xs:annotation>
+   </xs:element>
+   <xs:element name="doorleverenRegelingVersieVerzoek" type="lvbbt:LeveringVerzoekType">
+      <xs:annotation>
+         <xs:documentation source="https://koop.gitlab.io/lvbb/bronhouderkoppelvlak/1.3.0-ic/go/go.html?id=xsd:lvbbt:doorleverenRegelingVersieVerzoek"/>
       </xs:annotation>
    </xs:element>
    <xs:element name="valideerDoorleverenRegelingVersie"
@@ -205,6 +206,11 @@
                <xs:documentation source="https://koop.gitlab.io/lvbb/bronhouderkoppelvlak/1.3.0-ic/go/go.html?id=xsd:lvbbt:idAanleveraar:OpdrachtType"/>
             </xs:annotation>
          </xs:element>
+         <xs:element name="softwareVersie" type="lvbbt:SoftwareVersieType" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="https://koop.gitlab.io/lvbb/bronhouderkoppelvlak/1.3.0-ic/go/go.html?id=xsd:lvbbt:softwareVersie:LeveringVerzoekType"/>
+            </xs:annotation>
+         </xs:element>
       </xs:sequence>
       <xs:attribute name="schemaversie" type="xs:token" use="optional"/>
    </xs:complexType>
@@ -316,55 +322,6 @@
                <xs:element name="identificatie" type="xs:string">
                   <xs:annotation>
                      <xs:documentation source="https://koop.gitlab.io/lvbb/bronhouderkoppelvlak/1.3.0-ic/go/go.html?id=xsd:lvbbt:identificatie:BreekPublicatieAfOpdrachtType"/>
-                  </xs:annotation>
-               </xs:element>
-            </xs:sequence>
-         </xs:extension>
-      </xs:complexContent>
-   </xs:complexType>
-   <xs:element name="validatieDirecteMutatieOpdracht"
-               type="lvbbt:ValidatieDirecteMutatieOpdrachtType">
-      <xs:annotation>
-         <xs:documentation source="https://koop.gitlab.io/lvbb/bronhouderkoppelvlak/1.3.0-ic/go/go.html?id=xsd:lvbbt:validatieDirecteMutatieOpdracht"/>
-      </xs:annotation>
-   </xs:element>
-   <xs:complexType name="ValidatieDirecteMutatieOpdrachtType">
-      <xs:annotation>
-         <xs:documentation source="https://koop.gitlab.io/lvbb/bronhouderkoppelvlak/1.3.0-ic/go/go.html?id=xsd:lvbbt:ValidatieDirecteMutatieOpdrachtType"/>
-      </xs:annotation>
-      <xs:complexContent>
-         <xs:extension base="lvbbt:OpdrachtType">
-            <xs:sequence>
-               <xs:element maxOccurs="1"
-                           minOccurs="0"
-                           name="directeMutatie"
-                           type="lvbbt:dtBestandsnaam">
-                  <xs:annotation>
-                     <xs:documentation source="https://koop.gitlab.io/lvbb/bronhouderkoppelvlak/1.3.0-ic/go/go.html?id=xsd:lvbbt:directeMutatie:ValidatieDirecteMutatieOpdrachtType"/>
-                  </xs:annotation>
-               </xs:element>
-            </xs:sequence>
-         </xs:extension>
-      </xs:complexContent>
-   </xs:complexType>
-   <xs:element name="directeMutatieOpdracht" type="lvbbt:DirecteMutatieOpdrachtType">
-      <xs:annotation>
-         <xs:documentation source="https://koop.gitlab.io/lvbb/bronhouderkoppelvlak/1.3.0-ic/go/go.html?id=xsd:lvbbt:directeMutatieOpdracht"/>
-      </xs:annotation>
-   </xs:element>
-   <xs:complexType name="DirecteMutatieOpdrachtType">
-      <xs:annotation>
-         <xs:documentation source="https://koop.gitlab.io/lvbb/bronhouderkoppelvlak/1.3.0-ic/go/go.html?id=xsd:lvbbt:DirecteMutatieOpdrachtType"/>
-      </xs:annotation>
-      <xs:complexContent>
-         <xs:extension base="lvbbt:OpdrachtType">
-            <xs:sequence>
-               <xs:element maxOccurs="1"
-                           minOccurs="0"
-                           name="directeMutatie"
-                           type="lvbbt:dtBestandsnaam">
-                  <xs:annotation>
-                     <xs:documentation source="https://koop.gitlab.io/lvbb/bronhouderkoppelvlak/1.3.0-ic/go/go.html?id=xsd:lvbbt:directeMutatie:DirecteMutatieOpdrachtType"/>
                   </xs:annotation>
                </xs:element>
             </xs:sequence>
