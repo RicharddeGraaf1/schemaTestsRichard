@@ -774,176 +774,6 @@
       </xs:restriction>
    </xs:simpleType>
    <!--
-  Antwoord voor opdracht tot validatie van de directe mutatie
-  -->
-   <xs:element name="validatieDirecteMutatieVerzoekResultaat"
-               type="lvbbt:ValidatieDirecteMutatieVerzoekResultaatType">
-      <xs:annotation>
-         <xs:documentation source="https://koop.gitlab.io/lvbb/bronhouderkoppelvlak/1.3.0-ic/go/go.html?id=xsd:lvbbt:validatieDirecteMutatieVerzoekResultaat"/>
-      </xs:annotation>
-   </xs:element>
-   <xs:complexType name="ValidatieDirecteMutatieVerzoekResultaatType">
-      <xs:annotation>
-         <xs:documentation source="https://koop.gitlab.io/lvbb/bronhouderkoppelvlak/1.3.0-ic/go/go.html?id=xsd:lvbbt:ValidatieDirecteMutatieVerzoekResultaatType"/>
-      </xs:annotation>
-      <xs:complexContent>
-         <xs:extension base="lvbbt:VerzoekResultaatType">
-            <xs:sequence>
-               <xs:element minOccurs="0"
-                           name="verslag"
-                           type="lvbbt:ValidatieDirecteMutatieVerslagType">
-                  <xs:annotation>
-                     <xs:documentation source="https://koop.gitlab.io/lvbb/bronhouderkoppelvlak/1.3.0-ic/go/go.html?id=xsd:lvbbt:verslag:ValidatieDirecteMutatieVerzoekResultaatType"/>
-                  </xs:annotation>
-               </xs:element>
-            </xs:sequence>
-         </xs:extension>
-      </xs:complexContent>
-   </xs:complexType>
-   <xs:complexType name="ValidatieDirecteMutatieVerslagType">
-      <xs:annotation>
-         <xs:documentation source="https://koop.gitlab.io/lvbb/bronhouderkoppelvlak/1.3.0-ic/go/go.html?id=xsd:lvbbt:ValidatieDirecteMutatieVerslagType"/>
-      </xs:annotation>
-      <xs:complexContent>
-         <xs:extension base="lvbbt:OpdrachtverslagType">
-            <xs:choice>
-               <xs:element name="uitkomst" type="lvbbt:ValidatieDirecteMutatieUitkomstCode">
-                  <xs:annotation>
-                     <xs:documentation source="https://koop.gitlab.io/lvbb/bronhouderkoppelvlak/1.3.0-ic/go/go.html?id=xsd:lvbbt:uitkomst:ValidatieDirecteMutatieVerslagType"/>
-                  </xs:annotation>
-               </xs:element>
-               <xs:element name="voortgang" type="lvbbt:ValidatieDirecteMutatieVoortgangCode">
-                  <xs:annotation>
-                     <xs:documentation source="https://koop.gitlab.io/lvbb/bronhouderkoppelvlak/1.3.0-ic/go/go.html?id=xsd:lvbbt:voortgang:ValidatieDirecteMutatieVerslagType"/>
-                  </xs:annotation>
-               </xs:element>
-            </xs:choice>
-         </xs:extension>
-      </xs:complexContent>
-   </xs:complexType>
-   <xs:simpleType name="ValidatieDirecteMutatieUitkomstCode">
-      <xs:annotation>
-         <xs:documentation> Code die aangeeft of de behandeling van een opdracht tot validatie van een
-        directe mutatie is geslaagd. </xs:documentation>
-      </xs:annotation>
-      <xs:restriction base="xs:string">
-         <xs:enumeration value="valide">
-            <xs:annotation>
-               <xs:documentation> De directe mutatie voldoet aan alle eisen die de LVBB er op dit moment
-            aan stelt. </xs:documentation>
-            </xs:annotation>
-         </xs:enumeration>
-         <xs:enumeration value="niet-valide">
-            <xs:annotation>
-               <xs:documentation> De directe mutatie voldoet niet aan de eisen die de LVBB er aan stelt.
-          </xs:documentation>
-            </xs:annotation>
-         </xs:enumeration>
-      </xs:restriction>
-   </xs:simpleType>
-   <xs:simpleType name="ValidatieDirecteMutatieVoortgangCode">
-      <xs:annotation>
-         <xs:documentation> Code die aangeeft hoe ver de behandeling van een opdracht tot validatie van
-        een directe mutatie is gevorderd. </xs:documentation>
-      </xs:annotation>
-      <xs:restriction base="xs:string">
-         <xs:enumeration value="validatie-voltooid">
-            <xs:annotation>
-               <xs:documentation> De validatie van de directe mutatie is voltooid. </xs:documentation>
-            </xs:annotation>
-         </xs:enumeration>
-      </xs:restriction>
-   </xs:simpleType>
-   <!--
-  Antwoord voor opdracht voor een directe mutatie
-  -->
-   <xs:element name="directeMutatieVerzoekResultaat"
-               type="lvbbt:DirecteMutatieVerzoekResultaatType">
-      <xs:annotation>
-         <xs:documentation source="https://koop.gitlab.io/lvbb/bronhouderkoppelvlak/1.3.0-ic/go/go.html?id=xsd:lvbbt:directeMutatieVerzoekResultaat"/>
-      </xs:annotation>
-   </xs:element>
-   <xs:complexType name="DirecteMutatieVerzoekResultaatType">
-      <xs:annotation>
-         <xs:documentation source="https://koop.gitlab.io/lvbb/bronhouderkoppelvlak/1.3.0-ic/go/go.html?id=xsd:lvbbt:DirecteMutatieVerzoekResultaatType"/>
-      </xs:annotation>
-      <xs:complexContent>
-         <xs:extension base="lvbbt:VerzoekResultaatType">
-            <xs:sequence>
-               <xs:element minOccurs="0" name="verslag" type="lvbbt:DirecteMutatieVerslagType">
-                  <xs:annotation>
-                     <xs:documentation source="https://koop.gitlab.io/lvbb/bronhouderkoppelvlak/1.3.0-ic/go/go.html?id=xsd:lvbbt:verslag:DirecteMutatieVerzoekResultaatType"/>
-                  </xs:annotation>
-               </xs:element>
-            </xs:sequence>
-         </xs:extension>
-      </xs:complexContent>
-   </xs:complexType>
-   <xs:complexType name="DirecteMutatieVerslagType">
-      <xs:annotation>
-         <xs:documentation source="https://koop.gitlab.io/lvbb/bronhouderkoppelvlak/1.3.0-ic/go/go.html?id=xsd:lvbbt:DirecteMutatieVerslagType"/>
-      </xs:annotation>
-      <xs:complexContent>
-         <xs:extension base="lvbbt:OpdrachtverslagType">
-            <xs:choice>
-               <xs:element name="uitkomst" type="lvbbt:DirecteMutatieUitkomstCode">
-                  <xs:annotation>
-                     <xs:documentation source="https://koop.gitlab.io/lvbb/bronhouderkoppelvlak/1.3.0-ic/go/go.html?id=xsd:lvbbt:uitkomst:DirecteMutatieVerslagType"/>
-                  </xs:annotation>
-               </xs:element>
-               <xs:element name="voortgang" type="lvbbt:DirecteMutatieVoortgangCode">
-                  <xs:annotation>
-                     <xs:documentation source="https://koop.gitlab.io/lvbb/bronhouderkoppelvlak/1.3.0-ic/go/go.html?id=xsd:lvbbt:voortgang:DirecteMutatieVerslagType"/>
-                  </xs:annotation>
-               </xs:element>
-            </xs:choice>
-         </xs:extension>
-      </xs:complexContent>
-   </xs:complexType>
-   <xs:simpleType name="DirecteMutatieUitkomstCode">
-      <xs:annotation>
-         <xs:documentation> Code die aangeeft of de behandeling van een opdracht voor een directe
-        mutatie is geslaagd. </xs:documentation>
-      </xs:annotation>
-      <xs:restriction base="xs:string">
-         <xs:enumeration value="ok">
-            <xs:annotation>
-               <xs:documentation> De opdracht is met succes afgerond. </xs:documentation>
-            </xs:annotation>
-         </xs:enumeration>
-         <xs:enumeration value="niet-valide">
-            <xs:annotation>
-               <xs:documentation> De directe mutatie voldoet niet aan de eisen die de LVBB er aan stelt.
-          </xs:documentation>
-            </xs:annotation>
-         </xs:enumeration>
-         <xs:enumeration value="behandeling-afgebroken">
-            <xs:annotation>
-               <xs:documentation> De behandeling van de opdracht is afgebroken. 
-          </xs:documentation>
-            </xs:annotation>
-         </xs:enumeration>
-      </xs:restriction>
-   </xs:simpleType>
-   <xs:simpleType name="DirecteMutatieVoortgangCode">
-      <xs:annotation>
-         <xs:documentation> Code die aangeeft hoe ver de behandeling van een opdracht voor een directe
-        mutatie is gevorderd. </xs:documentation>
-      </xs:annotation>
-      <xs:restriction base="xs:string">
-         <xs:enumeration value="validatie-voltooid">
-            <xs:annotation>
-               <xs:documentation> De directe mutatie is voltooid. </xs:documentation>
-            </xs:annotation>
-         </xs:enumeration>
-         <xs:enumeration value="mutatie-voltooid">
-            <xs:annotation>
-               <xs:documentation> De aangeleverde mutatie is uitgevoerd. </xs:documentation>
-            </xs:annotation>
-         </xs:enumeration>
-      </xs:restriction>
-   </xs:simpleType>
-   <!--
   Antwoord voor opdracht tot validatie van de revisie
   -->
    <xs:element name="validatieRevisieVerzoekResultaat"
@@ -1395,6 +1225,154 @@
          <xs:enumeration value="validatie-voltooid">
             <xs:annotation>
                <xs:documentation>De validatie van de registratieopdracht is voltooid.</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:element name="validatieDoorleverenRegelingVersieVerzoekResultaat"
+      type="lvbbt:ValidatieDoorleverenRegelingVersieVerzoekResultaatType">
+      <xs:annotation>
+         <xs:documentation source="https://koop.gitlab.io/lvbb/bronhouderkoppelvlak/1.3.0-ic/go/go.html?id=xsd:lvbbt:validatieDoorleverenRegelingVersieVerzoekResultaat"/>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="ValidatieDoorleverenRegelingVersieVerzoekResultaatType">
+      <xs:annotation>
+         <xs:documentation source="https://koop.gitlab.io/lvbb/bronhouderkoppelvlak/1.3.0-ic/go/go.html?id=xsd:lvbbt:ValidatieDoorleverenRegelingVersieVerzoekResultaatType"/>
+      </xs:annotation>
+      <xs:complexContent>
+         <xs:extension base="lvbbt:VerzoekResultaatType">
+            <xs:sequence>
+               <xs:element minOccurs="1"
+                  name="verslag"
+                  type="lvbbt:ValidatieDoorleverenRegelingVersieVerslagType">
+                  <xs:annotation>
+                     <xs:documentation source="https://koop.gitlab.io/lvbb/bronhouderkoppelvlak/1.3.0-ic/go/go.html?id=xsd:lvbbt:verslag:ValidatieDoorleverenRegelingVersieVerzoekResultaatType"/>
+                  </xs:annotation>
+               </xs:element>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:complexType name="ValidatieDoorleverenRegelingVersieVerslagType">
+      <xs:annotation>
+         <xs:documentation source="https://koop.gitlab.io/lvbb/bronhouderkoppelvlak/1.3.0-ic/go/go.html?id=xsd:lvbbt:ValidatieDoorleverenRegelingVersieVerslagType"/>
+      </xs:annotation>
+      <xs:complexContent>
+         <xs:extension base="lvbbt:OpdrachtverslagType">
+            <xs:choice>
+               <xs:element name="uitkomst" type="lvbbt:ValidatieDoorleverenRegelingVersieUitkomstCode">
+                  <xs:annotation>
+                     <xs:documentation source="https://koop.gitlab.io/lvbb/bronhouderkoppelvlak/1.3.0-ic/go/go.html?id=xsd:lvbbt:uitkomst:ValidatieDoorleverenRegelingVersieVerslagType"/>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="voortgang" type="lvbbt:ValidatieDoorleverenRegelingVersieVoortgangCode">
+                  <xs:annotation>
+                     <xs:documentation source="https://koop.gitlab.io/lvbb/bronhouderkoppelvlak/1.3.0-ic/go/go.html?id=xsd:lvbbt:voortgang:ValidatieDoorleverenRegelingVersieVerslagType"/>
+                  </xs:annotation>
+               </xs:element>
+            </xs:choice>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:simpleType name="ValidatieDoorleverenRegelingVersieUitkomstCode">
+      <xs:restriction base="xs:string">
+         <xs:enumeration value="valide">
+            <xs:annotation>
+               <xs:documentation>De DoorleverenRegelingVersie voldoet aan alle eisen die de LVBB er op dit moment aan stelt.</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="niet-valide">
+            <xs:annotation>
+               <xs:documentation>De DoorleverenRegelingVersie voldoet niet aan de eisen die de LVBB er aan stelt.</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="behandeling-afgebroken">
+            <xs:annotation>
+               <xs:documentation>De behandeling van de opdracht is afgebroken.</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType name="ValidatieDoorleverenRegelingVersieVoortgangCode">
+      <xs:restriction base="xs:string">
+         <xs:enumeration value="validatie-voltooid">
+            <xs:annotation>
+               <xs:documentation>De validatie van de DoorleverenRegelingVersie is voltooid.
+               </xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+      </xs:restriction>
+   </xs:simpleType>
+   <!--
+  Antwoord voor DoorleverenRegelingVersieopdracht
+  -->
+   <xs:element name="DoorleverenRegelingVersieVerzoekResultaat"
+      type="lvbbt:DoorleverenRegelingVersieVerzoekResultaatType">
+      <xs:annotation>
+         <xs:documentation source="https://koop.gitlab.io/lvbb/bronhouderkoppelvlak/1.3.0-ic/go/go.html?id=xsd:lvbbt:DoorleverenRegelingVersieVerzoekResultaat"/>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="DoorleverenRegelingVersieVerzoekResultaatType">
+      <xs:annotation>
+         <xs:documentation source="https://koop.gitlab.io/lvbb/bronhouderkoppelvlak/1.3.0-ic/go/go.html?id=xsd:lvbbt:DoorleverenRegelingVersieVerzoekResultaatType"/>
+      </xs:annotation>
+      <xs:complexContent>
+         <xs:extension base="lvbbt:VerzoekResultaatType">
+            <xs:sequence>
+               <xs:element minOccurs="1" name="verslag" type="lvbbt:DoorleverenRegelingVersieVerslagType">
+                  <xs:annotation>
+                     <xs:documentation source="https://koop.gitlab.io/lvbb/bronhouderkoppelvlak/1.3.0-ic/go/go.html?id=xsd:lvbbt:verslag:DoorleverenRegelingVersieVerzoekResultaatType"/>
+                  </xs:annotation>
+               </xs:element>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:complexType name="DoorleverenRegelingVersieVerslagType">
+      <xs:annotation>
+         <xs:documentation source="https://koop.gitlab.io/lvbb/bronhouderkoppelvlak/1.3.0-ic/go/go.html?id=xsd:lvbbt:DoorleverenRegelingVersieVerslagType"/>
+      </xs:annotation>
+      <xs:complexContent>
+         <xs:extension base="lvbbt:OpdrachtverslagType">
+            <xs:choice>
+               <xs:element name="uitkomst" type="lvbbt:DoorleverenRegelingVersieUitkomstCode">
+                  <xs:annotation>
+                     <xs:documentation source="https://koop.gitlab.io/lvbb/bronhouderkoppelvlak/1.3.0-ic/go/go.html?id=xsd:lvbbt:uitkomst:DoorleverenRegelingVersieVerslagType"/>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="voortgang" type="lvbbt:DoorleverenRegelingVersieVoortgangCode">
+                  <xs:annotation>
+                     <xs:documentation source="https://koop.gitlab.io/lvbb/bronhouderkoppelvlak/1.3.0-ic/go/go.html?id=xsd:lvbbt:voortgang:DoorleverenRegelingVersieVerslagType"/>
+                  </xs:annotation>
+               </xs:element>
+            </xs:choice>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:simpleType name="DoorleverenRegelingVersieUitkomstCode">
+      <xs:restriction base="xs:string">
+         <xs:enumeration value="registratie-voltooid">
+            <xs:annotation>
+               <xs:documentation>De aangeleverde DoorleverenRegelingVersieopdracht is uitgevoerd.</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="niet-valide">
+            <xs:annotation>
+               <xs:documentation>De DoorleverenRegelingVersie voldoet niet aan de eisen die de LVBB er aan stelt.</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="behandeling-afgebroken">
+            <xs:annotation>
+               <xs:documentation>De behandeling van de opdracht is afgebroken.</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType name="DoorleverenRegelingVersieVoortgangCode">
+      <xs:restriction base="xs:string">
+         <xs:enumeration value="validatie-voltooid">
+            <xs:annotation>
+               <xs:documentation>De validatie van de DoorleverenRegelingVersieopdracht is voltooid.</xs:documentation>
             </xs:annotation>
          </xs:enumeration>
       </xs:restriction>
