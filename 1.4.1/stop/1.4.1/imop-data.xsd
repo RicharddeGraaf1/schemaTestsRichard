@@ -1350,6 +1350,7 @@
    <xs:simpleType name="dtSTOPidentificatie">
       <xs:restriction base="xs:anyURI">
          <xs:minLength value="1"/>
+         <xs:pattern value="/akn/nl/(act|bill|doc)/(gm|pv|ws|mnre)[0-9]{1,6}/(2[0-9]{3}|2[0-9\-]{9})/[a-zA-Z0-9][a-zA-Z0-9_-]{1,128}(/nld@[a-zA-Z0-9_-]+)?"/>
       </xs:restriction>
    </xs:simpleType>
    <xs:simpleType name="dtWaardeRef">
