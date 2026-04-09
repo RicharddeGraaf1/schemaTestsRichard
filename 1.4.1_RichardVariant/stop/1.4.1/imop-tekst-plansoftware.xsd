@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:tekst="https://standaarden.overheid.nl/stop/imop/tekst/"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified"
+           targetNamespace="https://standaarden.overheid.nl/stop/imop/tekst/"
+           version="1.4.1">
+   <xs:annotation>
+      <xs:documentation>STOP plansoftware-uitbreiding (Richard-variant).
+
+      Aanvulling op de STOP imop-tekst module, bedoeld om STOP bruikbaar te
+      maken voor plansoftware. Definieert:
+        * inline-referentie-elementen taakRef, activiteitRef en opmerkingRef
+          waarmee binnen een Al verwezen kan worden naar plansoftware-objecten;
+        * de attribuutgroep agPlansoftware met versie, wijzigingsmoment en
+          gewijzigdDoor, bedoeld om wijzigingsinformatie van plansoftware op
+          structuurelementen (zoals Artikel) op te nemen.
+
+      Deze module wordt in imop-tekst.xsd opgenomen via xs:include en
+      uitsluitend daar bedraad in mgInlinesCompleet en op het Artikel-element.
+      Het bestaande STOP schema blijft daarmee verder ongewijzigd.
+      </xs:documentation>
+   </xs:annotation>
+
+   <!-- =====================================================================
+        Inline referentie-elementen voor gebruik binnen Al / mgInlinesCompleet
+        ===================================================================== -->
+
+   <xs:element name="taakRef">
+      <xs:annotation>
+         <xs:documentation>Verwijzing naar een plansoftware-taak. De inhoud
+         bevat de zichtbare tekst van de verwijzing; het attribuut taakId
+         bevat de identificatie van de taak in de plansoftware.</xs:documentation>
+      </xs:annotation>
+      <xs:complexType mixed="true">
+         <xs:attribute name="taakId" type="xs:string" use="required"/>
+      </xs:complexType>
+   </xs:element>
+
+   <xs:element name="activiteitRef">
+      <xs:annotation>
+         <xs:documentation>Verwijzing naar een activiteit (bijvoorbeeld een
+         IMOW-activiteit). Het attribuut activiteitId bevat de identificatie
+         van de activiteit.</xs:documentation>
+      </xs:annotation>
+      <xs:complexType mixed="true">
+         <xs:attribute name="activiteitId" type="xs:string" use="required"/>
+      </xs:complexType>
+   </xs:element>
+
+   <xs:element name="opmerkingRef">
+      <xs:annotation>
+         <xs:documentation>Verwijzing naar een opmerking in de plansoftware.
+         Het attribuut opmerkingId bevat de identificatie van de opmerking.</xs:documentation>
+      </xs:annotation>
+      <xs:complexType mixed="true">
+         <xs:attribute name="opmerkingId" type="xs:string" use="required"/>
+      </xs:complexType>
+   </xs:element>
+
+   <!-- =====================================================================
+        Attribuutgroep voor plansoftware-wijzigingsinformatie op structuren
+        ===================================================================== -->
+
+   <xs:attributeGroup name="agPlansoftware">
+      <xs:annotation>
+         <xs:documentation>Optionele attributen die plansoftware op een
+         structuurelement kan plaatsen om versie- en wijzigingsinformatie
+         vast te leggen. Deze attributen zijn opzettelijk als xs:string
+         getypeerd zodat plansoftware-leveranciers eigen notaties kunnen
+         hanteren zonder de STOP-validatie te breken.</xs:documentation>
+      </xs:annotation>
+      <xs:attribute name="versie" type="xs:string" use="optional"/>
+      <xs:attribute name="wijzigingsmoment" type="xs:string" use="optional"/>
+      <xs:attribute name="gewijzigdDoor" type="xs:string" use="optional"/>
+   </xs:attributeGroup>
+
+</xs:schema>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+   Voorbeeld van een Artikel zoals plansoftware dat aanlevert. Maakt gebruik
+   van de plansoftware-uitbreiding op STOP imop-tekst (Richard-variant):
+     * versie / wijzigingsmoment / gewijzigdDoor op het Artikel-element
+     * inline taakRef / activiteitRef / opmerkingRef binnen Al
+
+   De default-namespace is hieronder gelijkgezet aan de STOP tekst-namespace
+   zodat alle ongeprefixte elementen (Artikel, Kop, Al, taakRef, ...)
+   automatisch in de juiste namespace zitten en valideren tegen het
+   uitgebreide imop-tekst.xsd.
+-->
+<Artikel xmlns="https://standaarden.overheid.nl/stop/imop/tekst/"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://standaarden.overheid.nl/stop/imop/tekst/ stop/1.4.1/imop-tekst.xsd"
+         eId="chp_5__art_5.6"
+         wId="gm0363_1__chp_5__art_5.6"
+         versie="1"
+         wijzigingsmoment="2026-04-09 T10:20:32:00Z2"
+         gewijzigdDoor="tfrijsewijk">
+   <Kop>
+      <Label>Artikel</Label>
+      <Nummer>5.6</Nummer>
+      <Opschrift>GebiedOngewijzigd</Opschrift>
+   </Kop>
+   <Inhoud>
+      <Al>Dit is een artikel <taakRef taakId="23">met de functionaliteit</taakRef>: GebiedOngewijzigd.
+         <br/>Indien er een <activiteitRef activiteitId="nl.imow.gm0363.activiteit.Bomenkappen">wijziging</activiteitRef> is,
+         is deze <opmerkingRef opmerkingId="63">zichtbaar</opmerkingRef> na 3 maart 2022.</Al>
+   </Inhoud>
+</Artikel>
