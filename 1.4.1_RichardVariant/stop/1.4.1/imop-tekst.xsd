@@ -1264,8 +1264,6 @@
          <xs:attributeGroup ref="tekst:agAlgemeen"/>
          <xs:attributeGroup ref="tekst:agWijzigactieStructuur"/>
          <xs:attributeGroup ref="tekst:agCategorieKlassiek"/>
-         <!-- Plansoftware-uitbreiding (Richard-variant) -->
-         <xs:attributeGroup ref="tekst:agPlansoftware"/>
       </xs:complexType>
    </xs:element>
    <xs:element name="Lid">
@@ -2240,6 +2238,9 @@
    <!-- EINDE GROEPEN -->
    <!-- ATTRIBUTEN -->
    <xs:attributeGroup name="agAlgemeen">
+      <!-- Plansoftware-uitbreiding (Richard-variant): plansoftware-attributen
+           zijn hiermee overal toegestaan waar agAlgemeen wordt gebruikt. -->
+      <xs:attributeGroup ref="tekst:agPlansoftware"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:attributeGroup>
    <xs:attributeGroup name="agSchemaVersie">
