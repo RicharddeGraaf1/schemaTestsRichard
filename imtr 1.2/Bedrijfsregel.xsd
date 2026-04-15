@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- XSD structuur specifiek voor toevoegingen aan Bedrijfsregels. -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:bedr="http://toepasbare-regels.omgevingswet.overheid.nl/v1.0/Bedrijfsregel"
+  elementFormDefault="qualified"
+  targetNamespace="http://toepasbare-regels.omgevingswet.overheid.nl/v1.0/Bedrijfsregel"
+  version="1.0.0">
+
+  <xs:simpleType name="sttrVersie">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="1"/>
+      <xs:enumeration value="2"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:element name="sttr">
+    <xs:complexType>
+      <xs:attribute name="versie" type="bedr:sttrVersie" use="required"/>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- Dit is de verwijzing naar de functionele structuur. -->
+  <xs:element name="functioneleStructuurRef">
+    <xs:complexType>
+      <xs:attribute name="href" type="xs:anyURI" use="required"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="dynamischeVragenUit"/>
+
+</xs:schema>
