@@ -7,9 +7,9 @@
             elementFormDefault="qualified" attributeFormDefault="unqualified">
 
 	<xsd:import namespace="http://www.omg.org/spec/DMN/20180521/DC/"
-	            schemaLocation="DC.xsd"/>
+		schemaLocation="https://raw.githubusercontent.com/RicharddeGraaf1/schemaTestsRichard/refs/heads/main/imtr%203.0/DC.xsd"/>
 	<xsd:import namespace="http://www.omg.org/spec/DMN/20180521/DI/"
-	            schemaLocation="DI.xsd"/>
+		schemaLocation="https://raw.githubusercontent.com/RicharddeGraaf1/schemaTestsRichard/refs/heads/main/imtr%203.0/DI.xsd"/>
 
 	<xsd:element name="DMNDI" type="dmndi:DMNDI"/>
 	<xsd:element name="DMNDiagram" type="dmndi:DMNDiagram"/>

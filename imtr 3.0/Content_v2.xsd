@@ -6,7 +6,7 @@
 	xmlns="http://toepasbare-regels.omgevingswet.overheid.nl/v2.0/Content"
 	version="2.0.0">
 
-	<xs:import namespace="http://toepasbare-regels.omgevingswet.overheid.nl/v1.0/DataTypes" schemaLocation="DataTypes.xsd"/>
+	<xs:import namespace="http://toepasbare-regels.omgevingswet.overheid.nl/v1.0/DataTypes" schemaLocation="https://raw.githubusercontent.com/RicharddeGraaf1/schemaTestsRichard/refs/heads/main/imtr%203.0/DataTypes.xsd"/>
 
 	<xs:element name="conclusieToelichting">
 		<xs:complexType>

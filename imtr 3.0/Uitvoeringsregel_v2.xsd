@@ -8,9 +8,9 @@
            targetNamespace="http://toepasbare-regels.omgevingswet.overheid.nl/v2.0/Uitvoeringsregel"
            elementFormDefault="qualified"
            version="2.0.0">
-	<xs:import namespace="http://toepasbare-regels.omgevingswet.overheid.nl/v2.0/Content" schemaLocation="Content_v2.xsd"/>
-	<xs:import namespace="http://toepasbare-regels.omgevingswet.overheid.nl/v2.0/Interactieregel" schemaLocation="Interactieregel_v2.xsd"/>
-	<xs:import namespace="http://toepasbare-regels.omgevingswet.overheid.nl/v1.0/DataTypes" schemaLocation="DataTypes.xsd"/>
+	<xs:import namespace="http://toepasbare-regels.omgevingswet.overheid.nl/v2.0/Content" schemaLocation="https://raw.githubusercontent.com/RicharddeGraaf1/schemaTestsRichard/refs/heads/main/imtr%203.0/Content_v2.xsd"/>
+	<xs:import namespace="http://toepasbare-regels.omgevingswet.overheid.nl/v2.0/Interactieregel" schemaLocation="https://raw.githubusercontent.com/RicharddeGraaf1/schemaTestsRichard/refs/heads/main/imtr%203.0/Interactieregel_v2.xsd"/>
+	<xs:import namespace="http://toepasbare-regels.omgevingswet.overheid.nl/v1.0/DataTypes" schemaLocation="https://raw.githubusercontent.com/RicharddeGraaf1/schemaTestsRichard/refs/heads/main/imtr%203.0/DataTypes.xsd"/>
 	<xs:element name="uitvoeringsregels">
 		<xs:complexType>
 			<xs:sequence>
